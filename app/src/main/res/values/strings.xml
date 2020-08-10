@@ -1,0 +1,30 @@
+<resources>
+    <string name="facebook_app_id">558108944885214</string>
+    <string name="fb_login_protocol_scheme">fb558108944885214</string>
+
+
+    <string name="app_name">suzuki-app</string>
+    <string name="motorcycle_models_label">MOTORCYCLE\nMODELS</string>
+    <string name="spare_parts_label">SPARE\nPARTS</string>
+    <string name="dealer_locator_label">DEALER\nLOCATOR</string>
+    <string name="service_center_label">SERVICE\nCENTER</string>
+    <string name="customer_care_label">CUSTOMER\nCARE</string>
+    <string name="label_create_an_account">Create an Account</string>
+    <string name="label_full_name">Full Name</string>
+    <string name="label_email_address">Email Address</string>
+    <string name="label_password">Password</string>
+    <string name="label_mobile_number">Mobile Number</string>
+    <string name="label_terms_note">By creating an account, you agree to our <u>terms</u></string>
+    <string name="label_sign_in_link"><u>SIGN IN</u></string>
+    <string name="label_submit">Submit</string>
+    <string name="label_mobile_hint">e.g, +63 917 123 4567</string>
+    <string name="label_sign_in">Sign In</string>
+    <string name="label_email_mobile">Email Address / Mobile Number</string>
+    <string name="label_or">OR</string>
+    <string name="label_forgot_password_link"><u>FORGOT PASSWORD</u></string>
+    <string name="label_forgot_password">FORGOT PASSWORD</string>
+    <string name="label_continue_facebook">Continue with Facebook</string>
+    <string name="label_have_no_account">Have no account yet?</string>
+    <string name="label_create_an_account_link"><u>CREATE AN ACCOUNT</u></string>
+    <string name="label_send">Send</string>
+</resources>

@@ -1,0 +1,2 @@
+rootProject.name='suzuki-app'
+include ':app'

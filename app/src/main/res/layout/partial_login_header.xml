@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <ImageView
+        android:id="@+id/iv_header_background_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:scaleType="fitXY"
+
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bar1"
+
+        app:layout_constraintVertical_bias="0.0"
+        android:src="@color/color_blue_300"
+
+        />
+
+    <ImageView
+        android:id="@+id/iv_header_logo"
+        android:layout_width="190dp"
+        android:layout_height="25dp"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/iv_header_image"
+
+        android:layout_marginTop="22dp"
+        android:layout_marginBottom="6dp"
+
+        android:src="@drawable/img_crossover_logo"
+        />
+
+    <ImageView
+        android:id="@+id/iv_header_bottom_slant"
+        android:layout_width="0dp"
+        android:layout_height="93dp"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/iv_header_bottom_logo"
+
+        android:src="@drawable/img_white_slant_bar"
+        android:scaleType="fitXY"
+        />
+
+    <ImageView
+        android:id="@+id/iv_header_image"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@id/iv_header_logo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        app:layout_constraintDimensionRatio="w,1:1"
+        android:layout_marginTop="8dp"
+
+        android:src="@drawable/img_crossover"
+        />
+
+    <View
+        android:id="@+id/bar1"
+        android:layout_width="32dp"
+        android:layout_height="4.2dp"
+
+        app:layout_constraintTop_toBottomOf="@id/iv_header_image"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/bar2"
+        app:layout_constraintBottom_toTopOf="@id/iv_header_bottom_logo"
+        android:background="@color/color_grey_1000"
+        android:layout_marginRight="10dp"
+
+        app:layout_constraintHorizontal_chainStyle="packed"
+
+        />
+
+    <View
+        android:id="@+id/bar2"
+        android:layout_width="32dp"
+        android:layout_height="4.2dp"
+
+        app:layout_constraintTop_toTopOf="@id/bar1"
+        app:layout_constraintLeft_toRightOf="@id/bar1"
+        app:layout_constraintRight_toLeftOf="@id/bar3"
+        app:layout_constraintBottom_toBottomOf="@id/bar1"
+        android:layout_marginRight="10dp"
+        android:background="@color/color_grey_1000"
+        />
+
+    <View
+        android:id="@+id/bar3"
+        android:layout_width="32dp"
+        android:layout_height="4.2dp"
+
+        app:layout_constraintTop_toTopOf="@id/bar1"
+        app:layout_constraintLeft_toRightOf="@id/bar2"
+        app:layout_constraintRight_toLeftOf="@id/bar4"
+        app:layout_constraintBottom_toBottomOf="@id/bar1"
+        android:layout_marginRight="10dp"
+        android:background="@color/color_grey_1000"
+        />
+
+    <View
+        android:id="@+id/bar4"
+        android:layout_width="32dp"
+        android:layout_height="4.2dp"
+
+        app:layout_constraintTop_toTopOf="@id/bar1"
+        app:layout_constraintLeft_toRightOf="@id/bar3"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/bar1"
+        android:background="@color/color_grey_1000"
+        />
+
+
+    <ImageView
+        android:id="@+id/iv_header_bottom_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+
+        app:layout_constraintTop_toBottomOf="@id/bar1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/guideline"
+
+
+        android:background="@android:color/white"
+        android:src="@drawable/suzuki_logo"
+        android:paddingTop="5dp"
+        android:paddingBottom="9dp"
+        />
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".46"
+        />
+
+
+
+</merge>

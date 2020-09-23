@@ -27,4 +27,9 @@
     <string name="label_have_no_account">Have no account yet?</string>
     <string name="label_create_an_account_link"><u>CREATE AN ACCOUNT</u></string>
     <string name="label_send">Send</string>
+    <string name="label_motorcycle_models">Motorcycle\nModels</string>
+    <string name="label_dealerlocator">Dealer\nLocator</string>
+    <string name="label_spareparts">Spare\nParts</string>
+    <string name="label_servicecenters">Service\nCenters</string>
+    <string name="label_my_suzuki_diary">My Suzuki\nDiary</string>
 </resources>

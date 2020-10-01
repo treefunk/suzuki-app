@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/img_main_bg"
+    >
+
+<!--    <include layout="@layout/partial_nav_top" />
+
+    <View
+        android:id="@+id/extra"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toBottomOf="@id/appbar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@color/color_red_200"
+        />-->
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/label_beast_name"
+
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+
+        style="@style/suzukiHeader1"
+        android:letterSpacing="0.05"
+        android:text="ADD SERVICE HISTORY"
+        tools:ignore="NotSibling"
+        />
+
+    <View
+        android:id="@+id/white_bg_header_bike_details"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="@id/blue_bg_bike_details"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/blue_bg_bike_details"
+        app:layout_constraintLeft_toLeftOf="@id/blue_bg_bike_details"
+        android:background="@android:color/white"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="8dp"
+        />
+
+    <View
+        android:id="@+id/blue_bg_bike_details"
+        android:layout_width="125dp"
+        android:layout_height="35dp"
+
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/rectangle_blue_slanted_1"
+        />
+
+    <ImageView
+        android:id="@+id/box_bike_details"
+        android:layout_width="0dp"
+        android:layout_height="190dp"
+
+        app:layout_constraintTop_toBottomOf="@id/white_bg_header_bike_details"
+        app:layout_constraintLeft_toLeftOf="@id/blue_bg_bike_details"
+        app:layout_constraintRight_toRightOf="@id/white_bg_header_bike_details"
+        android:background="@android:color/white"
+        />
+
+    <TextView
+        android:id="@+id/label_header_bike_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/blue_bg_bike_details"
+        app:layout_constraintTop_toTopOf="@id/blue_bg_bike_details"
+        app:layout_constraintBottom_toBottomOf="@id/blue_bg_bike_details"
+        app:layout_constraintRight_toRightOf="@id/blue_bg_bike_details"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginLeft="12dp"
+
+        android:text="BIKE DETAILS"
+        style="@style/suzukiHeader2.labelCustomerCare"
+        android:textColor="@color/color_blue_1000"
+        android:textSize="11sp"
+        />
+
+    <TextView
+        android:id="@+id/label_beast_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toTopOf="@id/box_bike_details"
+        app:layout_constraintLeft_toLeftOf="@id/box_bike_details"
+        app:layout_constraintRight_toRightOf="@id/box_bike_details"
+        app:layout_constraintBottom_toTopOf="@id/tv_beast_nickname"
+        app:layout_constraintHorizontal_bias="0"
+
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="12dp"
+        style="@style/suzukiHeader2.labelServiceHistory"
+        android:text="The Beast's Nickname"
+        />
+
+    <EditText
+        android:id="@+id/tv_beast_nickname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@id/label_beast_nickname"
+        app:layout_constraintLeft_toLeftOf="@id/label_beast_nickname"
+        app:layout_constraintRight_toRightOf="@id/box_bike_details"
+        app:layout_constraintBottom_toTopOf="@id/label_odometer_reading"
+
+        style="@style/suzukiEditText1"
+        android:background="@color/color_grey_1000"
+        android:paddingLeft="6dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginRight="14dp"
+        />
+
+    <TextView
+        android:id="@+id/label_odometer_reading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@id/tv_beast_nickname"
+        app:layout_constraintLeft_toLeftOf="@id/box_bike_details"
+        app:layout_constraintRight_toRightOf="@id/box_bike_details"
+        app:layout_constraintBottom_toTopOf="@id/tv_odometer_reading"
+        app:layout_constraintHorizontal_bias="0"
+
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="12dp"
+        style="@style/suzukiHeader2.labelServiceHistory"
+        android:text="Current Odometer Reading"
+        />
+
+    <EditText
+        android:id="@+id/tv_odometer_reading"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@id/label_odometer_reading"
+        app:layout_constraintLeft_toLeftOf="@id/label_odometer_reading"
+        app:layout_constraintRight_toRightOf="@id/box_bike_details"
+        app:layout_constraintBottom_toTopOf="@id/label_date_of_purchase"
+        app:layout_constraintHorizontal_bias="0"
+
+        style="@style/suzukiEditText1"
+        android:background="@color/color_grey_1000"
+        android:paddingLeft="6dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginRight="14dp"
+        />
+
+    <TextView
+        android:id="@+id/label_date_of_purchase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@id/tv_odometer_reading"
+        app:layout_constraintLeft_toLeftOf="@id/box_bike_details"
+        app:layout_constraintRight_toRightOf="@id/box_bike_details"
+        app:layout_constraintBottom_toTopOf="@id/tv_date_of_purchase"
+        app:layout_constraintHorizontal_bias="0"
+
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="12dp"
+        style="@style/suzukiHeader2.labelServiceHistory"
+        android:text="Date of Purchase"
+        />
+
+    <EditText
+        android:id="@+id/tv_date_of_purchase"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@id/label_date_of_purchase"
+        app:layout_constraintLeft_toLeftOf="@id/label_date_of_purchase"
+        app:layout_constraintRight_toRightOf="@id/box_bike_details"
+
+
+        style="@style/suzukiEditText1"
+        android:background="@color/color_grey_1000"
+        android:paddingLeft="6dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginRight="14dp"
+        />
+
+    <View
+        android:id="@+id/white_bg_header_next_pms"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="@id/blue_bg_next_pms"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/blue_bg_next_pms"
+        app:layout_constraintLeft_toLeftOf="@id/blue_bg_next_pms"
+        android:background="@android:color/white"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="8dp"
+        />
+
+    <View
+        android:id="@+id/blue_bg_next_pms"
+        android:layout_width="125dp"
+        android:layout_height="35dp"
+
+        app:layout_constraintTop_toBottomOf="@id/box_bike_details"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/rectangle_blue_slanted_1"
+        />
+
+    <ImageView
+        android:id="@+id/box_next_pms"
+        android:layout_width="0dp"
+        android:layout_height="135dp"
+
+        app:layout_constraintTop_toBottomOf="@id/white_bg_header_next_pms"
+        app:layout_constraintLeft_toLeftOf="@id/blue_bg_next_pms"
+        app:layout_constraintRight_toRightOf="@id/white_bg_header_next_pms"
+        android:background="@android:color/white"
+        />
+
+    <TextView
+        android:id="@+id/label_header_next_pms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/blue_bg_next_pms"
+        app:layout_constraintTop_toTopOf="@id/blue_bg_next_pms"
+        app:layout_constraintBottom_toBottomOf="@id/blue_bg_next_pms"
+        app:layout_constraintRight_toRightOf="@id/blue_bg_next_pms"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginLeft="12dp"
+
+        android:text="MY NEXT PMS"
+        style="@style/suzukiHeader2.labelCustomerCare"
+        android:textColor="@color/color_blue_1000"
+        android:textSize="11sp"
+        />
+
+    <CheckBox
+        android:id="@+id/cb_manual_input"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+
+        app:layout_constraintLeft_toLeftOf="@id/white_bg_header_next_pms"
+        app:layout_constraintTop_toTopOf="@id/white_bg_header_next_pms"
+        app:layout_constraintBottom_toBottomOf="@id/white_bg_header_next_pms"
+        app:layout_constraintRight_toLeftOf="@id/label_manual_input"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintHorizontal_bias="0.75"
+        android:layout_marginRight="6dp"
+
+        android:background="@drawable/selector_checkbox_round"
+        android:button="@null"
+        />
+
+    <TextView
+        android:id="@+id/label_manual_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintLeft_toRightOf="@id/cb_manual_input"
+        app:layout_constraintTop_toTopOf="@id/white_bg_header_next_pms"
+        app:layout_constraintRight_toRightOf="@id/white_bg_header_next_pms"
+        app:layout_constraintBottom_toBottomOf="@id/white_bg_header_next_pms"
+
+        style="@style/suzukiHeader2.labelServiceHistory"
+        android:text="Manual Input my next PMS"
+        />
+
+    <TextView
+        android:id="@+id/label_date_pms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toTopOf="@id/box_next_pms"
+        app:layout_constraintLeft_toLeftOf="@id/box_next_pms"
+        app:layout_constraintRight_toRightOf="@id/box_next_pms"
+        app:layout_constraintHorizontal_bias="0"
+
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="12dp"
+        style="@style/suzukiHeader2.labelServiceHistory"
+        android:text="Date"
+        />
+
+    <EditText
+        android:id="@+id/tv_date_pms"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@id/label_date_pms"
+        app:layout_constraintLeft_toLeftOf="@id/label_date_pms"
+        app:layout_constraintRight_toRightOf="@id/box_next_pms"
+        app:layout_constraintBottom_toTopOf="@id/label_mileage_pms"
+
+        style="@style/suzukiEditText1"
+        android:background="@color/color_grey_1000"
+        android:paddingLeft="6dp"
+        android:paddingRight="20dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginRight="14dp"
+        />
+
+    <ImageView
+        android:id="@+id/ic_calendar"
+        android:layout_width="31dp"
+        android:layout_height="31dp"
+
+        app:layout_constraintRight_toRightOf="@id/tv_date_pms"
+        app:layout_constraintTop_toTopOf="@id/tv_date_pms"
+        app:layout_constraintBottom_toBottomOf="@id/tv_date_pms"
+        android:layout_marginRight="2dp"
+        android:src="@drawable/ic_calendar"
+        android:scaleType="fitCenter"
+
+        />
+
+
+
+    <TextView
+        android:id="@+id/label_mileage_pms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@id/tv_date_pms"
+        app:layout_constraintLeft_toLeftOf="@id/box_next_pms"
+        app:layout_constraintRight_toRightOf="@id/box_next_pms"
+        app:layout_constraintBottom_toTopOf="@id/tv_mileage_pms"
+        app:layout_constraintHorizontal_bias="0"
+
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="12dp"
+        style="@style/suzukiHeader2.labelServiceHistory"
+        android:text="Mileage left before next PMS"
+        />
+
+    <EditText
+        android:id="@+id/tv_mileage_pms"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@id/label_mileage_pms"
+        app:layout_constraintLeft_toLeftOf="@id/label_mileage_pms"
+        app:layout_constraintRight_toRightOf="@id/box_next_pms"
+        app:layout_constraintHorizontal_bias="0"
+
+        style="@style/suzukiEditText1"
+        android:background="@color/color_grey_1000"
+        android:paddingLeft="6dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginRight="14dp"
+        />
+
+    <TextView
+        android:id="@+id/label_warning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/box_next_pms"
+        app:layout_constraintTop_toBottomOf="@id/box_next_pms"
+        app:layout_constraintRight_toRightOf="@id/box_next_pms"
+        app:layout_constraintHorizontal_bias="0"
+
+        android:layout_marginTop="6dp"
+
+
+        android:text="*Turn on your notification to be notified of your next pms"
+        android:fontFamily="@font/overpass_extrabold"
+        android:textSize="11.5sp"
+        android:textColor="@color/color_red_200"
+        />
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="80dp"
+        android:layout_height="35dp"
+
+        app:layout_constraintTop_toBottomOf="@id/label_warning"
+        app:layout_constraintLeft_toLeftOf="@id/label_warning"
+        style="@style/suzukiButton2"
+        android:text="SAVE"
+        android:textSize="11sp"
+        android:backgroundTint="@color/color_blue_90"
+        />
+
+    <TextView
+        android:id="@+id/tv_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:iconTint="@color/color_blue_300"
+        app:layout_constraintRight_toLeftOf="@id/ib_next_arrow"
+        app:layout_constraintTop_toTopOf="@id/ib_next_arrow"
+        app:layout_constraintBottom_toBottomOf="@id/ib_next_arrow"
+        android:layout_marginRight="8dp"
+        style="@style/suzukiHeader2"
+        android:textColor="@color/color_blue_300"
+        android:textStyle="bold"
+
+        android:text="NEXT"
+        />
+
+    <ImageButton
+        android:id="@+id/ib_next_arrow"
+        android:layout_width="27.5dp"
+        android:layout_height="27.5dp"
+
+        android:background="@drawable/ic_arrow_right"
+        app:layout_constraintTop_toTopOf="@id/btn_save"
+        app:layout_constraintBottom_toBottomOf="@id/btn_save"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="8dp"
+        />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

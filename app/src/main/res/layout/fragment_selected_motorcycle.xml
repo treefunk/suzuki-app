@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/color_blue_1100">
+
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/grey_line_header"
+        android:background="@color/color_blue_1100"
+        />
+
+    <ImageView
+        android:id="@+id/iv_motorcycle_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tv_motorcycle_caption"
+        app:layout_constraintHorizontal_bias="0"
+
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="18dp"
+        android:src="@drawable/img_crossover_logo"
+        android:scaleType="fitCenter"
+        />
+
+    <TextView
+        android:id="@+id/tv_motorcycle_caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@id/iv_motorcycle_logo"
+        app:layout_constraintLeft_toLeftOf="@id/iv_motorcycle_logo"
+        app:layout_constraintRight_toRightOf="@id/iv_motorcycle_logo"
+        app:layout_constraintBottom_toTopOf="@id/grey_line_header"
+        app:layout_constraintHorizontal_bias="0"
+
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="10dp"
+        style="@style/suzukiHeader1_1"
+        android:text="Adventure Across Borders"
+        />
+
+
+    <View
+        android:id="@+id/white_bg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        app:layout_constraintTop_toTopOf="@id/grey_line_header"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/rectangle_white_slanted"
+        android:background="@color/color_blue_1100"        />
+
+    <View
+        android:id="@+id/grey_line_header"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_motorcycle_caption"
+        app:layout_constraintBottom_toTopOf="@id/white_bg"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@color/color_grey_900"
+        />
+
+    <ImageView
+        android:id="@+id/ic_nearest_dealer"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/grey_line_header"
+        app:layout_constraintRight_toLeftOf="@id/tv_link_nearest_dealer"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:layout_marginTop="3dp"
+        android:src="@drawable/ic_find_dealer"
+        android:scaleType="fitCenter"
+        />
+
+    <TextView
+        android:id="@+id/tv_link_nearest_dealer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toTopOf="@id/ic_nearest_dealer"
+        app:layout_constraintLeft_toRightOf="@id/ic_nearest_dealer"
+        app:layout_constraintRight_toLeftOf="@id/dealer_divider"
+        app:layout_constraintBottom_toBottomOf="@id/ic_nearest_dealer"
+
+        android:layout_marginRight="6dp"
+
+        style="@style/suzukiTextLink2"
+        android:text="@string/link_find_nearest_dealer"
+        />
+
+    <View
+        android:id="@+id/dealer_divider"
+        android:layout_width="1.5dp"
+        android:layout_height="15dp"
+
+        app:layout_constraintTop_toTopOf="@id/ic_nearest_dealer"
+        app:layout_constraintLeft_toRightOf="@id/tv_link_nearest_dealer"
+        app:layout_constraintRight_toLeftOf="@id/ic_watch"
+        app:layout_constraintBottom_toBottomOf="@id/ic_nearest_dealer"
+
+        android:background="@color/color_grey_900"
+        />
+
+    <ImageView
+        android:id="@+id/ic_watch"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+
+        app:layout_constraintLeft_toRightOf="@id/dealer_divider"
+        app:layout_constraintTop_toBottomOf="@id/grey_line_header"
+        app:layout_constraintRight_toLeftOf="@id/tv_link_watch"
+
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="2dp"
+        android:src="@drawable/ic_play"
+        android:scaleType="fitCenter"
+        />
+
+    <TextView
+        android:id="@+id/tv_link_watch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toTopOf="@id/ic_nearest_dealer"
+        app:layout_constraintLeft_toRightOf="@id/ic_watch"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/ic_nearest_dealer"
+
+
+        style="@style/suzukiTextLink2"
+        android:text="@string/link_watch_product_video"
+        />
+
+    <ImageView
+        android:id="@+id/rectangle_white_slanted"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        app:layout_constraintTop_toBottomOf="@id/grey_line_header"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        android:layout_marginTop="90dp"
+
+        android:background="@drawable/rectangle_white_slanted"
+        />
+
+    <ImageView
+        android:id="@+id/iv_motorcycle_image"
+        android:layout_width="0dp"
+        android:layout_height="220dp"
+
+        app:layout_constraintTop_toBottomOf="@id/dealer_divider"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:src="@drawable/img_crossover"
+        android:scaleType="centerInside"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="10dp"
+        />
+
+    <ImageButton
+        android:id="@+id/ib_color_variant_left_arrow"
+        android:layout_width="32.5dp"
+        android:layout_height="32.5dp"
+
+        android:background="@drawable/ic_carousel_left"
+        app:layout_constraintTop_toBottomOf="@id/iv_motorcycle_image"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="8dp"
+        />
+
+    <ImageButton
+        android:id="@+id/ib_color_variant_right_arrow"
+        android:layout_width="32.5dp"
+        android:layout_height="32.5dp"
+
+        android:background="@drawable/ic_carousel_right"
+        app:layout_constraintTop_toBottomOf="@id/iv_motorcycle_image"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="8dp"
+        />
+
+    <TextView
+        android:id="@+id/label_color_variant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Color Variants"
+        app:layout_constraintTop_toTopOf="@id/ib_color_variant_left_arrow"
+        app:layout_constraintLeft_toRightOf="@id/ib_color_variant_left_arrow"
+        app:layout_constraintRight_toLeftOf="@id/ib_color_variant_right_arrow"
+        app:layout_constraintBottom_toTopOf="@id/rv_color_variant"
+
+
+        style="@style/suzukiTextBody3"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_color_variant"
+        android:layout_width="wrap_content"
+        android:layout_height="14dp"
+
+        app:layout_constraintLeft_toLeftOf="@id/label_color_variant"
+        app:layout_constraintRight_toRightOf="@id/label_color_variant"
+        app:layout_constraintTop_toBottomOf="@id/label_color_variant"
+        app:layout_constraintBottom_toTopOf="@id/ib_view_360"
+
+        android:layout_marginTop="4dp"
+
+        tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_motorcycle_color_variant"
+        tools:itemCount="4"
+        tools:orientation="horizontal"
+        />
+
+    <ImageView
+        android:id="@+id/ib_view_360"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@id/rv_color_variant"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="10dp"
+
+        android:src="@drawable/img_view_360"
+
+        />
+
+
+
+    <View
+        android:id="@+id/white_price_background"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        app:layout_constraintHorizontal_weight="1"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ib_view_360"
+        app:layout_constraintRight_toLeftOf="@id/price_background"
+
+
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="12dp"
+        android:background="@android:color/white"
+        />
+
+    <View
+        android:id="@+id/white_bg_extra"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/white"
+
+        app:layout_constraintLeft_toLeftOf="@id/white_price_background"
+        app:layout_constraintRight_toRightOf="@id/price_background"
+        app:layout_constraintTop_toTopOf="@id/white_price_background"
+        app:layout_constraintBottom_toBottomOf="@id/white_price_background"
+        />
+    <View
+        android:id="@+id/price_background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHorizontal_weight="1.19"
+
+        app:layout_constraintTop_toTopOf="@id/white_price_background"
+        app:layout_constraintLeft_toRightOf="@id/white_price_background"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/white_price_background"
+
+        android:layout_marginRight="8dp"
+        android:background="@drawable/rectangle_blue_slanted_3"
+        />
+
+    <TextView
+        android:id="@+id/label_price"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/white_price_background"
+
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="4dp"
+        android:paddingLeft="4dp"
+
+        style="@style/suzukiSemiBlackText1"
+
+        android:text="PRICE"
+        />
+
+    <TextView
+        android:id="@+id/tv_motorcycle_name"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        app:layout_constraintLeft_toLeftOf="@id/label_price"
+        app:layout_constraintTop_toBottomOf="@id/label_price"
+        app:layout_constraintRight_toRightOf="@id/white_price_background"
+        app:layout_constraintBottom_toBottomOf="@id/white_price_background"
+        app:layout_constraintVertical_bias="0"
+        android:paddingLeft="4dp"
+
+
+        android:text="MATTE YELLOW PREMIUM EDITION"
+        style="@style/suzukiTextBody2"
+        android:textColor="@color/color_black_alpha65"
+        android:fontFamily="@font/forza_bold"
+        android:letterSpacing="0.09"
+        android:textSize="9.5sp"
+        />
+
+    <TextView
+        android:id="@+id/label_currency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintLeft_toLeftOf="@id/price_background"
+        app:layout_constraintTop_toTopOf="@id/price_background"
+        app:layout_constraintRight_toRightOf="@id/price_background"
+        app:layout_constraintHorizontal_bias="0.02"
+
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="18dp"
+
+        style="@style/suzukiSemiBlackText1"
+        android:text="PHP"
+        android:textColor="@android:color/white"
+        />
+
+    <TextView
+        android:id="@+id/tv_motorcycle_price"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintBottom_toBottomOf="@id/price_background"
+        app:layout_constraintLeft_toLeftOf="@id/price_background"
+        app:layout_constraintRight_toRightOf="@id/price_background"
+
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="4dp"
+
+        style="@style/suzukiHeader1_1"
+        android:gravity="right"
+        android:text="63,900.00"
+        android:textSize="19.5sp"
+        android:textColor="@android:color/white"
+
+        />
+
+    <TextView
+        android:id="@+id/label_features"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@id/white_price_background"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="10dp"
+        style="@style/suzukiHeader1_1"
+        android:text="FEATURES"
+        android:textSize="15.5sp"
+        />
+
+    <ImageButton
+        android:id="@+id/ib_features_left_arrow"
+        android:layout_width="32.5dp"
+        android:layout_height="32.5dp"
+
+        android:background="@drawable/ic_carousel_left"
+        app:layout_constraintTop_toTopOf="@id/rv_motorcycle_features"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/rv_motorcycle_features"
+        app:layout_constraintBottom_toBottomOf="@id/rv_motorcycle_features"
+        android:layout_marginLeft="8dp"
+        />
+
+    <!--  TODO: item width should be = recyclerview width / 4   -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_motorcycle_features"
+        android:layout_width="0dp"
+        android:layout_height="75dp"
+        app:layout_constraintTop_toBottomOf="@id/label_features"
+        app:layout_constraintLeft_toRightOf="@id/ib_features_left_arrow"
+        app:layout_constraintRight_toLeftOf="@id/ib_features_right_arrow"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+        tools:itemCount="4"
+        tools:listitem="@layout/item_motorcycle_feature"
+        tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:spanCount="4"
+        tools:orientation="horizontal"
+        />
+
+    <ImageButton
+        android:id="@+id/ib_features_right_arrow"
+        android:layout_width="32.5dp"
+        android:layout_height="32.5dp"
+
+        android:background="@drawable/ic_carousel_right"
+        app:layout_constraintTop_toTopOf="@id/rv_motorcycle_features"
+        app:layout_constraintLeft_toRightOf="@id/rv_motorcycle_features"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/rv_motorcycle_features"
+        android:layout_marginRight="8dp"
+        />
+
+
+    <TextView
+        android:id="@+id/label_specifications"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@id/rv_motorcycle_features"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/blue_bg_specs"
+
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="10dp"
+        style="@style/suzukiHeader1_1"
+        android:text="SPECIFICATIONS"
+        android:textSize="15.5sp"
+        />
+
+    <View
+        android:id="@+id/blue_bg_specs"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        app:layout_constraintTop_toBottomOf="@id/label_specifications"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@color/color_blue_150"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="6dp"
+
+        />
+
+
+    <TextView
+        android:id="@+id/label_engine_specs"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+
+        app:layout_constraintTop_toBottomOf="@id/label_specifications"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/label_chassis_specs"
+        app:layout_constraintBottom_toBottomOf="@id/line_white_specs"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center_vertical"
+
+        android:padding="6dp"
+        style="@style/suzukiTextBody2"
+        android:text="Engine\nSpecifications"
+        android:textColor="@color/color_blue_1000"
+        android:letterSpacing="0.07"
+        android:fontFamily="@font/forza_bold"
+        android:textSize="10sp"
+        />
+
+    <TextView
+        android:id="@+id/label_chassis_specs"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+
+
+        app:layout_constraintTop_toBottomOf="@id/label_specifications"
+        app:layout_constraintLeft_toRightOf="@id/label_engine_specs"
+        app:layout_constraintRight_toLeftOf="@id/label_dimensions"
+        app:layout_constraintBottom_toBottomOf="@id/line_white_specs"
+        android:layout_marginTop="4dp"
+
+        android:padding="6dp"
+        style="@style/suzukiTextBody2"
+        android:text="Chassis\nSpecifications"
+        android:textColor="@color/color_grey_disabled"
+        android:gravity="center_vertical"
+        android:fontFamily="@font/forza_bold"
+
+        android:textSize="10sp"
+        android:background="@android:color/white"
+
+
+        />
+
+    <TextView
+        android:id="@+id/label_dimensions"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+
+
+        app:layout_constraintTop_toBottomOf="@id/label_specifications"
+        app:layout_constraintLeft_toRightOf="@id/label_chassis_specs"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/line_white_specs"
+
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center_vertical"
+        android:textSize="10sp"
+
+
+        android:padding="6dp"
+        style="@style/suzukiTextBody2"
+        android:text="Dimensions"
+        android:textColor="@color/color_grey_disabled"
+        android:background="@android:color/white"
+        android:fontFamily="@font/forza_bold"
+
+
+        />
+
+    <View
+        android:id="@+id/line_white_specs"
+        android:layout_width="0dp"
+        android:layout_height="0.65dp"
+
+        app:layout_constraintLeft_toLeftOf="@id/label_engine_specs"
+        app:layout_constraintRight_toRightOf="@id/label_dimensions"
+        app:layout_constraintBottom_toBottomOf="@id/label_engine_specs"
+        android:background="@color/color_blue_1000"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_motorcycle_specs"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintTop_toBottomOf="@id/line_white_specs"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:listitem="@layout/item_motorcycle_specification"
+        tools:itemCount="7"
+        tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:orientation="vertical"
+        />
+
+    <Button
+        android:id="@+id/btn_download_brochure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@id/rv_motorcycle_specs"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_book_test_drive"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="2dp"
+        android:text="DOWNLOAD BROCHURE"
+        android:textSize="14sp"
+        style="@style/suzukiButton1"
+        app:backgroundTint="@color/color_blue_300"
+        />
+
+    <Button
+        android:id="@+id/btn_book_test_drive"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@id/btn_download_brochure"
+        app:layout_constraintLeft_toLeftOf="@id/btn_download_brochure"
+        app:layout_constraintRight_toRightOf="@id/btn_download_brochure"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="24dp"
+        android:text="BOOK A TEST RIDE"
+        android:textSize="14sp"
+
+        style="@style/suzukiButton1"
+        app:backgroundTint="@color/color_blue_300"
+        />
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="95dp"
+    android:orientation="horizontal"
+    android:paddingLeft="10dp"
+    android:paddingTop="12dp"
+    android:paddingRight="10dp">
+
+
+    <TextView
+        android:id="@+id/label_dealer_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/suzukiHeader1_1"
+
+        android:text="Dealer Name"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+    <ImageView
+        android:id="@+id/ic_address"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+
+        android:src="@drawable/ic_find_dealer"
+        app:layout_constraintTop_toTopOf="@id/tv_address"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/tv_address"
+        app:layout_constraintBottom_toBottomOf="@id/tv_address"
+        android:translationX="-4dp"
+
+        />
+
+    <TextView
+        android:id="@+id/tv_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        style="@style/suzukiSemiBlackText1"
+        app:layout_constraintTop_toBottomOf="@id/label_dealer_name"
+        app:layout_constraintLeft_toRightOf="@id/ic_address"
+        app:layout_constraintBottom_toTopOf="@id/tv_phone"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintVertical_bias="0"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:text="Address 1, Adress 2, City"
+        />
+    <ImageView
+        android:id="@+id/ic_phone"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+
+        android:src="@drawable/ic_phone"
+        app:layout_constraintTop_toTopOf="@id/tv_phone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/tv_phone"
+        app:layout_constraintBottom_toBottomOf="@id/tv_phone"
+        android:translationX="-3dp"
+
+        />
+
+    <TextView
+        android:id="@+id/tv_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        style="@style/suzukiSemiBlackText1"
+        app:layout_constraintTop_toBottomOf="@id/tv_address"
+        app:layout_constraintLeft_toRightOf="@id/ic_phone"
+        app:layout_constraintBottom_toTopOf="@id/tv_mobile"
+        android:layout_marginBottom="6dp"
+
+        android:text="+632 8123 4567"
+        />
+
+    <ImageView
+        android:id="@+id/ic_mobile"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+
+        android:src="@drawable/ic_mobile"
+        app:layout_constraintTop_toTopOf="@id/tv_mobile"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/tv_mobile"
+        app:layout_constraintBottom_toBottomOf="@id/tv_mobile"
+        android:translationX="-3dp"
+
+        />
+
+    <TextView
+        android:id="@+id/tv_mobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        style="@style/suzukiSemiBlackText1"
+        app:layout_constraintTop_toBottomOf="@id/tv_phone"
+        app:layout_constraintLeft_toRightOf="@id/ic_mobile"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="+63917 8123 4567"
+        />
+
+    <Button
+        android:id="@+id/btn_get_directions"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/btn_check_dealers_info"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_check_dealers_info"
+        app:layout_constraintVertical_chainStyle="packed"
+
+        style="@style/suzukiButton2"
+        android:text="GET DIRECTIONS"
+        />
+
+    <Button
+        android:id="@+id/btn_check_dealers_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@id/btn_get_directions"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/grey_line_footer"
+
+
+        style="@style/suzukiButton2"
+        android:text="CHECK DEALER'S INFO"
+        app:backgroundTint="@color/color_blue_300"
+        />
+
+
+
+
+    <View
+        android:id="@+id/grey_line_footer"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_blue_1000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

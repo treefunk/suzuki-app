@@ -5,12 +5,32 @@
     <color name="colorAccent">#03DAC5</color>
     <color name="color_blue_200">#1C5E8D</color>
     <color name="color_blue_300">#3398D8</color>
+    <color name="color_blue_90">#003145</color>
+
     <color name="color_blue_100">#0C3144</color>
+    <color name="color_blue_100_alpha70">#B30C3144</color>
+    <color name="color_blue_120">#1B4556</color>
+
+    <color name="color_blue_100_65alpha">#A60C3144</color>
     <color name="color_blue_150">#005E90</color>
     <color name="color_blue_900">#EEF2F3</color>
+    <color name="color_blue_250">#005E90</color>
+    <color name="color_blue_270">#005BAA</color>
     <color name="color_blue_1000">#EFF2F3</color>
     <color name="color_blue_1100">#FEFEFE</color>
     <color name="color_facebook_blue">#4167B0</color>
     <color name="color_grey_1000">#E8E8E8</color>
-    <color name="color_grey_33">#005E90</color>
+    <color name="color_grey_1100">#EEEEEE</color>
+    <color name="color_grey_900">#E7E7E7</color>
+    <color name="color_light_white">#FFFF</color>
+    <color name="color_red_200">#C11636</color>
+    <color name="color_black_alpha45">#73000000</color>
+    <color name="color_black_alpha55">#8C000000</color>
+    <color name="color_black_alpha65">#A6000000</color>
+    <color name="color_black_alpha80">#B3000000</color>
+    <color name="color_grey_disabled">#919191</color>
+
+    <color name="color_purple_100">#3A4D98</color>
+
+
 </resources>

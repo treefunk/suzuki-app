@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:id="@+id/chipgroup_change_oil"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@id/label_change_oil"
+    app:layout_constraintLeft_toLeftOf="@id/label_change_oil"
+    app:layout_constraintRight_toRightOf="@id/box_maintenance"
+    android:layout_marginTop="2dp"
+    app:singleSelection="true"
+    app:selectionRequired="true"
+
+    tools:parentTag="com.google.android.material.chip.ChipGroup"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.chip.Chip
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CHECK"
+        style="@style/suzukiChoiceChip"
+        android:background="@drawable/selector_toggle_rect_blue"
+        />
+
+    <com.google.android.material.chip.Chip
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="COMPLETED"
+
+        style="@style/suzukiChoiceChip"
+        android:background="@drawable/selector_toggle_rect_blue"
+        />
+</merge>

@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
 
     android:background="@drawable/img_main_bg"
-    tools:context=".motorcycle_models.MotorcycleModelsFragment"
+    tools:context=".features.motorcycle_models.MotorcycleModelsFragment"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
 
@@ -40,7 +40,7 @@
         android:layout_marginTop="8dp"
 
         android:elevation="2dp"
-        android:background="@drawable/shape_rect_semi_rounded_corners"
+        android:background="@drawable/shape_rect_grey_semi_rounded_corners"
         />
 
     <ImageView
@@ -82,7 +82,7 @@
         android:layout_marginTop="8dp"
 
         android:elevation="2dp"
-        android:background="@drawable/shape_rect_semi_rounded_corners"
+        android:background="@drawable/shape_rect_grey_semi_rounded_corners"
         />
 
     <ImageView
@@ -125,7 +125,7 @@
         android:layout_marginTop="8dp"
 
         android:elevation="2dp"
-        android:background="@drawable/shape_rect_semi_rounded_corners"
+        android:background="@drawable/shape_rect_grey_semi_rounded_corners"
         />
 
     <ImageView
@@ -168,7 +168,7 @@
         android:layout_marginTop="8dp"
 
         android:elevation="2dp"
-        android:background="@drawable/shape_rect_semi_rounded_corners"
+        android:background="@drawable/shape_rect_grey_semi_rounded_corners"
         />
 
     <ImageView
@@ -211,7 +211,7 @@
         android:layout_marginTop="8dp"
 
         android:elevation="2dp"
-        android:background="@drawable/shape_rect_semi_rounded_corners"
+        android:background="@drawable/shape_rect_grey_semi_rounded_corners"
         />
 
     <ImageView
@@ -257,7 +257,7 @@
         android:layout_marginTop="8dp"
 
         android:elevation="2dp"
-        android:background="@drawable/shape_rect_semi_rounded_corners"
+        android:background="@drawable/shape_rect_grey_semi_rounded_corners"
         />
 
     <ImageView
@@ -300,7 +300,7 @@
         android:layout_marginTop="8dp"
 
         android:elevation="2dp"
-        android:background="@drawable/shape_rect_semi_rounded_corners"
+        android:background="@drawable/shape_rect_grey_semi_rounded_corners"
         />
 
     <ImageView
@@ -345,7 +345,7 @@
         android:layout_marginTop="8dp"
 
         android:elevation="2dp"
-        android:background="@drawable/shape_rect_semi_rounded_corners"
+        android:background="@drawable/shape_rect_grey_semi_rounded_corners"
         />
 
     <ImageView
@@ -388,7 +388,7 @@
         android:layout_marginTop="8dp"
 
         android:elevation="2dp"
-        android:background="@drawable/shape_rect_semi_rounded_corners"
+        android:background="@drawable/shape_rect_grey_semi_rounded_corners"
         />
 
     <ImageView
@@ -431,7 +431,7 @@
         android:layout_marginTop="8dp"
 
         android:elevation="2dp"
-        android:background="@drawable/shape_rect_semi_rounded_corners"
+        android:background="@drawable/shape_rect_grey_semi_rounded_corners"
         />
 
     <ImageView

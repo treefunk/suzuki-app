@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "179063550762",
+    "firebase_url": "https://suzuki-92ccb.firebaseio.com",
+    "project_id": "suzuki-92ccb",
+    "storage_bucket": "suzuki-92ccb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:179063550762:android:d538ee32a1aed2f5e16453",
+        "android_client_info": {
+          "package_name": "com.myoptimind.suzuki_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "179063550762-23kpje43ktd11a5dsmnk41k3vibj08c5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBeOGn9CuYxRa2Leb5I2VHEn_5H20Tkt5E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "179063550762-23kpje43ktd11a5dsmnk41k3vibj08c5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "179063550762-3db7g3cdbf4ts3dkiqdslj0nqv1agt60.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.myoptimind.suzuki"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

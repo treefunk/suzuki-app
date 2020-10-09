@@ -5,6 +5,8 @@
     <color name="colorAccent">#03DAC5</color>
     <color name="color_blue_200">#1C5E8D</color>
     <color name="color_blue_300">#3398D8</color>
+    <color name="color_blue_300_alpha30">#4D3398D8</color>
+
     <color name="color_blue_90">#003145</color>
 
     <color name="color_blue_100">#0C3144</color>

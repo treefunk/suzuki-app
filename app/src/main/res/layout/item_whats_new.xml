@@ -69,6 +69,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="6dp"
         android:text="PROMO"
+        android:textAllCaps="true"
         />
 
     <View
@@ -79,6 +80,8 @@
         app:layout_constraintBottom_toBottomOf="@id/tv_type"
         app:layout_constraintLeft_toRightOf="@id/tv_type"
         app:layout_constraintRight_toLeftOf="@id/tv_caption"
+        android:layout_marginTop="1.5dp"
+        android:layout_marginBottom="1.5dp"
         android:background="@color/color_black_alpha80"
         />
 

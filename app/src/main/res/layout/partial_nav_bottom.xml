@@ -19,7 +19,7 @@
 
 
     <ImageView
-        android:id="@+id/ib_motorcycle"
+        android:id="@+id/ib_menu_motorcycle"
         android:layout_width="62.5dp"
         android:layout_height="62.5dp"
 
@@ -31,7 +31,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
 
 
-        app:layout_constraintRight_toLeftOf="@id/ib_spareparts"
+        app:layout_constraintRight_toLeftOf="@id/ib_menu_spareparts"
         app:layout_constraintTop_toTopOf="@id/triangleshape"
 
         app:layout_constraintVertical_bias="0.57" />
@@ -43,24 +43,24 @@
 
         android:layout_height="wrap_content"
         android:text="@string/label_motorcycle_models"
-        app:layout_constraintBottom_toBottomOf="@id/ib_motorcycle"
-        app:layout_constraintLeft_toLeftOf="@id/ib_motorcycle"
+        app:layout_constraintBottom_toBottomOf="@id/ib_menu_motorcycle"
+        app:layout_constraintLeft_toLeftOf="@id/ib_menu_motorcycle"
 
-        app:layout_constraintRight_toRightOf="@id/ib_motorcycle"
-        app:layout_constraintTop_toBottomOf="@id/ib_motorcycle" />
+        app:layout_constraintRight_toRightOf="@id/ib_menu_motorcycle"
+        app:layout_constraintTop_toBottomOf="@id/ib_menu_motorcycle" />
 
     <ImageView
-        android:id="@+id/ib_spareparts"
+        android:id="@+id/ib_menu_spareparts"
         android:layout_width="62.5dp"
         android:layout_height="62.5dp"
 
         android:elevation="30dp"
         android:src="@drawable/ic_spare_parts_off"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="@id/ib_motorcycle"
+        app:layout_constraintLeft_toRightOf="@id/ib_menu_motorcycle"
 
 
-        app:layout_constraintRight_toLeftOf="@id/ib_dealerlocator"
+        app:layout_constraintRight_toLeftOf="@id/ib_menu_dealerlocator"
         app:layout_constraintTop_toTopOf="@id/triangleshape"
         app:layout_constraintVertical_bias="0.57" />
 
@@ -71,24 +71,24 @@
 
         android:layout_height="wrap_content"
         android:text="@string/label_spareparts"
-        app:layout_constraintBottom_toBottomOf="@id/ib_spareparts"
-        app:layout_constraintLeft_toLeftOf="@id/ib_spareparts"
+        app:layout_constraintBottom_toBottomOf="@id/ib_menu_spareparts"
+        app:layout_constraintLeft_toLeftOf="@id/ib_menu_spareparts"
 
-        app:layout_constraintRight_toRightOf="@id/ib_spareparts"
-        app:layout_constraintTop_toBottomOf="@id/ib_spareparts" />
+        app:layout_constraintRight_toRightOf="@id/ib_menu_spareparts"
+        app:layout_constraintTop_toBottomOf="@id/ib_menu_spareparts" />
 
     <ImageView
-        android:id="@+id/ib_dealerlocator"
+        android:id="@+id/ib_menu_dealerlocator"
         android:layout_width="62.5dp"
         android:layout_height="62.5dp"
 
         android:elevation="30dp"
         android:src="@drawable/ic_dealer_locator_off"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="@id/ib_spareparts"
+        app:layout_constraintLeft_toRightOf="@id/ib_menu_spareparts"
 
 
-        app:layout_constraintRight_toLeftOf="@id/ib_servicecenters"
+        app:layout_constraintRight_toLeftOf="@id/ib_menu_servicecenters"
         app:layout_constraintTop_toTopOf="@id/triangleshape"
         app:layout_constraintVertical_bias="0.57" />
 
@@ -99,24 +99,24 @@
 
         android:layout_height="wrap_content"
         android:text="@string/label_dealerlocator"
-        app:layout_constraintBottom_toBottomOf="@id/ib_dealerlocator"
-        app:layout_constraintLeft_toLeftOf="@id/ib_dealerlocator"
+        app:layout_constraintBottom_toBottomOf="@id/ib_menu_dealerlocator"
+        app:layout_constraintLeft_toLeftOf="@id/ib_menu_dealerlocator"
 
-        app:layout_constraintRight_toRightOf="@id/ib_dealerlocator"
-        app:layout_constraintTop_toBottomOf="@id/ib_dealerlocator" />
+        app:layout_constraintRight_toRightOf="@id/ib_menu_dealerlocator"
+        app:layout_constraintTop_toBottomOf="@id/ib_menu_dealerlocator" />
 
     <ImageView
-        android:id="@+id/ib_servicecenters"
+        android:id="@+id/ib_menu_servicecenters"
         android:layout_width="62.5dp"
         android:layout_height="62.5dp"
 
         android:elevation="30dp"
         android:src="@drawable/ic_service_centers_off"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="@id/ib_dealerlocator"
+        app:layout_constraintLeft_toRightOf="@id/ib_menu_dealerlocator"
 
 
-        app:layout_constraintRight_toLeftOf="@id/ib_my_suzuki_diary"
+        app:layout_constraintRight_toLeftOf="@id/ib_menu_my_suzuki_diary"
         app:layout_constraintTop_toTopOf="@id/triangleshape"
         app:layout_constraintVertical_bias="0.57" />
 
@@ -127,14 +127,14 @@
 
         android:layout_height="wrap_content"
         android:text="@string/label_servicecenters"
-        app:layout_constraintBottom_toBottomOf="@id/ib_servicecenters"
-        app:layout_constraintLeft_toLeftOf="@id/ib_servicecenters"
+        app:layout_constraintBottom_toBottomOf="@id/ib_menu_servicecenters"
+        app:layout_constraintLeft_toLeftOf="@id/ib_menu_servicecenters"
 
-        app:layout_constraintRight_toRightOf="@id/ib_servicecenters"
-        app:layout_constraintTop_toBottomOf="@id/ib_servicecenters" />
+        app:layout_constraintRight_toRightOf="@id/ib_menu_servicecenters"
+        app:layout_constraintTop_toBottomOf="@id/ib_menu_servicecenters" />
 
     <ImageView
-        android:id="@+id/ib_my_suzuki_diary"
+        android:id="@+id/ib_menu_my_suzuki_diary"
         android:layout_width="62.5dp"
         android:layout_height="62.5dp"
 
@@ -143,7 +143,7 @@
         android:src="@drawable/ic_suzuki_diary_off"
         app:layout_constraintBottom_toBottomOf="parent"
 
-        app:layout_constraintLeft_toRightOf="@id/ib_servicecenters"
+        app:layout_constraintLeft_toRightOf="@id/ib_menu_servicecenters"
 
 
         app:layout_constraintRight_toRightOf="parent"
@@ -157,11 +157,11 @@
 
         android:layout_height="wrap_content"
         android:text="@string/label_my_suzuki_diary"
-        app:layout_constraintBottom_toBottomOf="@id/ib_my_suzuki_diary"
-        app:layout_constraintLeft_toLeftOf="@id/ib_my_suzuki_diary"
+        app:layout_constraintBottom_toBottomOf="@id/ib_menu_my_suzuki_diary"
+        app:layout_constraintLeft_toLeftOf="@id/ib_menu_my_suzuki_diary"
 
-        app:layout_constraintRight_toRightOf="@id/ib_my_suzuki_diary"
-        app:layout_constraintTop_toBottomOf="@id/ib_my_suzuki_diary" />
+        app:layout_constraintRight_toRightOf="@id/ib_menu_my_suzuki_diary"
+        app:layout_constraintTop_toBottomOf="@id/ib_menu_my_suzuki_diary" />
 
     <ImageButton
         android:id="@+id/fab_submenu"
@@ -170,7 +170,9 @@
 
         android:layout_marginRight="75dp"
         android:layout_marginBottom="110dp"
-        android:background="@drawable/ic_menu"
+        android:src="@drawable/ic_menu"
+        android:scaleType="centerInside"
+        android:background="?attr/selectableItemBackgroundBorderless"
         android:elevation="24dp"
 
 
@@ -178,5 +180,19 @@
         app:layout_constraintLeft_toRightOf="@id/triangleshape"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="@id/triangleshape" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_bottom_nav"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:constraint_referenced_ids="triangleshape,
+        ib_menu_motorcycle,
+        ib_menu_spareparts,
+        ib_menu_dealerlocator,
+        ib_menu_servicecenters,
+        ib_menu_my_suzuki_diary,
+label_motorycycle,label_spareparts,label_dealerlocator,label_servicecenters,label_my_suzuki_diary"
+
+        />
 
 </merge>

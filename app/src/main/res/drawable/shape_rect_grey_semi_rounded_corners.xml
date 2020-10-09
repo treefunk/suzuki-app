@@ -8,6 +8,6 @@
         />
 
     <solid
-        android:color="@android:color/white"
+        android:color="@color/color_grey_1100"
         />
 </shape>

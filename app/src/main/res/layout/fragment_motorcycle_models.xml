@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/img_main_bg"
-    tools:context=".motorcycle_models.MotorcycleModelsFragment">
+    tools:context=".features.motorcycle_models.MotorcycleModelsFragment"
+    android:layout_marginBottom="80dp"
+    >
 
     <TextView
         android:id="@+id/tv_title"
@@ -84,7 +87,30 @@
         android:text="FILTER BY"
         />
 
-    <TextView
+    <AutoCompleteTextView
+        android:id="@+id/tv_filter_value"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/filter_white_background"
+        app:layout_constraintLeft_toRightOf="@id/filter_background"
+        app:layout_constraintBottom_toBottomOf="@id/filter_white_background"
+        app:layout_constraintRight_toRightOf="@id/ib_dropdown_arrow"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintHorizontal_bias="0"
+        android:background="@android:color/white"
+
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+
+        android:layout_marginLeft="18dp"
+
+        style="@style/suzukiTextBody2"
+        android:textAllCaps="true"
+        />
+
+<!--    <TextView
         android:id="@+id/tv_filter_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -101,7 +127,7 @@
         style="@style/suzukiTextBody2"
         android:text="Underbones"
         android:textAllCaps="true"
-        />
+        />-->
 
     <ImageButton
         android:id="@+id/ib_dropdown_arrow"
@@ -127,6 +153,9 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
 
+        android:paddingBottom="60dp"
+        android:clipToPadding="false"
+        android:background="@android:color/transparent"
         tools:listitem="@layout/item_motorcycle_model"
         />
 

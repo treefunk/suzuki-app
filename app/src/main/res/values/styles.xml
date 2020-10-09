@@ -221,9 +221,9 @@
     </style>
 
     <style name="suzukiButton1" parent="TextAppearance.MaterialComponents.Button">
-        <item name="android:minHeight">40dp</item>
-        <item name="android:paddingTop">6dp</item>
-        <item name="android:paddingBottom">6dp</item>
+        <item name="android:minHeight">25dp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
         <item name="android:minWidth">180dp</item>
         <item name="android:includeFontPadding">true</item>
         <item name="android:textSize">12.5sp</item>

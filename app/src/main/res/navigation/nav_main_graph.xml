@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.myoptimind.suzuki_app.home.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home"
+        >
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/motorcycleModelsFragment"
+        android:name="com.myoptimind.suzuki_app.features.motorcycle_models.MotorcycleModelsFragment"
+        android:label="motorcycleModelsFragment"
+        tools:layout="@layout/fragment_motorcycle_models"
+        />
+
+    <fragment
+        android:id="@+id/sparePartsFragment"
+        android:name="com.myoptimind.suzuki_app.features.spare_parts.SparePartsFragment"
+        android:label="SparePartsFragment"
+        tools:layout="@layout/fragment_spare_parts"
+        />
+    <action
+        android:id="@+id/action_global_motorcycleModelsFragment"
+        app:destination="@id/motorcycleModelsFragment"
+        app:enterAnim="@anim/fragment_fade_enter"
+        app:exitAnim="@anim/fragment_fade_exit"
+        app:launchSingleTop="true" />
+    <fragment
+        android:id="@+id/fullMenuFragment"
+        android:name="com.myoptimind.suzuki_app.home.FullMenuFragment"
+        android:label="FullMenuFragment"
+        tools:layout="@layout/fragment_full_menu"
+        >
+        <action
+            android:id="@+id/action_fullMenuFragment_to_whatsNewFragment"
+            app:destination="@id/whatsNewFragment" />
+        <action
+            android:id="@+id/action_fullMenuFragment_to_customerCareFragment"
+            app:destination="@id/customerCareFragment" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_fullMenuFragment"
+        app:destination="@id/fullMenuFragment"
+        app:launchSingleTop="true"
+        />
+    <fragment
+        android:id="@+id/serviceCentersFragment"
+        android:name="com.myoptimind.suzuki_app.features.service_centers.ServiceCentersFragment"
+        android:label="ServiceCentersFragment"
+        tools:layout="@layout/fragment_service_centers"
+
+        />
+    <action
+        android:id="@+id/action_global_serviceCentersFragment"
+        app:destination="@id/serviceCentersFragment" />
+    <fragment
+        android:id="@+id/whatsNewFragment"
+        android:name="com.myoptimind.suzuki_app.features.whats_new.WhatsNewFragment"
+        android:label="WhatsNewFragment"
+        tools:layout="@layout/fragment_whats_new"
+        />
+    <action
+        android:id="@+id/action_global_whatsNewFragment"
+        app:destination="@id/whatsNewFragment" />
+    <fragment
+        android:id="@+id/customerCareFragment"
+        android:name="com.myoptimind.suzuki_app.features.customer_care.CustomerCareFragment"
+        android:label="CustomerCareFragment"
+        tools:layout="@layout/fragment_customer_care"
+        />
+
+</navigation>

@@ -12,7 +12,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/img_main_bg"
     android:paddingBottom="100dp"
-    tools:context=".motorcycle_models.MotorcycleModelsFragment">
+    tools:context=".features.motorcycle_models.MotorcycleModelsFragment">
 
 
     <View

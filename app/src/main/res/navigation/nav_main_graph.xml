@@ -19,20 +19,30 @@
         android:name="com.myoptimind.suzuki_app.features.motorcycle_models.MotorcycleModelsFragment"
         android:label="motorcycleModelsFragment"
         tools:layout="@layout/fragment_motorcycle_models"
-        />
+        >
+        <action
+            android:id="@+id/action_motorcycleModelsFragment_to_selectedMotorcycleFragment"
+            app:destination="@id/selectedMotorcycleFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/sparePartsFragment"
         android:name="com.myoptimind.suzuki_app.features.spare_parts.SparePartsFragment"
         android:label="SparePartsFragment"
         tools:layout="@layout/fragment_spare_parts"
-        />
+        >
+        <action
+            android:id="@+id/action_sparePartsFragment_to_selectedSparePartFragment"
+            app:destination="@id/selectedSparePartFragment" />
+    </fragment>
     <action
         android:id="@+id/action_global_motorcycleModelsFragment"
         app:destination="@id/motorcycleModelsFragment"
         app:enterAnim="@anim/fragment_fade_enter"
         app:exitAnim="@anim/fragment_fade_exit"
-        app:launchSingleTop="true" />
+        app:launchSingleTop="true"
+        app:popUpTo="@id/homeFragment"
+        />
     <fragment
         android:id="@+id/fullMenuFragment"
         android:name="com.myoptimind.suzuki_app.home.FullMenuFragment"
@@ -45,6 +55,23 @@
         <action
             android:id="@+id/action_fullMenuFragment_to_customerCareFragment"
             app:destination="@id/customerCareFragment" />
+        <action
+            android:id="@+id/action_fullMenuFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+
+            />
+        <action
+            android:id="@+id/action_fullMenuFragment_to_safetyTipsFragment"
+            app:destination="@id/safetyTipsFragment" />
+        <action
+            android:id="@+id/action_fullMenuFragment_to_fragmentSuzukiDiary"
+            app:destination="@id/fragmentSuzukiDiary" />
+        <action
+            android:id="@+id/action_fullMenuFragment_to_compareModelsFragment"
+            app:destination="@id/compareModelsFragment" />
+        <action
+            android:id="@+id/action_fullMenuFragment_to_extractDataFragment"
+            app:destination="@id/extractDataFragment" />
     </fragment>
     <action
         android:id="@+id/action_global_fullMenuFragment"
@@ -57,16 +84,27 @@
         android:label="ServiceCentersFragment"
         tools:layout="@layout/fragment_service_centers"
 
-        />
+        >
+        <action
+            android:id="@+id/action_serviceCentersFragment_to_selectedServiceCenterFragment"
+            app:destination="@id/selectedServiceCenterFragment" />
+    </fragment>
     <action
         android:id="@+id/action_global_serviceCentersFragment"
-        app:destination="@id/serviceCentersFragment" />
+        app:destination="@id/serviceCentersFragment"
+        app:popUpTo="@id/homeFragment"
+
+        />
     <fragment
         android:id="@+id/whatsNewFragment"
         android:name="com.myoptimind.suzuki_app.features.whats_new.WhatsNewFragment"
         android:label="WhatsNewFragment"
         tools:layout="@layout/fragment_whats_new"
-        />
+        >
+        <action
+            android:id="@+id/action_whatsNewFragment_to_selectedWhatsNewFragment"
+            app:destination="@id/selectedWhatsNewFragment" />
+    </fragment>
     <action
         android:id="@+id/action_global_whatsNewFragment"
         app:destination="@id/whatsNewFragment" />
@@ -75,6 +113,232 @@
         android:name="com.myoptimind.suzuki_app.features.customer_care.CustomerCareFragment"
         android:label="CustomerCareFragment"
         tools:layout="@layout/fragment_customer_care"
+        >
+        <argument
+            android:name="selectedInquiry"
+            android:defaultValue="0"
+            app:argType="string"
+            />
+
+    </fragment>
+    <action
+        android:id="@+id/action_global_sparePartsFragment"
+        app:destination="@id/sparePartsFragment" />
+    <fragment
+        android:id="@+id/safetyTipsFragment"
+        android:name="com.myoptimind.suzuki_app.features.safety_tips.SafetyTipsFragment"
+        android:label="SafetyTipsFragment"
+        tools:layout="@layout/fragment_safety_tips"
+        >
+        <action
+            android:id="@+id/action_safetyTipsFragment_to_selectedSafetyTipsFragment"
+            app:destination="@id/selectedSafetyTipsFragment" />
+        <action
+            android:id="@+id/action_safetyTipsFragment_to_customerCareFragment"
+            app:destination="@id/customerCareFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dealerLocatorsFragment"
+        android:name="com.myoptimind.suzuki_app.features.dealer_locator.DealerLocatorsFragment"
+        android:label="DealerLocatorsFragment"
+        tools:layout="@layout/fragment_service_centers"
+        >
+        <action
+            android:id="@+id/action_dealerLocatorsFragment_to_selectedDealerLocatorFragment"
+            app:destination="@id/selectedDealerLocatorFragment" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_dealerLocatorsFragment"
+        app:destination="@id/dealerLocatorsFragment" />
+    <fragment
+        android:id="@+id/selectedWhatsNewFragment"
+        android:name="com.myoptimind.suzuki_app.features.whats_new.SelectedWhatsNewFragment"
+        android:label="SelectedWhatsNewFragment"
+        tools:layout="@layout/fragment_selected_whats_new"
+        >
+        <argument
+            android:name="index"
+            app:argType="integer"
+            android:defaultValue="0"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/selectedSafetyTipsFragment"
+        android:name="com.myoptimind.suzuki_app.features.safety_tips.SelectedSafetyTipsFragment"
+        android:label="SelectedSafetyTipsFragment"
+        tools:layout="@layout/fragment_selected_safety_tip"
+        >
+        <argument
+            android:name="index"
+            app:argType="integer"
+            android:defaultValue="0"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/selectedDealerLocatorFragment"
+        android:name="com.myoptimind.suzuki_app.features.dealer_locator.SelectedDealerLocatorFragment"
+        android:label="SelectedDealerLocatorFragment"
+        tools:layout="@layout/fragment_selected_service_center"
+
+
+        >
+        <argument
+            android:name="id"
+            android:defaultValue="0"
+            app:argType="string"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/selectedServiceCenterFragment"
+        android:name="com.myoptimind.suzuki_app.features.service_centers.SelectedServiceCenterFragment"
+        android:label="SelectedServiceCenterFragment"
+        tools:layout="@layout/fragment_selected_service_center"
+        >
+        <argument
+            android:name="id"
+            android:defaultValue="0"
+            app:argType="string"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/selectedSparePartFragment"
+        android:name="com.myoptimind.suzuki_app.features.spare_parts.SelectedSparePartFragment"
+        android:label="SelectedSparePartFragment"
+        tools:layout="@layout/fragment_selected_spare_parts"
+        >
+        <argument
+            android:name="id"
+            app:argType="string"
+            />
+
+        <argument
+            android:name="title"
+            app:argType="string"
+            />
+        <action
+            android:id="@+id/action_selectedSparePartFragment_to_customerCareFragment"
+            app:destination="@id/customerCareFragment" />
+        <action
+            android:id="@+id/action_selectedSparePartFragment_to_selectedDealerLocatorFragment"
+            app:destination="@id/selectedDealerLocatorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectedMotorcycleFragment"
+        android:name="com.myoptimind.suzuki_app.features.motorcycle_models.SelectedMotorcycleFragment"
+        android:label="SelectedMotorcycleFragment"
+        tools:layout="@layout/fragment_selected_motorcycle"
+        >
+        <argument
+            android:name="id"
+            app:argType="string"
+
+            />
+        <action
+            android:id="@+id/action_selectedMotorcycleFragment_to_customerCareFragment"
+            app:destination="@id/customerCareFragment" />
+        <action
+            android:id="@+id/action_selectedMotorcycleFragment_to_selectedDealerLocatorFragment2"
+            app:destination="@id/selectedDealerLocatorFragment" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_suzukiDiary"
+        app:destination="@id/fragmentSuzukiDiary" />
+    <fragment
+        android:id="@+id/fragmentSuzukiDiary"
+        android:name="com.myoptimind.suzuki_app.features.suzuki_diary.FragmentSuzukiDiary"
+        android:label="FragmentSuzukiDiary"
+        tools:layout="@layout/fragment_suzuki_diary"
         />
+    <fragment
+        android:id="@+id/compareModelsFragment"
+        android:name="com.myoptimind.suzuki_app.features.compare_motorcycles.CompareModelsFragment"
+        android:label="CompareModelsFragment"
+        tools:layout="@layout/fragment_compare_models"
+        />
+
+    <fragment
+        android:id="@+id/extractDataFragment"
+        android:name="com.myoptimind.suzuki_app.features.extract_data.ExtractDataFragment"
+        android:label="ExtractDataFragment" >
+        <action
+            android:id="@+id/action_extractDataFragment_to_selectedServiceHistoryFragment2"
+            app:destination="@id/selectedServiceHistoryFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutSuzukiFragment"
+        android:name="com.myoptimind.suzuki_app.features.sidenav.AboutSuzukiFragment"
+        android:label="AboutSuzukiFragment"
+        />
+    <fragment
+        android:id="@+id/privacyPolicyFragment"
+        android:name="com.myoptimind.suzuki_app.features.sidenav.PrivacyPolicyFragment"
+        android:label="PrivacyPolicyFragment"
+
+        />
+    <fragment
+        android:id="@+id/termsAndConditionsFragment"
+        android:name="com.myoptimind.suzuki_app.features.sidenav.TermsAndConditionsFragment"
+        android:label="TermsAndConditionsFragment"
+
+        />
+    <action
+        android:id="@+id/action_global_aboutSuzukiFragment"
+        app:destination="@id/aboutSuzukiFragment"
+        app:launchSingleTop="true"
+        app:popUpTo="@id/homeFragment"
+
+        />
+    <action
+        android:id="@+id/action_global_termsAndConditionsFragment"
+        app:destination="@id/termsAndConditionsFragment"
+        app:launchSingleTop="true"
+        app:popUpTo="@id/homeFragment"
+
+
+        />
+    <action
+        android:id="@+id/action_global_privacyPolicyFragment"
+        app:destination="@id/privacyPolicyFragment"
+        app:launchSingleTop="true"
+        app:popUpTo="@id/homeFragment"
+
+        />
+    <action
+        android:id="@+id/action_global_customerCareFragment"
+        app:destination="@id/customerCareFragment" />
+    <fragment
+        android:id="@+id/selectedServiceHistoryFragment2"
+        android:name="com.myoptimind.suzuki_app.features.suzuki_diary.service_history.SelectedServiceHistoryFragment"
+        android:label="SelectedServiceHistoryFragment"
+
+        >
+        <argument
+            android:name="index"
+            app:argType="integer"
+            android:defaultValue="-1"
+            />
+        <argument
+            android:name="title"
+            app:argType="string"
+            android:defaultValue="My Suzuki Diary"
+            />
+    </fragment>
+    <action
+        android:id="@+id/action_global_safetyTipsFragment"
+        app:destination="@id/safetyTipsFragment" />
+    <fragment
+        android:id="@+id/upcomingServiceEventsFragment2"
+        android:name="com.myoptimind.suzuki_app.features.notifications.UpcomingServiceEventsFragment"
+        android:label="UpcomingServiceEventsFragment" >
+
+        <action
+            android:id="@+id/action_upcomingServiceEventsFragment2_to_selectedServiceHistoryFragment22"
+            app:destination="@id/selectedServiceHistoryFragment2" >
+        </action>
+    </fragment>
+    <action
+        android:id="@+id/action_global_upcomingServiceEventsFragment2"
+        app:destination="@id/upcomingServiceEventsFragment2" />
+
 
 </navigation>

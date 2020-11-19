@@ -9,6 +9,7 @@
         <item name="colorControlHighlight">@color/color_blue_300</item>
     </style>
 
+
     <style name="ShapeAppearance.App.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
         <item name="cornerFamily">cut</item>
         <item name="cornerSize">0dp</item>
@@ -22,8 +23,7 @@
     </style>
 
     <style name="suzukiHeader1">
-        <item name="android:textSize">19.5sp</item>
-
+        <item name="android:textSize">14sp</item>
         <item name="android:letterSpacing">0.07</item>
         <item name="android:textColor">@color/color_blue_100</item>
         <item name="android:fontFamily">@font/forza_black</item>
@@ -36,7 +36,7 @@
     </style>
 
     <style name="suzukiHeader2">
-        <item name="android:textSize">13sp</item>
+        <item name="android:textSize">10sp</item>
         <item name="android:textColor">@color/color_blue_100</item>
         <item name="android:fontFamily">@font/forza_medium</item>
         <item name="fontWeight">900</item>
@@ -107,7 +107,7 @@
 
 
     <style name="suzukiTextBody2">
-        <item name="android:textSize">11.5sp</item>
+        <item name="android:textSize">8sp</item>
         <item name="android:fontFamily">@font/forza_medium</item>
         <item name="android:textColor">@color/color_blue_100</item>
     </style>
@@ -135,7 +135,7 @@
     <style name="suzukiTextLink2" parent="suzukiTextLink">
         <item name="android:fontFamily">@font/overpass_black</item>
         <item name="android:textStyle">normal</item>
-        <item name="android:textSize">7.5sp</item>
+        <item name="android:textSize">8sp</item>
         <item name="android:letterSpacing">0.16</item>
     </style>
 
@@ -169,7 +169,7 @@
 
     <style name="suzukiSemiBlackText1.serviceHistorySummaryBody" parent="suzukiHeader2">
         <item name="android:textColor">@color/color_blue_250</item>
-        <item name="android:textSize">13sp</item>
+        <item name="android:textSize">12sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:letterSpacing">0.07</item>
         <item name="android:gravity">center</item>
@@ -182,7 +182,7 @@
 
     <style name="suzukiSemiBlackText1.serviceHistorySummaryLabel" parent="suzukiHeader2">
         <item name="android:textColor">@color/color_blue_100</item>
-        <item name="android:textSize">12sp</item>
+        <item name="android:textSize">11sp</item>
         <item name="android:letterSpacing">0.04</item>
     </style>
 
@@ -204,12 +204,12 @@
 
     <style name="suzukiEditText1">
         <item name="android:background">@color/color_blue_900</item>
-        <item name="android:paddingTop">6dp</item>
-        <item name="android:paddingBottom">6dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
         <item name="android:paddingLeft">12dp</item>
         <item name="android:paddingRight">12dp</item>
         <item name="android:textColor">@color/color_blue_100</item>
-        <item name="android:textSize">10.5sp</item>
+        <item name="android:textSize">9sp</item>
         <item name="android:fontFamily">@font/forza_light</item>
     </style>
 
@@ -221,18 +221,30 @@
     </style>
 
     <style name="suzukiButton1" parent="TextAppearance.MaterialComponents.Button">
-        <item name="android:minHeight">25dp</item>
+        <item name="android:minHeight">30dp</item>
         <item name="android:paddingTop">0dp</item>
         <item name="android:paddingBottom">0dp</item>
-        <item name="android:minWidth">180dp</item>
+        <item name="android:minWidth">150dp</item>
         <item name="android:includeFontPadding">true</item>
-        <item name="android:textSize">12.5sp</item>
+        <item name="android:textSize">11sp</item>
         <item name="fontFamily">@font/overpass_bold</item>
         <item name="android:textColor">@android:color/white</item>
         <item name="android:background">@drawable/shape_rect_blue</item>
         <item name="shapeAppearance">@style/ShapeAppearance.App.SmallComponent</item>
         <item name="backgroundTint">@color/color_blue_200</item>
     </style>
+
+    <style name="suzukiButton4">
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:minHeight">40dp</item>
+        <item name="android:includeFontPadding">true</item>
+        <item name="android:textSize">11sp</item>
+        <item name="fontFamily">@font/overpass_bold</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="backgroundTint">@color/color_blue_200</item>
+    </style>
+
 
     <style name="suzukiButton2" parent="suzukiButton1">
         <item name="android:paddingTop">8dp</item>

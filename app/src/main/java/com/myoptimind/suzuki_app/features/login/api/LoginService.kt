@@ -3,11 +3,9 @@ package com.myoptimind.suzuki_app.features.login.api
 import com.google.gson.annotations.SerializedName
 import com.myoptimind.suzuki_app.features.login.data.LoginFeaturedMotorcycle
 import com.myoptimind.suzuki_app.features.login.data.User
-import com.myoptimind.suzuki_app.shared.api.MetaResponse
-import retrofit2.http.Field
-import retrofit2.http.FormUrlEncoded
-import retrofit2.http.GET
-import retrofit2.http.POST
+import com.myoptimind.suzuki_app.features.shared.api.MetaResponse
+import okhttp3.MultipartBody
+import retrofit2.http.*
 
 
 interface LoginService {
@@ -48,6 +46,16 @@ interface LoginService {
             val meta: MetaResponse
     )
 
+    @POST("customers/social_login")
+    @FormUrlEncoded
+    suspend fun loginSocialAccount(
+            @Field("email_address") emailAddress: String,
+            @Field("social_token") socialToken: String,
+            @Field("fullname") fullname: String,
+            @Field("device_id") deviceId: String,
+            @Field("firebase_id") firebaseId: String
+    ): LoginResponse
+
     @POST("customer/forgot-password")
     @FormUrlEncoded
     suspend fun requestForgotPassword(
@@ -77,5 +85,31 @@ interface LoginService {
             val data: List<LoginFeaturedMotorcycle>,
             val meta: MetaResponse
     )
+
+    @POST("customer/edit-password/{customer_id}")
+    @FormUrlEncoded
+    suspend fun changePassword(
+            @Path("customer_id") userId: String,
+            @Field("old_password") oldPassword: String,
+            @Field("new_password") newPassword: String,
+            @Field("confirm_password") confirmPassword: String
+    ): ChangePasswordResponse
+
+    class ChangePasswordResponse(
+            val meta: MetaResponse
+    )
+
+    @Multipart
+    @POST("customers/edit_pfp/{customer_id}")
+    suspend fun editProfilePicture(
+            @Path("customer_id") userId: String,
+            @Part profilePicture: MultipartBody.Part
+    ): EditProfilePictureResponse
+
+    class EditProfilePictureResponse(
+            val data: User,
+            val meta: MetaResponse
+    )
+
 
 }

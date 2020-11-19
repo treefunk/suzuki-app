@@ -12,15 +12,17 @@
     <View
         android:id="@+id/dialog_box"
         android:layout_width="0dp"
-        android:layout_height="250dp"
+        android:layout_height="0dp"
 
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_info_title"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/tv_info_message"
+
 
         android:layout_marginLeft="24dp"
         android:layout_marginRight="24dp"
+
         android:background="@drawable/shape_rect_grey_semi_rounded_corners"
         />
 
@@ -28,12 +30,11 @@
         android:id="@+id/tv_info_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/ib_close"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="@id/dialog_box"
         app:layout_constraintRight_toRightOf="@id/dialog_box"
-        app:layout_constraintBottom_toTopOf="@id/tv_info_message"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintVertical_chainStyle="packed"
-        app:layout_constraintVertical_bias="0"
 
         android:layout_marginTop="24dp"
         android:layout_marginLeft="12dp"
@@ -41,7 +42,9 @@
         style="@style/suzukiHeader1"
         android:gravity="center"
         android:textAllCaps="false"
-        android:textSize="20sp"
+        android:textSize="23sp"
+        android:paddingTop="35dp"
+        android:paddingBottom="10dp"
 
         android:text="Thank you for your\ninquiry!"
         />
@@ -53,11 +56,9 @@
         app:layout_constraintTop_toBottomOf="@id/tv_info_title"
         app:layout_constraintLeft_toLeftOf="@id/dialog_box"
         app:layout_constraintRight_toRightOf="@id/dialog_box"
-        app:layout_constraintBottom_toBottomOf="@id/dialog_box"
         app:layout_constraintVertical_bias="0"
         android:layout_marginLeft="12dp"
         android:layout_marginRight="12dp"
-        android:layout_marginTop="8dp"
         android:letterSpacing="0.05"
         style="@style/suzukiHeader2"
         android:gravity="center"
@@ -65,6 +66,7 @@
         android:textSize="12sp"
         android:lineHeight="23dp"
         android:textStyle="normal"
+        android:paddingBottom="40dp"
 
         android:text="One of our customer care agent with get in touch with you soon. Please wait for our email or call."
         />
@@ -72,8 +74,8 @@
 
     <ImageButton
         android:id="@+id/ib_close"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         app:layout_constraintTop_toTopOf="@id/dialog_box"
         app:layout_constraintRight_toRightOf="@id/dialog_box"
         app:layout_constraintLeft_toLeftOf="@id/dialog_box"

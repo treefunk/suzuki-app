@@ -23,7 +23,7 @@
 
     <ImageView
         android:id="@+id/filter_background"
-        android:layout_width="115dp"
+        android:layout_width="175dp"
         android:layout_height="35dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -65,7 +65,7 @@
 
         style="@style/suzukiTextBody2"
         android:textColor="@android:color/white"
-        android:text="FILTER BY"
+        android:text="FILTER BY CATEGORY"
         />
 
     <AutoCompleteTextView

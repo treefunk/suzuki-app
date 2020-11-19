@@ -7,9 +7,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.observe
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.myoptimind.suzuki_app.R
-import com.myoptimind.suzuki_app.shared.BaseDialogFragment
+import com.myoptimind.suzuki_app.features.shared.BaseDialogFragment
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.dialog_list_of_services.*
 
@@ -28,7 +29,7 @@ class ServiceCentersListDialog : BaseDialogFragment() {
 
         viewModel.services.observe(viewLifecycleOwner) { services ->
             val adapter = ServiceCentersListDialogAdapter(services)
-            rv_services.layoutManager = GridLayoutManager(requireContext(),2, GridLayoutManager.VERTICAL,false)
+            rv_services.layoutManager = LinearLayoutManager(requireContext(),RecyclerView.VERTICAL,false)
             rv_services.adapter = adapter
             adapter.notifyDataSetChanged()
         }

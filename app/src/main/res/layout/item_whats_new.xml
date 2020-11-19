@@ -44,9 +44,12 @@
 
         android:layout_marginLeft="6dp"
         android:layout_marginTop="4dp"
+        android:lineHeight="20dp"
+        android:layout_marginBottom="5dp"
 
         style="@style/suzukiHeader2"
-        android:text="Get a Free Raider J Crossover Quarter Face Helmet"
+        android:textSize="14sp"
+        android:text="Get a Free Raider J Crossover Quarter Face Helmet\nfdsfdsfsdfsdfsdffsdfsdfsdfsdfds"
 
         />
 

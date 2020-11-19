@@ -6,7 +6,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.myoptimind.suzuki_app.features.customer_care.api.CustomerCareService
-import com.myoptimind.suzuki_app.shared.api.Result
+import com.myoptimind.suzuki_app.features.shared.api.Result
 import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.launch
 

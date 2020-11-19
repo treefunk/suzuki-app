@@ -17,10 +17,10 @@ class ServiceCentersListDialogAdapter(
 
     inner class ViewHolder(private val v: View): RecyclerView.ViewHolder(v){
         fun bind(service: ServiceCentersService.ServiceCentersResponse.Service){
-            Glide.with(v.context)
+/*            Glide.with(v.context)
                     .load(service.thumbnail)
                     .centerCrop()
-                    .into(v.findViewById<ImageView>(R.id.iv_service_image))
+                    .into(v.findViewById<ImageView>(R.id.iv_service_image))*/
             v.findViewById<TextView>(R.id.tv_service_name).text = service.name
 
         }

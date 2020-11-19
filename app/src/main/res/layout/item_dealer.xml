@@ -2,7 +2,7 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="95dp"
+    android:layout_height="100dp"
     android:orientation="horizontal"
     android:layout_marginTop="8dp"
     android:layout_marginLeft="8dp"
@@ -14,21 +14,26 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:paddingLeft="10dp"
-        android:paddingTop="12dp"
+        android:paddingTop="6dp"
         android:paddingRight="10dp"
+        android:paddingBottom="6dp"
     >
 
     <TextView
         android:id="@+id/label_dealer_name"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         style="@style/suzukiHeader1_1"
 
-        android:text="Dealer Name"
-
+        android:text="Dealer Namddsadasefsdfsdfsdfdsfdsfdsfdsffdsfdsfsdfds"
+        android:breakStrategy="simple"
+        android:maxLines="2"
+        android:ellipsize="end"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-
+        app:layout_constraintRight_toLeftOf="@id/btn_get_directions"
+        app:layout_constraintVertical_chainStyle="spread_inside"
+        android:layout_marginRight="10dp"
         />
 
     <ImageView
@@ -41,24 +46,24 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@id/tv_address"
         app:layout_constraintBottom_toBottomOf="@id/tv_address"
-        android:translationX="-4dp"
+        app:layout_constraintVertical_bias="0"
+        android:translationX="-3dp"
+        android:translationY="-2dp"
 
         />
 
     <TextView
         android:id="@+id/tv_address"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
 
         style="@style/suzukiSemiBlackText1"
         app:layout_constraintTop_toBottomOf="@id/label_dealer_name"
         app:layout_constraintLeft_toRightOf="@id/ic_address"
+        app:layout_constraintRight_toLeftOf="@id/btn_get_directions"
         app:layout_constraintBottom_toTopOf="@id/tv_phone"
-        app:layout_constraintVertical_chainStyle="packed"
-        app:layout_constraintVertical_bias="0"
-        android:layout_marginTop="6dp"
-        android:layout_marginBottom="6dp"
-        android:text="Address 1, Adress 2, City"
+        android:layout_marginRight="4dp"
+        android:text="FDSFSDFSDFDSFSDFFDSFSDFSDFFDSFSDFFDSF"
         />
     <ImageView
         android:id="@+id/ic_phone"
@@ -83,7 +88,6 @@
         app:layout_constraintTop_toBottomOf="@id/tv_address"
         app:layout_constraintLeft_toRightOf="@id/ic_phone"
         app:layout_constraintBottom_toTopOf="@id/tv_mobile"
-        android:layout_marginBottom="6dp"
 
         android:text="+632 8123 4567"
         />
@@ -104,7 +108,7 @@
 
     <TextView
         android:id="@+id/tv_mobile"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
 
         style="@style/suzukiSemiBlackText1"
@@ -123,9 +127,12 @@
         app:layout_constraintLeft_toLeftOf="@id/btn_check_dealers_info"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toTopOf="@id/btn_check_dealers_info"
-        app:layout_constraintVertical_chainStyle="spread"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:layout_marginBottom="6dp"
 
+        android:textSize="12sp"
 
+        android:layout_marginTop="4dp"
         style="@style/suzukiButton1"
         android:letterSpacing="0"
         android:minWidth="0dp"
@@ -139,10 +146,10 @@
 
         app:layout_constraintTop_toBottomOf="@id/btn_get_directions"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="@id/grey_line_footer"
-        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
 
 
+        android:textSize="12sp"
         style="@style/suzukiButton1"
         android:letterSpacing="0"
         android:paddingRight="4dp"
@@ -155,7 +162,7 @@
 
 
 
-    <View
+<!--    <View
         android:id="@+id/grey_line_footer"
         android:layout_width="match_parent"
         android:layout_height="1dp"
@@ -165,7 +172,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        />
+        />-->
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

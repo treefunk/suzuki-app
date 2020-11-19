@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_suzuki_diary"
+    app:startDestination="@id/myMotorcyclesListFragment">
+
+    <fragment
+        android:id="@+id/registerMotorcycleFragment"
+        android:name="com.myoptimind.suzuki_app.features.suzuki_diary.my_motorcycles.RegisterMotorcycleFragment"
+        android:label="RegisterMotorcycleFragment"
+        tools:layout="@layout/fragment_register_motorcycle"
+        >
+        <argument
+            android:name="index"
+            app:argType="integer"
+            android:defaultValue="-1"
+            />
+        <action
+            android:id="@+id/action_registerMotorcycleFragment_to_myMotorcyclesListFragment"
+            app:destination="@id/myMotorcyclesListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myMotorcyclesListFragment"
+        android:name="com.myoptimind.suzuki_app.features.suzuki_diary.my_motorcycles.MyMotorcyclesListFragment"
+        android:label="MyMotorcyclesListFragment"
+        tools:layout="@layout/fragment_my_motorcycles">
+        <action
+            android:id="@+id/action_myMotorcyclesListFragment_to_selectedRegisteredMotorcycleFragment"
+            app:destination="@id/selectedRegisteredMotorcycleFragment" />
+        <action
+            android:id="@+id/action_myMotorcyclesListFragment_to_registerMotorcycleFragment"
+            app:destination="@id/registerMotorcycleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectedRegisteredMotorcycleFragment"
+        android:name="com.myoptimind.suzuki_app.features.suzuki_diary.my_motorcycles.SelectedRegisteredMotorcycleFragment"
+        android:label="SelectedRegisteredMotorcycleFragment"
+        tools:layout="@layout/fragment_selected_registered_motorcycle">
+        <argument
+            android:name="index"
+            app:argType="integer"
+            android:defaultValue="0"
+            />
+    </fragment>
+    <action
+        android:id="@+id/action_global_myMotorcyclesListFragment"
+        app:destination="@id/myMotorcyclesListFragment" />
+    <fragment
+        android:id="@+id/serviceHistoryListFragment"
+        android:name="com.myoptimind.suzuki_app.features.suzuki_diary.service_history.ServiceHistoryListFragment"
+        android:label="ServiceHistoryListFragment"
+        tools:layout="@layout/fragment_service_history_list"
+        >
+        <argument
+            android:name="indexToUpdate"
+            app:argType="integer"
+            android:defaultValue="-1"
+            />
+        <action
+            android:id="@+id/action_serviceHistoryListFragment_to_addServiceHistoryFragment"
+            app:destination="@id/addServiceHistoryFragment" />
+        <action
+            android:id="@+id/action_serviceHistoryListFragment_to_selectedServiceHistoryFragment"
+            app:destination="@id/selectedServiceHistoryFragment" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_serviceHistoryListFragment"
+        app:destination="@id/serviceHistoryListFragment" />
+    <fragment
+        android:id="@+id/addServiceHistoryFragment"
+        android:name="com.myoptimind.suzuki_app.features.suzuki_diary.service_history.AddServiceHistoryFragment"
+        android:label="AddServiceHistoryFragment"
+        tools:layout="@layout/fragment_add_service_history"
+        >
+        <argument
+            android:name="index"
+            app:argType="integer"
+            android:defaultValue="-1"
+            />
+        <action
+            android:id="@+id/action_addServiceHistoryFragment_to_addServiceHistoryMaintenanceFragment"
+            app:destination="@id/addServiceHistoryMaintenanceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addServiceHistoryMaintenanceFragment"
+        android:name="com.myoptimind.suzuki_app.features.suzuki_diary.service_history.AddServiceHistoryMaintenanceFragment"
+        android:label="AddServiceHistoryMaintenanceFragment"
+        tools:layout="@layout/fragment_add_service_history_maintenance"
+        >
+        <argument
+            android:name="index"
+            app:argType="integer"
+            android:defaultValue="0"
+            />
+        <action
+            android:id="@+id/action_addServiceHistoryMaintenanceFragment_to_serviceHistoryListFragment"
+            app:destination="@id/serviceHistoryListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectedServiceHistoryFragment"
+        android:name="com.myoptimind.suzuki_app.features.suzuki_diary.service_history.SelectedServiceHistoryFragment"
+        android:label="SelectedServiceHistoryFragment"
+        tools:layout="@layout/fragment_selected_service_history">
+        <argument
+            android:name="index"
+            app:argType="integer"
+            android:defaultValue="-1"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/upcomingServiceEventsFragment"
+        android:name="com.myoptimind.suzuki_app.features.notifications.UpcomingServiceEventsFragment"
+        android:label="UpcomingServiceEventsFragment"
+        tools:layout="@layout/fragment_upcoming_service_events"
+        />
+    <action
+        android:id="@+id/action_global_upcomingServiceEventsFragment"
+        app:destination="@id/upcomingServiceEventsFragment" />
+</navigation>

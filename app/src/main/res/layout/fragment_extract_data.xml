@@ -1,39 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+<androidx.core.widget.NestedScrollView
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
     android:background="@drawable/img_main_bg"
+
     >
 
+<androidx.constraintlayout.widget.ConstraintLayout
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_extract_data"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0"
-
-        android:layout_marginTop="24dp"
-        tools:listitem="@layout/item_extract_data"
-        tools:itemCount="2"
-        />
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="130dp"
+    >
 
     <Button
         android:id="@+id/btn_extract_all_data"
         android:layout_width="wrap_content"
-        android:layout_height="32.5dp"
+        android:layout_height="wrap_content"
 
-        app:layout_constraintTop_toBottomOf="@id/rv_extract_data"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0"
+        app:layout_constraintBottom_toTopOf="@id/rv_extract_data"
+        android:layout_marginTop="10dp"
 
         style="@style/suzukiButton3"
         android:text="Extract all data"
@@ -41,10 +43,31 @@
         />
 
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_extract_data"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@id/btn_extract_all_data"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        android:paddingBottom="10dp"
+        android:clipToPadding="false"
+        android:layout_marginTop="12dp"
+        android:overScrollMode="never"
+        />
 
 
 
 
 
 
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

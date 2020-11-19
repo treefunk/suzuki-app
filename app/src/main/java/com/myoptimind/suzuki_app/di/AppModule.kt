@@ -1,8 +1,11 @@
 package com.myoptimind.suzuki_app.di
 
 import android.content.Context
+import androidx.room.Room
+import androidx.room.RoomDatabase
 import com.myoptimind.suzuki_app.BuildConfig
-import com.myoptimind.suzuki_app.shared.AppSharedPref
+import com.myoptimind.suzuki_app.db.SuzukiDB
+import com.myoptimind.suzuki_app.features.shared.AppSharedPref
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -14,7 +17,6 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
-import kotlin.math.log
 
 @Module
 @InstallIn(ApplicationComponent::class)
@@ -54,6 +56,18 @@ class AppModule {
             @ApplicationContext context: Context
     ): AppSharedPref {
         return AppSharedPref(context)
+    }
+
+    @Singleton
+    @Provides
+    fun provideDatabase(
+            @ApplicationContext context: Context
+    ): SuzukiDB {
+        return Room.databaseBuilder(
+                context,
+                SuzukiDB::class.java,
+                "suzuki-db"
+        ).build()
     }
 
 }

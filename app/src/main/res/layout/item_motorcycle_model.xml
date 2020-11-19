@@ -75,6 +75,7 @@
     </LinearLayout>
 
     <ImageView
+        android:id="@+id/iv_motorcycle_next_arrow"
         android:layout_width="0dp"
         android:layout_height="23.5dp"
         android:layout_weight="0.2"

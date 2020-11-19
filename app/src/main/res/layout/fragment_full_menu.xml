@@ -11,7 +11,7 @@
 
     <TextView
         android:id="@+id/tv_title"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
 
         app:layout_constraintTop_toTopOf="parent"
@@ -19,11 +19,15 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toTopOf="@id/filter_background"
 
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="15dp"
 
         style="@style/suzukiHeader1"
+        android:gravity="center"
         android:text="WHERE DO YOU WANT TO GO?"
+        android:textSize="19sp"
         android:elevation="1dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
 
         tools:ignore="NotSibling" />
 
@@ -35,9 +39,9 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@id/box_spare_parts"
         app:layout_constraintBottom_toTopOf="@id/box_dealer_locator"
-        android:layout_marginLeft="24dp"
+        android:layout_marginLeft="36dp"
         android:layout_marginRight="12dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="14dp"
 
         android:elevation="2dp"
         android:background="@drawable/shape_rect_grey_semi_rounded_corners"
@@ -52,7 +56,6 @@
         app:layout_constraintRight_toRightOf="@id/box_motorcycle_models"
         app:layout_constraintBottom_toTopOf="@id/label_motorcycle_models"
         android:elevation="2dp"
-        android:src="@drawable/ic_menu_motorcycles"
         />
 
     <TextView
@@ -60,7 +63,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        app:layout_constraintTop_toBottomOf="@id/iv_motorcycle_models"
         app:layout_constraintLeft_toLeftOf="@id/box_motorcycle_models"
         app:layout_constraintRight_toRightOf="@id/box_motorcycle_models"
         app:layout_constraintBottom_toBottomOf="@id/box_motorcycle_models"
@@ -77,7 +79,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@id/box_service_centers"
         app:layout_constraintBottom_toTopOf="@id/box_compare_models"
-        android:layout_marginLeft="24dp"
+        android:layout_marginLeft="36dp"
         android:layout_marginRight="12dp"
         android:layout_marginTop="8dp"
 
@@ -94,7 +96,6 @@
         app:layout_constraintRight_toRightOf="@id/box_dealer_locator"
         app:layout_constraintBottom_toTopOf="@id/label_dealer_locator"
         android:elevation="2dp"
-        android:src="@drawable/ic_menu_dealer_locator"
         />
 
     <TextView
@@ -120,7 +121,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@id/box_my_suzuki_diary"
         app:layout_constraintBottom_toTopOf="@id/box_whats_new"
-        android:layout_marginLeft="24dp"
+        android:layout_marginLeft="36dp"
         android:layout_marginRight="12dp"
         android:layout_marginTop="8dp"
 
@@ -137,7 +138,6 @@
         app:layout_constraintRight_toRightOf="@id/box_compare_models"
         app:layout_constraintBottom_toTopOf="@id/label_compare_models"
         android:elevation="2dp"
-        android:src="@drawable/ic_menu_compare_models"
         />
 
     <TextView
@@ -163,7 +163,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@id/box_extract_data"
         app:layout_constraintBottom_toTopOf="@id/box_safety_tips"
-        android:layout_marginLeft="24dp"
+        android:layout_marginLeft="36dp"
         android:layout_marginRight="12dp"
         android:layout_marginTop="8dp"
 
@@ -180,7 +180,6 @@
         app:layout_constraintRight_toRightOf="@id/box_whats_new"
         app:layout_constraintBottom_toTopOf="@id/label_whats_new"
         android:elevation="2dp"
-        android:src="@drawable/ic_menu_whats_new"
         />
 
     <TextView
@@ -206,7 +205,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@id/box_customer_care"
         app:layout_constraintBottom_toTopOf="@id/ib_close"
-        android:layout_marginLeft="24dp"
+        android:layout_marginLeft="36dp"
         android:layout_marginRight="12dp"
         android:layout_marginTop="8dp"
 
@@ -223,7 +222,6 @@
         app:layout_constraintRight_toRightOf="@id/box_safety_tips"
         app:layout_constraintBottom_toTopOf="@id/label_safety_tips"
         android:elevation="2dp"
-        android:src="@drawable/ic_menu_safety_tips"
         />
 
     <TextView
@@ -252,9 +250,9 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toTopOf="@id/box_service_centers"
 
-        android:layout_marginRight="24dp"
+        android:layout_marginRight="36dp"
         android:layout_marginLeft="12dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="14dp"
 
         android:elevation="2dp"
         android:background="@drawable/shape_rect_grey_semi_rounded_corners"
@@ -269,7 +267,6 @@
         app:layout_constraintRight_toRightOf="@id/box_spare_parts"
         app:layout_constraintBottom_toTopOf="@id/label_spare_parts"
         android:elevation="2dp"
-        android:src="@drawable/ic_menu_spare_parts"
         />
 
     <TextView
@@ -295,7 +292,7 @@
         app:layout_constraintLeft_toRightOf="@id/box_dealer_locator"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toTopOf="@id/box_my_suzuki_diary"
-        android:layout_marginRight="24dp"
+        android:layout_marginRight="36dp"
         android:layout_marginLeft="12dp"
         android:layout_marginTop="8dp"
 
@@ -312,7 +309,6 @@
         app:layout_constraintRight_toRightOf="@id/box_service_centers"
         app:layout_constraintBottom_toTopOf="@id/label_service_centers"
         android:elevation="2dp"
-        android:src="@drawable/ic_menu_service_centers"
         />
 
     <TextView
@@ -340,7 +336,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toTopOf="@id/box_extract_data"
 
-        android:layout_marginRight="24dp"
+        android:layout_marginRight="36dp"
         android:layout_marginLeft="12dp"
         android:layout_marginTop="8dp"
 
@@ -357,7 +353,6 @@
         app:layout_constraintRight_toRightOf="@id/box_my_suzuki_diary"
         app:layout_constraintBottom_toTopOf="@id/label_my_suzuki_diary"
         android:elevation="2dp"
-        android:src="@drawable/ic_menu_suzuki_diary"
         />
 
     <TextView
@@ -370,7 +365,7 @@
         app:layout_constraintRight_toRightOf="@id/box_my_suzuki_diary"
         app:layout_constraintBottom_toBottomOf="@id/box_my_suzuki_diary"
         style="@style/suzukiFullMenuLabel"
-        android:text="My SUZUKI\nDIARY"
+        android:text="MY SUZUKI\nDIARY"
         />
 
 
@@ -383,7 +378,7 @@
         app:layout_constraintLeft_toRightOf="@id/box_whats_new"
         app:layout_constraintBottom_toTopOf="@id/box_customer_care"
 
-        android:layout_marginRight="24dp"
+        android:layout_marginRight="36dp"
         android:layout_marginLeft="12dp"
         android:layout_marginTop="8dp"
 
@@ -400,7 +395,6 @@
         app:layout_constraintRight_toRightOf="@id/box_extract_data"
         app:layout_constraintBottom_toTopOf="@id/label_extract_data"
         android:elevation="2dp"
-        android:src="@drawable/ic_menu_extract_data"
         />
 
     <TextView
@@ -426,7 +420,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toTopOf="@id/ib_close"
 
-        android:layout_marginRight="24dp"
+        android:layout_marginRight="36dp"
         android:layout_marginLeft="12dp"
         android:layout_marginTop="8dp"
 
@@ -443,7 +437,6 @@
         app:layout_constraintRight_toRightOf="@id/box_customer_care"
         app:layout_constraintBottom_toTopOf="@id/label_customer_care"
         android:elevation="2dp"
-        android:src="@drawable/ic_menu_customer_care"
         />
 
     <TextView
@@ -463,16 +456,20 @@
 
     <ImageButton
         android:id="@+id/ib_close"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
 
 
-        android:background="@drawable/ic_close"
+        android:src="@drawable/ic_close"
+        android:scaleType="centerInside"
+        android:background="?android:selectableItemBackgroundBorderless"
         android:layout_marginRight="2dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="4dp"
+        android:elevation="30dp"
         />
 
 

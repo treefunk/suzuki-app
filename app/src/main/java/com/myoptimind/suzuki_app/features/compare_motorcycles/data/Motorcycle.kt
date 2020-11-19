@@ -1,0 +1,33 @@
+package com.myoptimind.suzuki_app.features.compare_motorcycles.data
+
+data class Motorcycle(
+    val SRP: String,
+    val bore_x_stroke: String,
+    val category: String,
+    val compression_ratio: String,
+    val cooling_system: String,
+    val curb_mass: String,
+    val dry_weight: String,
+    val engine_displacement: String,
+    val engine_oil: String,
+    val engine_type: String,
+    val final_reduction_ratio: String,
+    val ground_road_clearance: String,
+    val id: String,
+    val ignition_system: String,
+    val logo: String,
+    val lubrication: String,
+    val max_power: String,
+    val max_torque: String,
+    val oil_capacity_overhaul: String,
+    val overal_height: String,
+    val overal_length: String,
+    val overal_width: String,
+    val primary_reduction_ratio: String,
+    val rake_trail: String,
+    val seat_height: String,
+    val starting: String,
+    val thumbnail: String,
+    val transmission_type: String,
+    val wheelbase: String
+)

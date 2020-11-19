@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.login.LoginActivity">
+
+    <ImageView
+        android:id="@+id/iv_header_background_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:scaleType="fitXY"
+
+
+        android:src="@color/color_blue_300"
+        app:layout_constraintBottom_toTopOf="@id/tablayout_login_featured"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+
+        />
+
+    <ImageView
+        android:id="@+id/iv_header_logo"
+        android:layout_width="150dp"
+        android:layout_height="25dp"
+
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="6dp"
+        android:src="@drawable/img_crossover_logo"
+        app:layout_constraintBottom_toTopOf="@id/vp_featured_motorcycle"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/iv_header_bottom_slant"
+        android:layout_width="0dp"
+        android:layout_height="93dp"
+
+        android:scaleType="fitXY"
+        android:src="@drawable/img_white_slant_bar"
+        app:layout_constraintBottom_toTopOf="@id/iv_header_bottom_logo"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vp_featured_motorcycle"
+        android:layout_width="0dp"
+        android:layout_height="170dp"
+
+        android:layout_marginTop="2dp"
+        app:layout_constraintBottom_toTopOf="@id/tablayout_login_featured"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@id/iv_header_logo"
+
+        />
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tablayout_login_featured"
+        android:layout_width="300dp"
+        android:layout_height="4.2dp"
+        android:fillViewport="false"
+        app:layout_constraintBottom_toTopOf="@id/iv_header_bottom_logo"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vp_featured_motorcycle"
+        app:tabBackground="@drawable/selector_tab_featured"
+
+        app:tabGravity="fill"
+        app:tabIndicatorHeight="0dp"
+        app:tabMaxWidth="32dp"
+        app:tabMode="fixed"
+
+        />
+
+
+    <ImageView
+        android:id="@+id/iv_header_bottom_logo"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+
+        android:background="@android:color/white"
+        android:src="@drawable/suzuki_logo"
+        app:layout_constraintBottom_toTopOf="@id/guideline"
+
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tablayout_login_featured" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.46" />
+
+    <fragment
+        android:id="@+id/nav_host_login_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@id/guideline"
+        app:navGraph="@navigation/nav_login_graph"
+
+        tools:layout="@layout/fragment_sign_up" />
+
+    <ImageView
+        android:id="@+id/view_loading"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        
+        android:visibility="gone"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,17 +4,18 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.observe
 import androidx.navigation.fragment.findNavController
 import com.myoptimind.suzuki_app.R
-import com.myoptimind.suzuki_app.shared.InfoDialogFragment
-import com.myoptimind.suzuki_app.shared.api.Result
+import com.myoptimind.suzuki_app.features.shared.InfoDialogFragment
+import com.myoptimind.suzuki_app.features.shared.api.Result
 import kotlinx.android.synthetic.main.fragment_forgot_password.*
 
 private const val DIALOG_TAG_FORGOT_PASSWORD = "dialog_forgot_password"
-class ForgotPasswordFragment: Fragment(), View.OnClickListener {
+class ForgotPasswordFragment: BaseLoginFragment(), View.OnClickListener {
 
     val viewModel: LoginViewModel by activityViewModels()
 
@@ -33,18 +34,32 @@ class ForgotPasswordFragment: Fragment(), View.OnClickListener {
                             "Thank you for your inquiry",
                             result.data.meta.message
                     ).show(childFragmentManager, DIALOG_TAG_FORGOT_PASSWORD)
+                    viewModel.clearLoginResult()
+                    setActiveWidgets(true)
+                    hideLoading()
                 }
                 is Result.Error -> {
                     InfoDialogFragment.newInstance(
                             result.error.message.toString(),
                             ""
                     ).show(childFragmentManager, DIALOG_TAG_FORGOT_PASSWORD)
+                    viewModel.clearLoginResult()
+                    setActiveWidgets(true)
+                    hideLoading()
                 }
                 Result.Loading -> {
-                    //
+                    setActiveWidgets(false)
+                    showLoading()
                 }
             }
         }
+    }
+
+    private fun setActiveWidgets(enabled: Boolean) {
+        et_email_mobile.isEnabled = enabled
+        btn_send.isEnabled = enabled
+        tv_create_account.isEnabled = enabled
+        tv_sign_in_link.isEnabled = enabled
     }
 
     private fun initClickListeners() {
@@ -59,7 +74,11 @@ class ForgotPasswordFragment: Fragment(), View.OnClickListener {
                 R.id.tv_create_account -> findNavController().navigate(R.id.action_forgotPasswordFragment_to_signUpFragment)
                 R.id.tv_sign_in_link   -> findNavController().navigate(R.id.action_forgotPasswordFragment_to_signInFragment)
                 R.id.btn_send          -> {
-                    viewModel.requestForgotPassword(et_email_mobile.text.toString().trim())
+                    if(et_email_mobile.text.trim().isNotEmpty()){
+                        viewModel.requestForgotPassword(et_email_mobile.text.toString().trim())
+                    }else{
+                        Toast.makeText(requireContext(),"Please input your email address.", Toast.LENGTH_LONG).show()
+                    }
                 }
             }
         }

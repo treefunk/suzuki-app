@@ -19,4 +19,10 @@ class MotorcycleModelsRepository @Inject constructor(
                 limit?.toString()
         )
     }
+
+    suspend fun getSingleMotorcycleModel(
+            id: String
+    ): MotorcycleModelsService.GetSingleMotorcycleModelResponse {
+        return motorcycleModelsService.getSingleMotorcycleModel(id)
+    }
 }

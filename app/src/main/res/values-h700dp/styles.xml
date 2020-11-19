@@ -1,0 +1,305 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/color_blue_300</item>
+        <item name="colorControlHighlight">@color/color_blue_300</item>
+    </style>
+
+
+    <style name="ShapeAppearance.App.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">0dp</item>
+    </style>
+
+    <style name="ThemeOverlay.App.FloatingActionButton" parent="">
+        <item name="cornerFamily">cut</item>
+        <item name="colorSecondary">@color/colorPrimary</item>
+        <item name="colorOnSecondary">@color/colorPrimaryDark</item>
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.App.SmallComponent</item>
+    </style>
+
+    <style name="suzukiHeader1">
+        <item name="android:textSize">18sp</item>
+
+        <item name="android:letterSpacing">0.07</item>
+        <item name="android:textColor">@color/color_blue_100</item>
+        <item name="android:fontFamily">@font/forza_black</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="suzukiHeader1_1" parent="suzukiHeader1">
+        <item name="android:textSize">11.5sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="suzukiHeader2">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/color_blue_100</item>
+        <item name="android:fontFamily">@font/forza_medium</item>
+        <item name="fontWeight">900</item>
+    </style>
+
+    <style name="suzukiHeader2.labelCustomerCare" parent="suzukiHeader2">
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0.05</item>
+    </style>
+
+    <style name="suzukiHeader2.labelServiceHistory" parent="suzukiHeader2">
+        <item name="android:textSize">11sp</item>
+
+        <item name="android:fontFamily">@font/forza_medium</item>
+        <item name="android:letterSpacing">0.05</item>
+    </style>
+    
+    <style name="SuzukiMainMenuNavText">
+        <item name="android:gravity">center</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/color_blue_200</item>
+        <item name="android:fontFamily">@font/forza_medium</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="suzukiTextBody1">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/overpass_regular</item>
+        <item name="android:textColor">@color/color_blue_100</item>
+    </style>
+
+    <style name="suzukiTextNavBody" parent="suzukiTextBody1">
+        <item name="android:fontFamily">@font/overpass_regular</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/color_blue_100</item>
+    </style>
+
+    <style name="suzukiTextChip">
+        <item name="android:textSize">10sp</item>
+        <item name="android:fontFamily">@font/overpass_regular</item>
+        <item name="android:textColor">@color/color_blue_100</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
+
+
+    <style name="suzukiTextBody1.maintenanceServiceLabel">
+        <item name="android:textSize">10.5sp</item>
+        <item name="android:fontFamily">@font/overpass_regular</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.05</item>
+
+        <item name="android:textColor">@color/color_black_alpha80</item>
+    </style>
+
+    <style name="suzukiSemiBlackText1.serviceHistorySummaryBody2" parent="suzukiTextBody1.maintenanceServiceLabel">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="suzukiTextWhatsNewCaption" parent="suzukiTextBody2">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/color_black_alpha45</item>
+
+    </style>
+
+
+    <style name="suzukiTextBody2">
+        <item name="android:textSize">11.5sp</item>
+        <item name="android:fontFamily">@font/forza_medium</item>
+        <item name="android:textColor">@color/color_blue_100</item>
+    </style>
+
+    <style name="suzukiFullMenuLabel" parent="suzukiTextBody2">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:elevation">2dp</item>
+        <item name="android:textColor">@color/color_blue_150</item>
+        <item name="android:paddingBottom">4dp</item>
+    </style>
+
+    <style name="suzukiTextBody3" parent="suzukiTextBody1">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/overpass_light</item>
+        <item name="android:textColor">@color/color_blue_100</item>
+    </style>
+
+    <style name="suzukiTextLink" parent="suzukiTextBody1">
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/overpass_black</item>
+        <item name="android:textColor">@color/color_blue_300</item>
+    </style>
+
+    <style name="suzukiTextLink2" parent="suzukiTextLink">
+        <item name="android:fontFamily">@font/overpass_black</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">8.5sp</item>
+        <item name="android:letterSpacing">0.10</item>
+    </style>
+
+    <style name="suzukiSemiBlackText1">
+        <item name="android:textSize">8.5sp</item>
+        <item name="android:textColor">@color/color_black_alpha65</item>
+        <item name="android:fontFamily">@font/forza_medium</item>
+    </style>
+
+    <style name="suzukiSemiBlackText1.cardLabel">
+        <item name="android:letterSpacing">0.06</item>
+        <item name="android:fontFamily">@font/forza_bold</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/color_black_alpha80</item>
+    </style>
+
+    <style name="suzukiSemiBlackText1.compareModelsLabel" parent="suzukiSemiBlackText1.cardLabel">
+        <item name="android:textColor">@color/color_black_alpha55</item>
+        <item name="android:fontFamily">@font/forza_black</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="suzukiSemiBlackText1.compareModelsBody" parent="suzukiHeader2">
+        <item name="android:textColor">@color/color_blue_250</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+
+
+    <style name="suzukiSemiBlackText1.serviceHistorySummaryBody" parent="suzukiHeader2">
+        <item name="android:textColor">@color/color_blue_250</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.07</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="suzukiSemiBlackText1.selectedRegisteredLabel" parent="suzukiHeader2">
+        <item name="android:textColor">@color/color_blue_100</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="suzukiSemiBlackText1.serviceHistorySummaryLabel" parent="suzukiHeader2">
+        <item name="android:textColor">@color/color_blue_100</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:letterSpacing">0.04</item>
+    </style>
+
+    <style name="suzukiSemiBlackText1.selectedRegisteredBody" parent="suzukiHeader2">
+        <item name="android:textColor">@color/color_blue_100</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:fontFamily">@font/overpass_regular</item>
+    </style>
+
+    <style name="suzukiSemiBlackText1.cardBody">
+        <item name="android:letterSpacing">0.05</item>
+        <item name="android:fontFamily">@font/overpass_light</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/color_black_alpha65</item>
+    </style>
+
+
+    <style name="suzukiEditText1">
+        <item name="android:background">@color/color_blue_900</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingBottom">6dp</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:textColor">@color/color_blue_100</item>
+        <item name="android:textSize">10.5sp</item>
+        <item name="android:fontFamily">@font/forza_light</item>
+    </style>
+
+    <style name="suzukiSearchEditText" parent="suzukiEditText1">
+        <item name="android:background">@color/color_grey_1100</item>
+        <item name="android:fontFamily">@font/forza_medium</item>
+        <item name="android:textColorHint">@color/color_blue_100_65alpha</item>
+        <item name="android:textColor">@color/color_blue_100</item>
+    </style>
+
+    <style name="suzukiButton1" parent="TextAppearance.MaterialComponents.Button">
+        <item name="android:minHeight">30dp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:minWidth">140dp</item>
+        <item name="android:includeFontPadding">true</item>
+        <item name="android:textSize">13sp</item>
+        <item name="fontFamily">@font/overpass_bold</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@drawable/shape_rect_blue</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.App.SmallComponent</item>
+        <item name="backgroundTint">@color/color_blue_200</item>
+    </style>
+
+    <style name="suzukiButton2" parent="suzukiButton1">
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">4dp</item>
+        <item name="android:paddingRight">4dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="fontFamily">@font/overpass_extrabold</item>
+    </style>
+
+    <style name="suzukiButton3" parent="TextAppearance.MaterialComponents.Button">
+        <item name="android:minHeight">40dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:minWidth">180dp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="fontFamily">@font/overpass_extrabold</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@drawable/shape_rect_blue</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.App.SmallComponent</item>
+        <item name="backgroundTint">@color/color_blue_200</item>
+    </style>
+
+    <style name="suzukiButton4">
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:minHeight">40dp</item>
+        <item name="android:includeFontPadding">true</item>
+        <item name="android:textSize">11sp</item>
+        <item name="fontFamily">@font/overpass_bold</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="backgroundTint">@color/color_blue_200</item>
+    </style>
+
+
+    <style name="suzukiButtonFacebook">
+        <item name="android:minWidth">180dp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+        <item name="android:background">@color/color_facebook_blue</item>
+    </style>
+
+    <style name="suzukiChoiceChip" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="chipBackgroundColor">@color/chip_state_maintenance</item>
+        <item name="chipStrokeColor">@color/color_blue_300</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="chipCornerRadius">4dp</item>
+        <item name="chipMinHeight">23dp</item>
+        <item name="chipStartPadding">4dp</item>
+        <item name="chipEndPadding">6dp</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="chipMinTouchTargetSize">0dp</item>
+        <item name="android:textAppearance">@style/suzukiTextChip</item>
+        <item name="android:textColor">@color/chip_state_maintenance_text</item>
+        <item name="checkedIconTint">@color/color_blue_300</item>
+    </style>
+
+</resources>

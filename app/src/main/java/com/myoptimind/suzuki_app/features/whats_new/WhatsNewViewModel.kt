@@ -6,7 +6,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.myoptimind.suzuki_app.features.whats_new.api.WhatsNewService
-import com.myoptimind.suzuki_app.shared.api.Result
+import com.myoptimind.suzuki_app.features.whats_new.data.Article
+import com.myoptimind.suzuki_app.features.shared.api.Result
 import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.launch
 
@@ -20,23 +21,43 @@ class WhatsNewViewModel @ViewModelInject constructor(
     val filterList: LiveData<List<WhatsNewService.WhatsNewResponse.Filter>> get() = _filterList
     private val _filterList             = MutableLiveData<List<WhatsNewService.WhatsNewResponse.Filter>>()
 
+    private var whatsNewList = MutableLiveData<List<Article>>()
     private val _selectedCategory       = MutableLiveData<String>()
 
+    // for pagination
+    var rowCount = 10
+    var offset = 0
 
     init {
-        getWhatsNew(null,null,null)
         _selectedCategory.value = ""
+//        getWhatsNew(_selectedCategory.value,offset,rowCount)
+    }
+
+    fun getInitialWhatsNew(){
+        getWhatsNew(_selectedCategory.value,offset,rowCount)
+    }
+
+    fun increaseRowCount(){
+//        offset += rowCount
+        getWhatsNew(_selectedCategory.value,offset,rowCount)
     }
 
     fun updateCategory(categoryId: String){
-
-        if(categoryId.compareTo("None",true) == 0){
+        offset = 0
+        if(categoryId.compareTo("All",true) == 0){
             _selectedCategory.value = null
         }else{
             _selectedCategory.value = categoryId
         }
 
-        getWhatsNew(_selectedCategory.value, null, null)
+        getWhatsNew(_selectedCategory.value, offset,rowCount)
+    }
+
+    fun getSingleArticle(index: Int): Article? {
+        return when(val result = whatsNewResult.value){
+            is Result.Success -> result.data.data.result[index]
+            else -> null
+        }
     }
 
 
@@ -63,6 +84,10 @@ class WhatsNewViewModel @ViewModelInject constructor(
                 _whatsNewResult.postValue(Result.Error(exception))
             }
         }
+    }
+
+    fun resetResult() {
+        _whatsNewResult.value = null
     }
 
 }

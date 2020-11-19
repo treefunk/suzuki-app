@@ -28,6 +28,8 @@
         app:layout_constraintBottom_toTopOf="@id/tv_title"
         tools:src="@tools:sample/backgrounds/scenic"
         android:scaleType="centerCrop"
+        app:layout_constraintVertical_chainStyle="spread"
+
 
         />
 
@@ -40,10 +42,10 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toTopOf="@id/tv_caption"
-        app:layout_constraintHorizontal_bias="0"
 
         android:layout_marginLeft="6dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="2dp"
 
         style="@style/suzukiHeader2"
         android:text="Get a Free Raider J Crossover Quarter Face Helmet"
@@ -63,7 +65,7 @@
 
         style="@style/suzukiTextWhatsNewCaption"
         android:layout_marginLeft="6dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="6dp"
         android:text="Promo Period: Mar 15 - Aug 31,2020"
         />
 

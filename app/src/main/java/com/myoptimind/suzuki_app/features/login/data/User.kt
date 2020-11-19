@@ -1,7 +1,7 @@
 package com.myoptimind.suzuki_app.features.login.data
 
 import com.google.gson.annotations.SerializedName
-import com.myoptimind.suzuki_app.shared.BaseRemoteEntity
+import com.myoptimind.suzuki_app.features.shared.BaseRemoteEntity
 
 class User(
         val id: String,
@@ -14,10 +14,16 @@ class User(
         @SerializedName("mobile_number")
         val mobileNumber: String,
 
+        @SerializedName("social_token")
+        val socialToken: String,
+
         val birthday: String,
 
         val address: String,
 
         @SerializedName("is_notifies")
-        val isNotifies: String
+        val isNotifies: String,
+
+        @SerializedName("profile_picture")
+        val profilePicture: String
 ): BaseRemoteEntity()

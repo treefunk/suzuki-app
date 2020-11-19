@@ -5,23 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/img_main_bg"
-    tools:context=".features.motorcycle_models.MotorcycleModelsFragment">
+    tools:context=".features.motorcycle_models.MotorcycleModelsFragment"
+    >
 
 
     <TextView
         android:id="@+id/tv_service_center_name"
         style="@style/suzukiHeader1"
-        android:layout_width="wrap_content"
-
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="12dp"
         android:layout_marginRight="8dp"
         android:elevation="1dp"
 
-        android:text="Suzuki Auto Araneta Center Satellite"
+        tools:text="Suzuki Auto Araneta Center Satellite"
         android:textAllCaps="false"
-        android:textSize="15sp"
+        android:textSize="17sp"
 
         app:layout_constraintBottom_toTopOf="@id/filter_background"
         app:layout_constraintHorizontal_bias="0"
@@ -32,14 +32,14 @@
         tools:ignore="NotSibling" />
 
     <TextView
-        android:id="@+id/service_center_caption"
+        android:id="@+id/tv_service_center_caption"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
         android:layout_marginLeft="8dp"
         android:layout_marginBottom="4dp"
         android:fontFamily="@font/forza_medium"
-        android:text="Quezon City"
+        tools:text="Quezon City"
         android:textStyle="bold"
         android:textColor="@color/color_black_alpha65"
 
@@ -52,25 +52,24 @@
     <View
         android:id="@+id/line_grey_1"
         android:layout_width="0dp"
-        android:layout_height="1dp"
+        android:layout_height="2dp"
 
-        android:layout_marginTop="6dp"
+        android:layout_marginTop="4dp"
         android:background="@color/color_grey_1000"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/service_center_caption" />
+        app:layout_constraintTop_toBottomOf="@id/tv_service_center_caption" />
 
     <View
         android:id="@+id/line_grey_2"
         android:layout_width="0dp"
-        android:layout_height="1dp"
-
+        android:layout_height="2dp"
 
         android:background="@color/color_grey_1000"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_call"
-        app:layout_constraintBottom_toTopOf="@id/map"
+        app:layout_constraintBottom_toTopOf="@id/map_placeholder"
         />
 
     <ImageView
@@ -87,15 +86,16 @@
     <Button
         android:id="@+id/btn_call"
         android:layout_width="0dp"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
+
 
         android:layout_marginLeft="8dp"
         android:layout_marginRight="2dp"
         android:paddingLeft="4dp"
-        android:text="CALL #788954"
+        android:text="CALL #789854"
         app:icon="@drawable/ic_phone"
         app:iconPadding="0dp"
-        app:iconSize="25dp"
+        app:iconSize="30dp"
         app:iconTint="@android:color/white"
         app:layout_constraintBottom_toTopOf="@id/line_grey_2"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -106,34 +106,47 @@
     <Button
         android:id="@+id/btn_send_email"
         android:layout_width="0dp"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
 
         android:layout_marginLeft="2dp"
         android:layout_marginRight="8dp"
         android:backgroundTint="@color/color_blue_150"
         android:paddingLeft="4dp"
         android:text="SEND AN EMAIL"
-        app:icon="@drawable/ic_phone"
+        app:icon="@drawable/ic_mail"
         app:iconPadding="0dp"
-        app:iconSize="25dp"
+        app:iconSize="30dp"
         app:iconTint="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@id/line_grey_2"
+
         app:layout_constraintLeft_toRightOf="@id/btn_call"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/line_grey_1" />
 
-    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+    <fragment
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="0dp"
-        android:layout_height="200dp"
+        android:layout_height="180dp"
         app:layout_constraintTop_toBottomOf="@id/line_grey_2"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
 
         android:layout_marginTop="4dp"
+        />
 
-        tools:context="com.example.mapwithmarker.MapsMarkerActivity" />
+    <ImageView
+        android:id="@+id/map_placeholder"
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toTopOf="@id/map"
+        app:layout_constraintLeft_toLeftOf="@id/map"
+        app:layout_constraintRight_toRightOf="@id/map"
+        app:layout_constraintBottom_toBottomOf="@id/map"
+        android:src="@drawable/map_placeholder"
+        android:scaleType="centerCrop"
+        />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/addressBox"
@@ -152,19 +165,19 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="8dp">
+            android:padding="4dp">
 
             <ImageView
                 android:id="@+id/ic_address"
-                android:layout_width="32.5dp"
-                android:layout_height="32.5dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 android:src="@drawable/ic_find_dealer"
-                android:translationY="-5dp"
-                android:translationX="-8dp"
+                app:layout_constraintVertical_bias="0"
                 android:scaleType="fitCenter"
+                android:translationX="-2dp"
                 />
 
             <TextView
@@ -172,7 +185,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintTop_toTopOf="@id/ic_address"
                 app:layout_constraintLeft_toRightOf="@id/ic_address"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintBottom_toTopOf="@id/tv_address"
@@ -180,9 +193,8 @@
                 app:layout_constraintHorizontal_bias="0"
                 app:layout_constraintVertical_bias="0"
 
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="6dp"
                 android:layout_marginBottom="6dp"
-                android:translationX="-10dp"
                 style="@style/suzukiSemiBlackText1.cardLabel"
 
                 android:text="ADDRESS"
@@ -199,11 +211,10 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintHorizontal_bias="0"
-                android:translationX="-10dp"
-
+                android:textSize="10.5sp"
                 style="@style/suzukiSemiBlackText1.cardBody"
 
-                android:text="Time Square Avenue Cor. P. Tuazon Blvd. Cubao,\nQuezon City"
+                tools:text="Time Square Avenue Cor. P. Tuazon Blvd. Cubao,\nQuezon City"
                 />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -213,7 +224,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/contactBox"
         android:layout_width="0dp"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
 
         android:layout_marginLeft="8dp"
         android:layout_marginTop="4dp"
@@ -227,20 +238,20 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="8dp">
+            android:layout_height="50dp"
+            android:padding="4dp">
 
             <ImageView
                 android:id="@+id/ic_contact"
-                android:layout_width="32.5dp"
-                android:layout_height="32.5dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 android:src="@drawable/ic_phone"
-                android:translationY="-5dp"
-                android:translationX="-6dp"
                 android:scaleType="fitCenter"
+                android:translationX="-2dp"
+
                 />
 
             <TextView
@@ -248,7 +259,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintTop_toTopOf="@id/ic_contact"
                 app:layout_constraintLeft_toRightOf="@id/ic_contact"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintBottom_toTopOf="@id/tv_contact"
@@ -256,8 +267,8 @@
                 app:layout_constraintVertical_bias="0"
                 app:layout_constraintVertical_chainStyle="packed"
 
+                android:layout_marginTop="6dp"
                 android:layout_marginBottom="6dp"
-                android:translationX="-10dp"
                 style="@style/suzukiSemiBlackText1.cardLabel"
 
                 android:text="CONTACT NUMBER"
@@ -275,11 +286,10 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintHorizontal_bias="0"
                 app:layout_constraintVertical_bias="0"
-                android:translationX="-10dp"
 
                 style="@style/suzukiSemiBlackText1.cardBody"
 
-                android:text="+632 8282 7451"
+                tools:text="+632 8282 7451"
                 />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -289,7 +299,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/mobileBox"
         android:layout_width="0dp"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
 
         android:layout_marginLeft="2dp"
         android:layout_marginTop="4dp"
@@ -303,7 +313,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="8dp">
+            android:padding="4dp">
 
             <ImageView
                 android:id="@+id/ic_mobile"
@@ -313,9 +323,9 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 android:src="@drawable/ic_mobile"
-                android:translationY="-5dp"
-                android:translationX="-8dp"
-                android:scaleType="fitCenter"
+                android:scaleType="centerInside"
+                android:translationX="-2dp"
+
                 />
 
             <TextView
@@ -323,7 +333,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintTop_toTopOf="@id/ic_mobile"
                 app:layout_constraintLeft_toRightOf="@id/ic_mobile"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintBottom_toTopOf="@id/tv_mobile"
@@ -332,7 +342,7 @@
                 app:layout_constraintVertical_chainStyle="packed"
 
                 android:layout_marginBottom="6dp"
-                android:translationX="-10dp"
+                android:layout_marginTop="6dp"
                 style="@style/suzukiSemiBlackText1.cardLabel"
 
                 android:text="MOBILE NUMBER"
@@ -350,11 +360,10 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintHorizontal_bias="0"
                 app:layout_constraintVertical_bias="0"
-                android:translationX="-10dp"
 
                 style="@style/suzukiSemiBlackText1.cardBody"
 
-                android:text="+63 977 008 8203"
+                tools:text="+63 977 008 8203"
                 />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

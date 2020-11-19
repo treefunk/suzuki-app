@@ -1,28 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView
-    android:layout_height="wrap_content"
-    android:layout_width="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    >
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/img_main_bg"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     tools:context=".features.motorcycle_models.MotorcycleModelsFragment">
+    <androidx.core.widget.NestedScrollView
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:fillViewport="true"
+        >
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
     <Button
         android:id="@+id/btn_my_motorcycles"
         android:layout_width="0dp"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
 
         android:layout_marginLeft="8dp"
         android:layout_marginRight="2dp"
-        android:layout_marginTop="8dp"
-        android:textSize="11sp"
+        android:textSize="12sp"
         android:text="MY MOTORCYCLES"
+        app:backgroundTint="@color/color_blue_150"
+        style="@style/suzukiButton4"
+
 
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -33,36 +46,48 @@
     <Button
         android:id="@+id/btn_service_history"
         android:layout_width="0dp"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+
 
         android:layout_marginLeft="2dp"
         android:layout_marginRight="8dp"
-        android:layout_marginTop="8dp"
-        android:textSize="11sp"
+        android:textSize="12sp"
+        style="@style/suzukiButton4"
 
-        android:backgroundTint="@color/color_blue_150"
+        app:backgroundTint="@color/color_blue_300"
         android:text="SERVICE HISTORY"
 
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toRightOf="@id/btn_my_motorcycles"
         app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="6dp"
         />
 
     <fragment
         android:id="@+id/fragment_container"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:name="androidx.navigation.fragment.NavHostFragment"
 
         app:layout_constraintTop_toBottomOf="@id/btn_my_motorcycles"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintVertical_bias="0"
+        android:layout_marginTop="2dp"
 
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_suzuki_diary"
         tools:layout="@layout/fragment_register_motorcycle"
         />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
 
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>

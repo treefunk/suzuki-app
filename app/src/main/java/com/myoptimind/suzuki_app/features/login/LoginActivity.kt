@@ -1,29 +1,57 @@
 package com.myoptimind.suzuki_app.features.login
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.view.View
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.view.isVisible
+import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.observe
 import androidx.viewpager2.widget.ViewPager2
 import com.bumptech.glide.Glide
 import com.google.android.material.tabs.TabLayoutMediator
+import com.myoptimind.suzuki_app.MainActivity
 import com.myoptimind.suzuki_app.R
 import com.myoptimind.suzuki_app.features.login.data.LoginFeaturedMotorcycle
-import com.myoptimind.suzuki_app.shared.api.Result
+import com.myoptimind.suzuki_app.features.shared.AppSharedPref
+import com.myoptimind.suzuki_app.features.shared.api.Result
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_login.*
+import kotlinx.android.synthetic.main.activity_login.view_loading
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
 import timber.log.Timber
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class LoginActivity : AppCompatActivity() {
 
     private val viewModel: LoginViewModel by viewModels()
+    private lateinit var job: Job
+    @Inject
+    lateinit var sharedPref: AppSharedPref
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+    private suspend fun switchScreen(){
+        for (i in 1..3){
+//            Log.v("Splashscreen", "${i}.. before switch")
+            delay(1000)
+        }
+        if(isUserLoggedIn()){
+            redirectAuthenticatedUser()
+        }else{
+            setContentView(R.layout.activity_login)
+            loadFeatured()
+        }
 
+    }
+
+    private fun loadFeatured() {
         val adapter = LoginFeaturedMotorcycleAdapter(ArrayList())
+
         vp_featured_motorcycle.adapter = adapter
         vp_featured_motorcycle.orientation = ViewPager2.ORIENTATION_HORIZONTAL
 
@@ -44,22 +72,63 @@ class LoginActivity : AppCompatActivity() {
                         }
                     })
                     adapter.notifyDataSetChanged()
+                    hideLoading()
                 }
-                is Result.Error -> Timber.v(result.toString()) // TODO
-                Result.Loading -> Timber.v(result.toString()) // TODO
+                is Result.Error -> hideLoading()
+                Result.Loading -> showLoading()
             }
+        }
+    }
+    private fun redirectAuthenticatedUser(){
+        Timber.v("User Id ${sharedPref.getUserId()} is currently logged in..")
+        this@LoginActivity.finish()
+        startActivity(
+                Intent(this, MainActivity::class.java)
+        )
+    }
+
+    private fun isUserLoggedIn(): Boolean = sharedPref.getUserId().isNotEmpty()
+
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+
+        viewModel.getFeaturedMotorcycles()
+
+        setContentView(R.layout.fragment_splash_screen)
+
+
+        job = lifecycleScope.launchWhenResumed {
+            switchScreen()
+        }
+//        setContentView(R.layout.activity_login)
+
+
+
+    }
+
+    internal fun showLoading(){
+        if(!view_loading.isVisible){
+            view_loading.visibility = View.VISIBLE
+        }
+    }
+
+    internal fun hideLoading(){
+        if(view_loading.isVisible){
+            view_loading.visibility = View.GONE
         }
     }
 
     private fun initActiveFeaturedMotorcycle(activeItem: LoginFeaturedMotorcycle) {
         Glide.with(this)
                 .load(activeItem.background)
-                .centerCrop()
+                .fitCenter()
                 .into(iv_header_background_image)
 
         Glide.with(this)
                 .load(activeItem.logo)
-                .centerInside()
+                .fitCenter()
                 .into(iv_header_logo)
     }
 

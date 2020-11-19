@@ -3,6 +3,9 @@ package com.myoptimind.suzuki_app.features.motorcycle_models.data
 import com.google.gson.annotations.SerializedName
 
 class MotorcycleModelListItem (
+
+        val id: String,
+
         val name: String,
 
         @SerializedName("tagline")

@@ -1,10 +1,12 @@
 package com.myoptimind.suzuki_app.features.motorcycle_models.api
 
 import com.google.gson.annotations.SerializedName
-import com.myoptimind.suzuki_app.features.motorcycle_models.data.FilterName
+import com.myoptimind.suzuki_app.features.shared.data.FilterName
+import com.myoptimind.suzuki_app.features.motorcycle_models.data.MotorcycleModel
 import com.myoptimind.suzuki_app.features.motorcycle_models.data.MotorcycleModelListItem
-import com.myoptimind.suzuki_app.shared.api.MetaResponse
+import com.myoptimind.suzuki_app.features.shared.api.MetaResponse
 import retrofit2.http.GET
+import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface MotorcycleModelsService {
@@ -29,4 +31,14 @@ interface MotorcycleModelsService {
             val filters: List<FilterName>
         )
     }
+
+    @GET("contents/motorcycle/{motorcycle_id}")
+    suspend fun getSingleMotorcycleModel(
+            @Path("motorcycle_id") id: String
+    ): GetSingleMotorcycleModelResponse
+
+    class GetSingleMotorcycleModelResponse(
+        val data: MotorcycleModel,
+        val meta: MetaResponse
+    )
 }

@@ -7,7 +7,8 @@
     app:layout_constraintRight_toRightOf="@id/box_maintenance"
     android:layout_marginTop="2dp"
     app:singleSelection="true"
-    app:selectionRequired="true"
+    app:selectionRequired="false"
+
 
     tools:parentTag="com.google.android.material.chip.ChipGroup"
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -15,27 +16,32 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <com.google.android.material.chip.Chip
+        android:id="@+id/choice_checked"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="CHECK"
+        android:tag="1"
         style="@style/suzukiChoiceChip"
+
         android:background="@drawable/selector_toggle_rect_blue"
         />
 
     <com.google.android.material.chip.Chip
+        android:id="@+id/choice_clean"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="CLEAN"
-
+        android:tag="2"
         style="@style/suzukiChoiceChip"
         android:background="@drawable/selector_toggle_rect_blue"
         />
 
     <com.google.android.material.chip.Chip
+        android:id="@+id/choice_replace"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="REPLACE"
-
+        android:tag="3"
         style="@style/suzukiChoiceChip"
         android:background="@drawable/selector_toggle_rect_blue"
         />

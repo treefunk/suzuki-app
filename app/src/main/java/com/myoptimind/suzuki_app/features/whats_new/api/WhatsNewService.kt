@@ -2,7 +2,7 @@ package com.myoptimind.suzuki_app.features.whats_new.api
 
 import com.google.gson.annotations.SerializedName
 import com.myoptimind.suzuki_app.features.whats_new.data.Article
-import com.myoptimind.suzuki_app.shared.api.MetaResponse
+import com.myoptimind.suzuki_app.features.shared.api.MetaResponse
 import retrofit2.http.GET
 import retrofit2.http.Query
 

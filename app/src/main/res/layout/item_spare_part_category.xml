@@ -14,16 +14,19 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:elevation="1dp"
         >
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:weightSum="2"
-        android:padding="10dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
 
         >
 
     <ImageView
+        android:id="@+id/iv_main"
         android:layout_width="0dp"
         android:layout_height="100dp"
         android:layout_weight="1"
@@ -32,11 +35,12 @@
         />
     <LinearLayout
         android:layout_width="0dp"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
         android:orientation="vertical"
         >
         <TextView
+            android:id="@+id/tv_motorcycle_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
@@ -47,6 +51,7 @@
             android:text="Raider J Crossover" />
 
         <TextView
+            android:id="@+id/tv_model_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
@@ -57,6 +62,7 @@
             />
 
         <TextView
+            android:id="@+id/tv_price_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
@@ -68,6 +74,7 @@
             />
 
         <LinearLayout
+            android:id="@+id/ll_inquire"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -79,10 +86,10 @@
                 style="@style/suzukiTextLink2"
                 android:fontFamily="@font/overpass_regular"
                 android:letterSpacing="0.06"
-                android:text="Inquire about this product"
+                android:text="@string/label_inquire"
                 android:layout_gravity="center_vertical"
                 android:layout_marginRight="4dp"
-                android:textSize="9sp"
+                android:textSize="10sp"
 
                 />
             <ImageView
@@ -94,6 +101,7 @@
                 />
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/ll_find_a_dealer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -103,10 +111,10 @@
                 style="@style/suzukiTextLink2"
                 android:fontFamily="@font/overpass_regular"
                 android:letterSpacing="0.06"
-                android:text="Find a Dealer"
+                android:text="@string/label_find_a_dealer"
                 android:layout_marginRight="4dp"
                 android:layout_gravity="center_vertical"
-                android:textSize="9sp"
+                android:textSize="10sp"
 
                 />
             <ImageView

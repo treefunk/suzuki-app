@@ -1,0 +1,817 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/img_main_bg"
+    >
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingBottom="25dp"
+    android:layout_marginBottom="130dp"
+    >
+
+<!--
+    <include layout="@layout/partial_nav_top" />
+
+    <View
+        android:id="@+id/extra"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toBottomOf="@id/appbar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@color/color_red_200"
+        />
+-->
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/label_beast_name"
+
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+
+        style="@style/suzukiHeader1"
+        android:letterSpacing="0.05"
+        android:text="BEAST NICKNAME"
+        tools:ignore="NotSibling"
+        />
+
+
+    <View
+        android:id="@+id/white_bg_header_bike_details"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="@id/blue_bg_bike_details"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/blue_bg_bike_details"
+        app:layout_constraintLeft_toLeftOf="@id/blue_bg_bike_details"
+        android:background="@drawable/shape_rect_white_semi_rounded_corners"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="8dp"
+        />
+
+    <View
+        android:id="@+id/blue_bg_bike_details"
+        android:layout_width="125dp"
+        android:layout_height="35dp"
+
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/rectangle_blue_slanted_4"
+        />
+
+
+
+    <TextView
+        android:id="@+id/label_header_bike_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/blue_bg_bike_details"
+        app:layout_constraintTop_toTopOf="@id/blue_bg_bike_details"
+        app:layout_constraintBottom_toBottomOf="@id/blue_bg_bike_details"
+        app:layout_constraintRight_toRightOf="@id/blue_bg_bike_details"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginLeft="12dp"
+
+        android:text="BIKE DETAILS"
+        style="@style/suzukiHeader2.labelCustomerCare"
+        android:textColor="@color/color_blue_1000"
+        android:textSize="11sp"
+        />
+
+    <ImageView
+        android:id="@+id/box_bike_details"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+
+        app:layout_constraintTop_toBottomOf="@id/white_bg_header_bike_details"
+        app:layout_constraintLeft_toLeftOf="@id/blue_bg_bike_details"
+        app:layout_constraintRight_toRightOf="@id/white_bg_header_bike_details"
+        android:background="@android:color/white"
+        />
+
+    <View
+        android:id="@+id/blue_line_bike_details"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+
+        android:layout_marginTop="1dp"
+        app:layout_constraintTop_toBottomOf="@id/blue_bg_bike_details"
+        app:layout_constraintLeft_toLeftOf="@id/label_preventive_maintenance"
+        app:layout_constraintRight_toRightOf="@id/label_emergency_service"
+        android:background="@color/color_blue_150"
+        />
+    
+    <TextView
+        android:id="@+id/label_odometer_reading"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintVertical_weight="0.5"
+        app:layout_constraintTop_toTopOf="@id/box_bike_details"
+        app:layout_constraintLeft_toLeftOf="@id/box_bike_details"
+        app:layout_constraintBottom_toTopOf="@id/tv_odometer_reading"
+        app:layout_constraintRight_toLeftOf="@id/line_center_bike_details"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:text="Current Odometer\nReading"
+
+        style="@style/suzukiSemiBlackText1.serviceHistorySummaryLabel"
+        />
+
+    <TextView
+        android:id="@+id/tv_odometer_reading"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintVertical_weight="0.5"
+        app:layout_constraintTop_toBottomOf="@id/label_odometer_reading"
+        app:layout_constraintLeft_toLeftOf="@id/box_bike_details"
+        app:layout_constraintBottom_toBottomOf="@id/box_bike_details"
+        app:layout_constraintRight_toLeftOf="@id/line_center_bike_details"
+        android:gravity="left"
+        android:layout_marginLeft="12dp"
+
+        android:text="23,758.4 miles"
+        style="@style/suzukiSemiBlackText1.serviceHistorySummaryBody"
+        />
+
+    <View
+        android:id="@+id/line_center_bike_details"
+        android:layout_width="0.6dp"
+        android:layout_height="0dp"
+
+        app:layout_constraintTop_toTopOf="@id/box_bike_details"
+        app:layout_constraintBottom_toBottomOf="@id/box_bike_details"
+        app:layout_constraintLeft_toLeftOf="@id/box_bike_details"
+        app:layout_constraintRight_toRightOf="@id/box_bike_details"
+        android:background="@color/color_grey_1000"
+        />
+
+    <TextView
+        android:id="@+id/label_date_purchase"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintVertical_weight="0.5"
+        app:layout_constraintTop_toTopOf="@id/label_odometer_reading"
+        app:layout_constraintLeft_toLeftOf="@id/line_center_bike_details"
+        app:layout_constraintRight_toRightOf="@id/box_bike_details"
+        app:layout_constraintBottom_toTopOf="@id/tv_date_purchase"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintVertical_bias="0"
+        android:layout_marginLeft="12dp"
+        android:text="Date of Purchase"
+
+        style="@style/suzukiSemiBlackText1.serviceHistorySummaryLabel"
+        />
+
+    <TextView
+        android:id="@+id/tv_date_purchase"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintVertical_weight="0.5"
+        app:layout_constraintTop_toBottomOf="@id/label_date_purchase"
+        app:layout_constraintRight_toRightOf="@id/box_bike_details"
+        app:layout_constraintBottom_toBottomOf="@id/box_bike_details"
+        app:layout_constraintLeft_toLeftOf="@id/label_date_purchase"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginRight="12dp"
+        android:gravity="left"
+
+        android:text="January 20, 2019"
+        style="@style/suzukiSemiBlackText1.serviceHistorySummaryBody"
+        />
+
+    <View
+        android:id="@+id/white_bg_header_next_pms"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="@id/blue_bg_next_pms"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/blue_bg_next_pms"
+        app:layout_constraintLeft_toLeftOf="@id/blue_bg_next_pms"
+        android:background="@drawable/shape_rect_white_semi_rounded_corners"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="8dp"
+        />
+
+    <View
+        android:id="@+id/blue_bg_next_pms"
+        android:layout_width="125dp"
+        android:layout_height="35dp"
+
+        app:layout_constraintTop_toBottomOf="@id/box_bike_details"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/rectangle_blue_slanted_4"
+        />
+
+    <TextView
+        android:id="@+id/label_header_next_pms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/blue_bg_next_pms"
+        app:layout_constraintTop_toTopOf="@id/blue_bg_next_pms"
+        app:layout_constraintBottom_toBottomOf="@id/blue_bg_next_pms"
+        app:layout_constraintRight_toRightOf="@id/blue_bg_next_pms"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginLeft="12dp"
+
+        android:text="MY NEXT PMS"
+        style="@style/suzukiHeader2.labelCustomerCare"
+        android:textColor="@color/color_blue_1000"
+        android:textSize="11sp"
+        />
+
+    <ImageView
+        android:id="@+id/box_next_pms"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+
+        app:layout_constraintTop_toBottomOf="@id/white_bg_header_next_pms"
+        app:layout_constraintLeft_toLeftOf="@id/blue_bg_next_pms"
+        app:layout_constraintRight_toRightOf="@id/white_bg_header_next_pms"
+        android:background="@android:color/white"
+        />
+
+    <TextView
+        android:id="@+id/label_date_pms"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toTopOf="@id/box_next_pms"
+        app:layout_constraintLeft_toLeftOf="@id/box_next_pms"
+        app:layout_constraintBottom_toTopOf="@id/tv_date_pms"
+        app:layout_constraintRight_toLeftOf="@id/line_center_next_pms"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:text="Date"
+        app:layout_constraintVertical_bias="0.3"
+
+        style="@style/suzukiSemiBlackText1.serviceHistorySummaryLabel"
+        />
+
+    <TextView
+        android:id="@+id/tv_date_pms"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintVertical_weight="0.5"
+        app:layout_constraintTop_toBottomOf="@id/label_date_pms"
+        app:layout_constraintLeft_toLeftOf="@id/box_next_pms"
+        app:layout_constraintBottom_toBottomOf="@id/box_next_pms"
+        app:layout_constraintRight_toLeftOf="@id/line_center_next_pms"
+        android:gravity="left"
+        android:layout_marginLeft="12dp"
+
+        android:text="July 05, 2020"
+        style="@style/suzukiSemiBlackText1.serviceHistorySummaryBody"
+        />
+
+    <View
+        android:id="@+id/line_center_next_pms"
+        android:layout_width="0.6dp"
+        android:layout_height="0dp"
+
+        app:layout_constraintTop_toTopOf="@id/box_next_pms"
+        app:layout_constraintBottom_toBottomOf="@id/box_next_pms"
+        app:layout_constraintLeft_toLeftOf="@id/box_next_pms"
+        app:layout_constraintRight_toRightOf="@id/box_next_pms"
+        android:background="@color/color_grey_1000"
+        />
+
+    <TextView
+        android:id="@+id/label_mileage_pms"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintVertical_weight="0.5"
+        app:layout_constraintTop_toTopOf="@id/label_date_pms"
+        app:layout_constraintLeft_toRightOf="@id/line_center_next_pms"
+        app:layout_constraintRight_toRightOf="@id/box_next_pms"
+        app:layout_constraintBottom_toTopOf="@id/tv_mileage_pms"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintVertical_bias="0"
+        android:layout_marginRight="24dp"
+        android:layout_marginLeft="12dp"
+        android:text="Mileage left before\nnext PMS"
+
+        style="@style/suzukiSemiBlackText1.serviceHistorySummaryLabel"
+        />
+
+    <TextView
+        android:id="@+id/tv_mileage_pms"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintVertical_weight="0.5"
+        app:layout_constraintTop_toBottomOf="@id/label_mileage_pms"
+        app:layout_constraintRight_toRightOf="@id/box_next_pms"
+        app:layout_constraintBottom_toBottomOf="@id/box_next_pms"
+        app:layout_constraintLeft_toLeftOf="@id/label_mileage_pms"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginRight="12dp"
+        android:gravity="left"
+
+        android:text="5,234.6 miles"
+        style="@style/suzukiSemiBlackText1.serviceHistorySummaryBody"
+        />
+
+    <View
+        android:id="@+id/blue_line_next_pms"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+
+        android:layout_marginTop="1dp"
+        app:layout_constraintTop_toBottomOf="@id/blue_bg_next_pms"
+        app:layout_constraintLeft_toLeftOf="@id/label_preventive_maintenance"
+        app:layout_constraintRight_toRightOf="@id/label_emergency_service"
+        android:background="@color/color_blue_150"
+        />
+
+
+    <View
+        android:id="@+id/blue_bg_specs"
+        android:layout_width="0dp"
+        android:layout_height="37dp"
+        app:layout_constraintTop_toBottomOf="@id/box_next_pms"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@color/color_blue_150"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="16dp"
+
+        />
+
+
+    <TextView
+        android:id="@+id/label_preventive_maintenance"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+
+        app:layout_constraintTop_toBottomOf="@id/box_next_pms"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/label_emergency_service"
+        app:layout_constraintBottom_toBottomOf="@id/line_white_specs"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center_vertical"
+
+        android:padding="6dp"
+        style="@style/suzukiTextBody2"
+        android:text="Preventive Maintenance\nService"
+        android:textColor="@color/color_blue_1000"
+        android:letterSpacing="0.07"
+        android:fontFamily="@font/forza_bold"
+        android:textSize="10sp"
+        />
+
+    <TextView
+        android:id="@+id/label_emergency_service"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+
+
+        app:layout_constraintTop_toBottomOf="@id/box_next_pms"
+        app:layout_constraintLeft_toRightOf="@id/label_preventive_maintenance"
+        app:layout_constraintRight_toRightOf="@id/blue_bg_specs"
+        app:layout_constraintBottom_toBottomOf="@id/line_white_specs"
+        android:layout_marginTop="16dp"
+
+        android:padding="6dp"
+        style="@style/suzukiTextBody2"
+        android:text="Emergency Service"
+        android:textColor="@color/color_grey_disabled"
+        android:gravity="center_vertical"
+        android:fontFamily="@font/forza_bold"
+
+        android:textSize="10sp"
+        android:background="@android:color/white"
+        />
+
+    <View
+        android:id="@+id/line_white_specs"
+        android:layout_width="0dp"
+        android:layout_height="0.70dp"
+
+        app:layout_constraintLeft_toLeftOf="@id/label_preventive_maintenance"
+        app:layout_constraintRight_toRightOf="@id/label_emergency_service"
+        app:layout_constraintBottom_toBottomOf="@id/label_preventive_maintenance"
+        android:background="@color/color_blue_1000"
+        />
+
+    <View
+        android:id="@+id/box_maintenance"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/blue_bg_specs"
+        app:layout_constraintLeft_toLeftOf="@id/line_white_specs"
+        app:layout_constraintRight_toRightOf="@id/line_white_specs"
+        app:layout_constraintBottom_toBottomOf="@id/tv_notes"
+        android:background="@android:color/white"
+        />
+
+    <TextView
+        android:id="@+id/label_change_oil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/line_white_specs"
+        app:layout_constraintLeft_toLeftOf="@id/box_maintenance"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+
+        style="@style/suzukiTextBody1.maintenanceServiceLabel"
+        android:text="CHANGE OIL"
+        />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+
+        app:layout_constraintTop_toBottomOf="@id/label_change_oil"
+        app:layout_constraintBottom_toTopOf="@id/label_tires"
+        app:layout_constraintLeft_toLeftOf="@id/box_maintenance"
+        app:layout_constraintRight_toRightOf="@id/box_maintenance"
+        android:background="@color/color_grey_1000"
+        />
+
+    <TextView
+        android:id="@+id/tv_change_oil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/label_change_oil"
+        app:layout_constraintRight_toRightOf="@id/box_maintenance"
+        app:layout_constraintBottom_toBottomOf="@id/label_change_oil"
+        android:layout_marginRight="8dp"
+
+        style="@style/suzukiSemiBlackText1.serviceHistorySummaryBody2"
+        android:text="CHECK"
+
+        />
+
+    <TextView
+        android:id="@+id/label_tires"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/label_change_oil"
+        app:layout_constraintLeft_toLeftOf="@id/box_maintenance"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="14dp"
+
+        style="@style/suzukiTextBody1.maintenanceServiceLabel"
+        android:text="TIRES"
+        />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+
+        app:layout_constraintTop_toBottomOf="@id/label_tires"
+        app:layout_constraintBottom_toTopOf="@id/label_brakes"
+        app:layout_constraintLeft_toLeftOf="@id/box_maintenance"
+        app:layout_constraintRight_toRightOf="@id/box_maintenance"
+        android:background="@color/color_grey_1000"
+        />
+
+    <TextView
+        android:id="@+id/tv_tires"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/label_tires"
+        app:layout_constraintRight_toRightOf="@id/box_maintenance"
+        app:layout_constraintBottom_toBottomOf="@id/label_tires"
+        android:layout_marginRight="8dp"
+
+        style="@style/suzukiSemiBlackText1.serviceHistorySummaryBody2"
+        android:text="CHECK"
+
+        />
+
+    <TextView
+        android:id="@+id/label_brakes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/label_tires"
+        app:layout_constraintLeft_toLeftOf="@id/box_maintenance"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="14dp"
+
+        style="@style/suzukiTextBody1.maintenanceServiceLabel"
+        android:text="BRAKES"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_brakes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/label_brakes"
+        app:layout_constraintRight_toRightOf="@id/box_maintenance"
+        app:layout_constraintBottom_toBottomOf="@id/label_brakes"
+        android:layout_marginRight="8dp"
+
+
+        style="@style/suzukiSemiBlackText1.serviceHistorySummaryBody2"
+        android:text="CHECK"
+
+        />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0.6dp"
+
+        app:layout_constraintTop_toBottomOf="@id/label_brakes"
+        app:layout_constraintBottom_toTopOf="@id/label_chains_sprockets"
+        app:layout_constraintLeft_toLeftOf="@id/box_maintenance"
+        app:layout_constraintRight_toRightOf="@id/box_maintenance"
+        android:background="@color/color_grey_1000"
+        />
+
+    <TextView
+        android:id="@+id/label_chains_sprockets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/label_brakes"
+        app:layout_constraintLeft_toLeftOf="@id/box_maintenance"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="14dp"
+
+        style="@style/suzukiTextBody1.maintenanceServiceLabel"
+        android:text="CHAINS AND SPROCKETS"
+        />
+
+    <TextView
+        android:id="@+id/tv_chains_sprockets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/label_chains_sprockets"
+        app:layout_constraintRight_toRightOf="@id/box_maintenance"
+        app:layout_constraintBottom_toBottomOf="@id/label_chains_sprockets"
+        android:layout_marginRight="8dp"
+
+        style="@style/suzukiSemiBlackText1.serviceHistorySummaryBody2"
+        android:text="CHECK"
+
+        />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0.6dp"
+
+        app:layout_constraintTop_toBottomOf="@id/label_chains_sprockets"
+        app:layout_constraintBottom_toTopOf="@id/label_air_filter"
+        app:layout_constraintLeft_toLeftOf="@id/box_maintenance"
+        app:layout_constraintRight_toRightOf="@id/box_maintenance"
+        android:background="@color/color_grey_1000"
+        />
+
+    <TextView
+        android:id="@+id/label_air_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/label_chains_sprockets"
+        app:layout_constraintLeft_toLeftOf="@id/box_maintenance"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="14dp"
+
+        style="@style/suzukiTextBody1.maintenanceServiceLabel"
+        android:text="AIR FILTER"
+        />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0.6dp"
+
+        app:layout_constraintTop_toBottomOf="@id/label_air_filter"
+        app:layout_constraintBottom_toTopOf="@id/label_spark_plugs"
+        app:layout_constraintLeft_toLeftOf="@id/box_maintenance"
+        app:layout_constraintRight_toRightOf="@id/box_maintenance"
+        android:background="@color/color_grey_1000"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_air_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/label_air_filter"
+        app:layout_constraintRight_toRightOf="@id/box_maintenance"
+        app:layout_constraintBottom_toBottomOf="@id/label_air_filter"
+        android:layout_marginRight="8dp"
+
+
+        style="@style/suzukiSemiBlackText1.serviceHistorySummaryBody2"
+        android:text="CHECK"
+
+        />
+
+    <TextView
+        android:id="@+id/label_spark_plugs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/label_air_filter"
+        app:layout_constraintLeft_toLeftOf="@id/box_maintenance"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="14dp"
+
+        style="@style/suzukiTextBody1.maintenanceServiceLabel"
+        android:text="SPARK PLUGS"
+        />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0.6dp"
+
+        app:layout_constraintTop_toBottomOf="@id/label_spark_plugs"
+        app:layout_constraintBottom_toTopOf="@id/label_exhaust_muffler"
+        app:layout_constraintLeft_toLeftOf="@id/box_maintenance"
+        app:layout_constraintRight_toRightOf="@id/box_maintenance"
+        android:background="@color/color_grey_1000"
+        />
+
+    <TextView
+        android:id="@+id/tv_spark_plugs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/label_spark_plugs"
+        app:layout_constraintRight_toRightOf="@id/box_maintenance"
+        app:layout_constraintBottom_toBottomOf="@id/label_spark_plugs"
+        android:layout_marginRight="8dp"
+
+
+        style="@style/suzukiSemiBlackText1.serviceHistorySummaryBody2"
+        android:text="CHECK"
+
+        />
+
+    <TextView
+        android:id="@+id/label_exhaust_muffler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/label_spark_plugs"
+        app:layout_constraintLeft_toLeftOf="@id/box_maintenance"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="14dp"
+
+        style="@style/suzukiTextBody1.maintenanceServiceLabel"
+        android:text="EXHAUST MUFFLER"
+        />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0.6dp"
+
+        app:layout_constraintTop_toBottomOf="@id/label_exhaust_muffler"
+        app:layout_constraintBottom_toTopOf="@id/label_suspension"
+        app:layout_constraintLeft_toLeftOf="@id/box_maintenance"
+        app:layout_constraintRight_toRightOf="@id/box_maintenance"
+        android:background="@color/color_grey_1000"
+        />
+
+    <TextView
+        android:id="@+id/tv_exhaust_muffler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/label_exhaust_muffler"
+        app:layout_constraintRight_toRightOf="@id/box_maintenance"
+        app:layout_constraintBottom_toBottomOf="@id/label_exhaust_muffler"
+        android:layout_marginRight="8dp"
+
+        style="@style/suzukiSemiBlackText1.serviceHistorySummaryBody2"
+        android:text="CHECK"
+
+        />
+
+    <TextView
+        android:id="@+id/label_suspension"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/label_exhaust_muffler"
+        app:layout_constraintLeft_toLeftOf="@id/box_maintenance"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="14dp"
+
+        style="@style/suzukiTextBody1.maintenanceServiceLabel"
+        android:text="SUSPENSION"
+        />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0.6dp"
+
+        app:layout_constraintTop_toBottomOf="@id/label_suspension"
+        app:layout_constraintBottom_toTopOf="@id/label_chassis_bolts_nuts"
+        app:layout_constraintLeft_toLeftOf="@id/box_maintenance"
+        app:layout_constraintRight_toRightOf="@id/box_maintenance"
+        android:background="@color/color_grey_1000"
+        />
+
+    <TextView
+        android:id="@+id/tv_suspension"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/label_suspension"
+        app:layout_constraintRight_toRightOf="@id/box_maintenance"
+        app:layout_constraintBottom_toBottomOf="@id/label_suspension"
+        android:layout_marginRight="8dp"
+
+        style="@style/suzukiSemiBlackText1.serviceHistorySummaryBody2"
+        android:text="CHECK"
+
+        />
+
+    <TextView
+        android:id="@+id/label_chassis_bolts_nuts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/label_suspension"
+        app:layout_constraintLeft_toLeftOf="@id/box_maintenance"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="14dp"
+
+        style="@style/suzukiTextBody1.maintenanceServiceLabel"
+        android:text="CHASSIS, BOLTS AND NUTS"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_chassis_bolts_nuts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/label_chassis_bolts_nuts"
+        app:layout_constraintRight_toRightOf="@id/box_maintenance"
+        app:layout_constraintBottom_toBottomOf="@id/label_chassis_bolts_nuts"
+        android:layout_marginRight="8dp"
+
+        style="@style/suzukiSemiBlackText1.serviceHistorySummaryBody2"
+        android:text="CHECK"
+
+        />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0.6dp"
+
+        app:layout_constraintTop_toBottomOf="@id/label_chassis_bolts_nuts"
+        app:layout_constraintBottom_toTopOf="@id/label_notes"
+        app:layout_constraintLeft_toLeftOf="@id/box_maintenance"
+        app:layout_constraintRight_toRightOf="@id/box_maintenance"
+        android:background="@color/color_grey_1000"
+        />
+
+
+    <TextView
+        android:id="@+id/label_notes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/label_chassis_bolts_nuts"
+        app:layout_constraintLeft_toLeftOf="@id/box_maintenance"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="14dp"
+
+        style="@style/suzukiTextBody1.maintenanceServiceLabel"
+        android:text="NOTES:"
+        />
+
+    <TextView
+        android:id="@+id/tv_notes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/label_notes"
+        app:layout_constraintLeft_toLeftOf="@id/box_maintenance"
+        app:layout_constraintRight_toRightOf="@id/box_maintenance"
+        app:layout_constraintBottom_toBottomOf="@id/box_maintenance"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="4dp"
+        android:paddingBottom="30dp"
+        app:layout_constraintVertical_bias="0"
+
+
+        style="@style/suzukiTextBody1.maintenanceServiceLabel"
+        android:text="@tools:sample/lorem/random"
+        />
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,7 +1,7 @@
 package com.myoptimind.suzuki_app.features.home.data
 
 import com.google.gson.annotations.SerializedName
-import com.myoptimind.suzuki_app.shared.BaseRemoteEntity
+import com.myoptimind.suzuki_app.features.shared.BaseRemoteEntity
 
 /**
  *  Items that displays on home slider

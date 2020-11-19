@@ -1,6 +1,6 @@
 package com.myoptimind.suzuki_app.features.customer_care.api
 
-import com.myoptimind.suzuki_app.shared.api.MetaResponse
+import com.myoptimind.suzuki_app.features.shared.api.MetaResponse
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.POST

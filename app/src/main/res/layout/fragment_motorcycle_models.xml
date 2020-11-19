@@ -26,7 +26,7 @@
         android:text="Motorcycle models"
         android:elevation="1dp"
 
-        tools:ignore="NotSibling" />
+         />
 
     <View
         android:id="@+id/filter_white_background"
@@ -103,6 +103,7 @@
         android:clickable="false"
         android:focusable="false"
         android:focusableInTouchMode="false"
+        android:text="All"
 
         android:layout_marginLeft="18dp"
 

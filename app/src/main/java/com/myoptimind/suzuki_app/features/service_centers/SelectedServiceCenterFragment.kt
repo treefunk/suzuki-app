@@ -22,6 +22,7 @@ import com.myoptimind.suzuki_app.features.shared.TitleOnlyFragment
 import com.myoptimind.suzuki_app.features.shared.api.Result
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_selected_service_center.*
+import pub.devrel.easypermissions.EasyPermissions
 
 @AndroidEntryPoint
 class SelectedServiceCenterFragment: TitleOnlyFragment() {
@@ -71,7 +72,7 @@ class SelectedServiceCenterFragment: TitleOnlyFragment() {
 
                         btn_call.setOnClickListener {
                             val phone = serviceCenter.contactNumber
-                            val intent = Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", "78954", null))
+                            val intent = Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", "#789854", null))
                             startActivity(intent)
                         }
 

@@ -16,6 +16,7 @@ private const val PREF_USER_ID   = "pref_user_id"
 private const val PREF_FULL_NAME = "pref_full_name"
 private const val PREF_EMAIL_ADDRESS = "pref_email_address"
 private const val PREF_PROFILE_PICTURE = "pref_profile_picture"
+private const val PREF_DISABLE_NOTIFICATION = "pref_enable_notifications"
 
 class AppSharedPref(val context: Context) {
     private var preferences: SharedPreferences? = null
@@ -91,5 +92,23 @@ class AppSharedPref(val context: Context) {
 
         editor?.apply()
     }
+
+    val isNotificationEnable: Boolean
+        get() = preferences!!.contains(PREF_DISABLE_NOTIFICATION).not()
+
+    fun enableNotification(enabled: Boolean){
+        preferences?.edit().also {
+            if(enabled.not()){
+                it?.putBoolean(PREF_DISABLE_NOTIFICATION,enabled)
+            }else{
+                if(preferences!!.contains(PREF_DISABLE_NOTIFICATION)){
+                    it?.remove(PREF_DISABLE_NOTIFICATION)
+                }
+            }
+            it?.apply()
+        }
+    }
+
+
 
 }

@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    >
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:background="@drawable/img_main_bg"
     android:layout_marginBottom="50dp"
     >
@@ -38,7 +44,7 @@
         app:layout_constraintTop_toBottomOf="@id/tv_title"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/rv_my_motorcycles"
+        app:layout_constraintBottom_toTopOf="@id/barrier_top_recycler"
 
         android:layout_marginTop="4dp"
 
@@ -49,34 +55,54 @@
 
         />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_my_motorcycles"
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier_top_recycler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="rl_my_motorcycles,img_motorcycle"
+        app:barrierDirection="top"
+        />
+
+    <RelativeLayout
+        android:id="@+id/rl_my_motorcycles"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-
         app:layout_constraintTop_toBottomOf="@id/btn_register_motorcycle"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        >
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_my_motorcycles"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
 
-        android:clipToPadding="false"
-        android:layout_marginTop="12dp"
-        android:paddingBottom="80dp"
-        android:overScrollMode="never"
-        tools:listitem="@layout/item_my_motorcycle"
-        />
-    
+
+
+            android:nestedScrollingEnabled="false"
+            android:clipToPadding="false"
+            android:layout_marginTop="12dp"
+            android:paddingBottom="110dp"
+            tools:listitem="@layout/item_my_motorcycle"
+            />
+
+
+    </RelativeLayout>
+
+
     <ImageView
         android:id="@+id/img_motorcycle"
         android:layout_width="250dp"
         android:layout_height="150dp"
 
-        app:layout_constraintTop_toBottomOf="@id/btn_register_motorcycle"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barrier_top_recycler"
+        app:layout_constraintBottom_toTopOf="@id/label_no_registered_motorcycle"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:src="@drawable/ic_motorcycles_2"
-        android:scaleType="centerInside"
-        app:layout_constraintVertical_bias="0.20"
+        android:scaleType="fitCenter"
+        android:layout_marginTop="120dp"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintVertical_bias="0.30"
         />
 
     <TextView
@@ -102,6 +128,7 @@
         app:layout_constraintTop_toBottomOf="@id/label_no_registered_motorcycle"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
 
 
         android:layout_marginTop="12dp"
@@ -126,7 +153,7 @@
         android:id="@+id/group_motorcycles"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:constraint_referenced_ids="tv_title,btn_register_motorcycle,rv_my_motorcycles"
+        app:constraint_referenced_ids="tv_title,btn_register_motorcycle,rl_my_motorcycles"
         android:visibility="gone"
         tools:visibility="visible"
         />
@@ -136,3 +163,6 @@
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>

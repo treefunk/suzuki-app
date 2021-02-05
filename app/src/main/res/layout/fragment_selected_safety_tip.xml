@@ -70,12 +70,19 @@
     <WebView
         android:id="@+id/wv_video"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="320dp"
         app:layout_constraintTop_toTopOf="@id/iv_main_image"
         app:layout_constraintLeft_toLeftOf="@id/iv_main_image"
         app:layout_constraintRight_toRightOf="@id/iv_main_image"
-        app:layout_constraintBottom_toBottomOf="@id/iv_main_image"
-        android:visibility="invisible"
+        android:visibility="gone"
+        />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier_media"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="wv_video,iv_main_image"
+        app:barrierDirection="bottom"
         />
 
 
@@ -87,7 +94,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
 
-        app:layout_constraintTop_toBottomOf="@id/iv_main_image"
+        app:layout_constraintTop_toBottomOf="@id/barrier_media"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
 

@@ -17,6 +17,7 @@ import com.myoptimind.suzuki_app.MainActivity
 import com.myoptimind.suzuki_app.R
 import com.myoptimind.suzuki_app.features.login.data.LoginFeaturedMotorcycle
 import com.myoptimind.suzuki_app.features.shared.AppSharedPref
+import com.myoptimind.suzuki_app.features.shared.MyFirebaseMessagingService
 import com.myoptimind.suzuki_app.features.shared.api.Result
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_login.*
@@ -81,9 +82,20 @@ class LoginActivity : AppCompatActivity() {
     }
     private fun redirectAuthenticatedUser(){
         Timber.v("User Id ${sharedPref.getUserId()} is currently logged in..")
+
+
+
+        val mainActivityIntent = Intent(this, MainActivity::class.java)
+        intent.extras?.getString(MyFirebaseMessagingService.EXTRA_WHATS_NEW).also {
+            Timber.d("extras - $it")
+            if(it != null)
+                mainActivityIntent.putExtra(MyFirebaseMessagingService.EXTRA_WHATS_NEW,it)
+        }
         this@LoginActivity.finish()
+
+
         startActivity(
-                Intent(this, MainActivity::class.java)
+                mainActivityIntent
         )
     }
 
@@ -92,6 +104,8 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
 
         viewModel.getFeaturedMotorcycles()

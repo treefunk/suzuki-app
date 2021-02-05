@@ -57,8 +57,8 @@
 
     <ImageView
         android:id="@+id/filter_background"
-        android:layout_width="170dp"
-        android:layout_height="40dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/tv_view_our_services"
         app:layout_constraintLeft_toLeftOf="parent"
 

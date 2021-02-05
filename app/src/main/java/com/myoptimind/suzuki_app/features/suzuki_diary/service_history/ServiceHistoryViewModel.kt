@@ -12,10 +12,12 @@ import com.myoptimind.suzuki_app.features.suzuki_diary.service_history.data.Serv
 import com.myoptimind.suzuki_app.features.suzuki_diary.service_history.data.ServiceHistoryDetails
 import com.myoptimind.suzuki_app.features.suzuki_diary.service_history.data.ServiceHistoryMaintenance
 import com.myoptimind.suzuki_app.features.shared.api.Result
+import com.myoptimind.suzuki_app.features.shared.getMessage
 import com.myoptimind.suzuki_app.features.suzuki_diary.my_motorcycles.MyMotorcyclesRepository
 import com.myoptimind.suzuki_app.features.suzuki_diary.my_motorcycles.api.MyMotorcyclesService
 import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.launch
+import retrofit2.HttpException
 import timber.log.Timber
 
 class ServiceHistoryViewModel @ViewModelInject constructor(
@@ -327,8 +329,13 @@ class ServiceHistoryViewModel @ViewModelInject constructor(
                         3
                 )
                 _upcomingEventsResult.postValue(Result.Success(response))
-            }catch (exception: java.lang.Exception){
-                _upcomingEventsResult.postValue(Result.Error(exception))
+            }catch (exception: Exception){
+                if(exception is HttpException){
+                    val message = exception.getMessage()
+                    _upcomingEventsResult.postValue(Result.Error(Exception(message)))
+                }else{
+                    _upcomingEventsResult.postValue(Result.Error(exception))
+                }
             }
         }
     }

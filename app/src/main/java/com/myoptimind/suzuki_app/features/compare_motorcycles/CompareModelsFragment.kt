@@ -76,13 +76,13 @@ class CompareModelsFragment() : TitleOnlyFragment() {
                 iv_motorcycle_logo_1.visibility = View.VISIBLE
                 group_no_motorcycles.visibility = View.GONE
                 Glide.with(requireContext())
-                        .load(it?.image)
-                        .centerInside()
+                        .load(it.image)
+                        .fitCenter()
                         .into(iv_motorcycle_1)
 
                 Glide.with(requireContext())
-                        .load(it?.logo)
-                        .centerInside()
+                        .load(it.logo)
+                        .fitCenter()
                         .into(iv_motorcycle_logo_1)
             }else{
                 iv_motorcycle_1.visibility = View.INVISIBLE
@@ -98,11 +98,11 @@ class CompareModelsFragment() : TitleOnlyFragment() {
                 group_no_motorcycles.visibility = View.GONE
                 Glide.with(requireContext())
                         .load(it?.image)
-                        .centerInside()
+                        .fitCenter()
                         .into(iv_motorcycle_2)
                 Glide.with(requireContext())
                         .load(it?.logo)
-                        .centerInside()
+                        .fitCenter()
                         .into(iv_motorcycle_logo_2)
             }else{
                 iv_motorcycle_2.visibility = View.INVISIBLE

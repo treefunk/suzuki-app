@@ -9,6 +9,7 @@ import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.myoptimind.suzuki_app.MainActivity
 import com.myoptimind.suzuki_app.R
+import com.myoptimind.suzuki_app.features.shared.InfoDialogFragment
 import com.myoptimind.suzuki_app.features.shared.LogoOnlyFragment
 import kotlinx.android.synthetic.main.fragment_full_menu.*
 
@@ -24,7 +25,11 @@ class FullMenuFragment : LogoOnlyFragment(), View.OnClickListener {
     override fun onClick(view: View?) {
         when(view){
             iv_motorcycle_models -> findNavController().navigate(R.id.action_global_motorcycleModelsFragment)
-            iv_spare_parts -> findNavController().navigate(R.id.action_global_sparePartsFragment)
+            iv_spare_parts -> {
+                //todo: enable this after update
+                InfoDialogFragment.newInstance("Sorry!","Contents for spare parts are coming soon.").show(parentFragmentManager,"spare_parts_disable")
+//                findNavController().navigate(R.id.action_global_sparePartsFragment)
+            }
             iv_dealer_locator -> findNavController().navigate(R.id.action_global_dealerLocatorsFragment)
             iv_whats_new -> findNavController().navigate(R.id.action_fullMenuFragment_to_whatsNewFragment)
             iv_customer_care -> findNavController().navigate(R.id.action_fullMenuFragment_to_customerCareFragment)
@@ -63,8 +68,12 @@ class FullMenuFragment : LogoOnlyFragment(), View.OnClickListener {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         super.onCreateView(inflater, container, savedInstanceState)
-        (activity as MainActivity).hideBottomNav(true);
         return inflater.inflate(R.layout.fragment_full_menu,container,false)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        (activity as MainActivity).hideBottomNav(true);
     }
 
 

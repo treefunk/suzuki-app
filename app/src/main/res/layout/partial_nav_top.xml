@@ -58,6 +58,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:lines="1"
+                android:maxLines="1"
+                android:singleLine="true"
                 android:hint="Search Model by Name"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toRightOf="@id/ib_nav_back"

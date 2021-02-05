@@ -23,7 +23,9 @@
         android:layout_marginRight="2dp"
         android:layout_marginTop="8dp"
         android:textSize="11sp"
-        android:text="SCHEDULE A SAFETY\n RIDING SEMINAR"
+        android:text="SCHEDULE A SAFETY\nRIDING SEMINAR"
+        android:lines="2"
+        android:maxLines="2"
 
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -40,6 +42,9 @@
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
         android:textSize="11sp"
+        android:lines="2"
+        android:maxLines="2"
+
 
         android:backgroundTint="@color/color_blue_150"
         android:text="LEARN TO RIDE"

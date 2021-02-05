@@ -53,13 +53,14 @@ class WhatsNewFragment : TitleOnlyFragment() {
 
 
 
-        adapter = WhatsNewAdapter(whatsNewList, object: WhatsNewAdapter.WhatsNewListener{
+        adapter = WhatsNewAdapter(whatsNewList,object: WhatsNewAdapter.WhatsNewListener{
             override fun onClickWhatsNew(index: Int) {
                 WhatsNewFragmentDirections.actionWhatsNewFragmentToSelectedWhatsNewFragment(index).also {
                     findNavController().navigate(it)
                 }
             }
         })
+
         rv_whats_new.layoutManager = LinearLayoutManager(requireContext(), RecyclerView.VERTICAL,false)
         rv_whats_new.adapter = adapter
         rv_whats_new.setOnScrollEnd {
@@ -67,6 +68,7 @@ class WhatsNewFragment : TitleOnlyFragment() {
                 viewModel.increaseRowCount()
             }
         }
+
 
         initClickListeners()
         initObservers()
@@ -84,9 +86,11 @@ class WhatsNewFragment : TitleOnlyFragment() {
 //                    adapter?.articleList = result.data.data.result
                     whatsNewList.clear()
                     whatsNewList.addAll(result.data.data.result)
+
                     total = result.data.data.result.size
                     adapter?.notifyDataSetChanged()
                     hideLoading()
+                    rv_whats_new.visibility = View.VISIBLE
 //                    viewModel.resetResult()
                 }
                 is Result.Error -> {
@@ -96,6 +100,7 @@ class WhatsNewFragment : TitleOnlyFragment() {
                 }
                 Result.Loading -> {
                     showLoading()
+                    rv_whats_new.visibility = View.GONE
                 }
             }
 

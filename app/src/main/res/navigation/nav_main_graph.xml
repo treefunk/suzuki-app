@@ -262,7 +262,7 @@
         android:label="ExtractDataFragment" >
         <action
             android:id="@+id/action_extractDataFragment_to_selectedServiceHistoryFragment2"
-            app:destination="@id/selectedServiceHistoryFragment2" />
+            app:destination="@id/selectedServiceHistoryFragment" />
     </fragment>
     <fragment
         android:id="@+id/aboutSuzukiFragment"
@@ -307,7 +307,7 @@
         android:id="@+id/action_global_customerCareFragment"
         app:destination="@id/customerCareFragment" />
     <fragment
-        android:id="@+id/selectedServiceHistoryFragment2"
+        android:id="@+id/selectedServiceHistoryFragment"
         android:name="com.myoptimind.suzuki_app.features.suzuki_diary.service_history.SelectedServiceHistoryFragment"
         android:label="SelectedServiceHistoryFragment"
 
@@ -327,18 +327,22 @@
         android:id="@+id/action_global_safetyTipsFragment"
         app:destination="@id/safetyTipsFragment" />
     <fragment
-        android:id="@+id/upcomingServiceEventsFragment2"
+        android:id="@+id/upcomingServiceEventsFragment"
         android:name="com.myoptimind.suzuki_app.features.notifications.UpcomingServiceEventsFragment"
         android:label="UpcomingServiceEventsFragment" >
-
         <action
-            android:id="@+id/action_upcomingServiceEventsFragment2_to_selectedServiceHistoryFragment22"
-            app:destination="@id/selectedServiceHistoryFragment2" >
+            android:id="@+id/action_upcomingServiceEventsFragment_to_selectedServiceHistoryFragment"
+            app:destination="@id/selectedServiceHistoryFragment">
         </action>
+<!--        j-->
+<!--        <action
+            android:id="@+id/action_upcomingServiceEventsFragment2_to_selectedServiceHistoryFragment22"
+            app:destination="@id/selectedServiceHistoryFragment">
+        </action>-->
     </fragment>
     <action
-        android:id="@+id/action_global_upcomingServiceEventsFragment2"
-        app:destination="@id/upcomingServiceEventsFragment2" />
+        android:id="@+id/action_global_upcomingServiceEventsFragment"
+        app:destination="@id/upcomingServiceEventsFragment" />
 
 
 </navigation>

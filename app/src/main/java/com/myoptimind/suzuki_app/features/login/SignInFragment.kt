@@ -114,7 +114,7 @@ class SignInFragment: BaseLoginFragment(), View.OnClickListener {
             }
 
             override fun onError(error: FacebookException?) {
-                Timber.v("ON ERROR")
+                Toast.makeText(requireContext(),error?.message,Toast.LENGTH_SHORT).show()
             }
         })
     }
@@ -138,7 +138,7 @@ class SignInFragment: BaseLoginFragment(), View.OnClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        facebookLogin()
         initClickListeners()
         initObservers()
     }
@@ -148,8 +148,14 @@ class SignInFragment: BaseLoginFragment(), View.OnClickListener {
             when(it){
                 R.id.tv_create_account -> findNavController().navigate(R.id.action_signInFragment_to_signUpFragment)
                 R.id.tv_forgot_password -> findNavController().navigate(R.id.action_signInFragment_to_forgotPasswordFragment)
-                R.id.btn_sign_in -> viewModel.loginUser(et_email_mobile.text.toString(), et_password.text.toString())
-                R.id.ib_facebook_button -> facebookLogin()
+                R.id.btn_sign_in -> {
+                    try{
+                        viewModel.loginUser(et_email_mobile.text.toString(), et_password.text.toString())
+                    }catch (exception: Exception){
+                        Toast.makeText(requireContext(),exception.message,Toast.LENGTH_SHORT).show()
+                    }
+                }
+//                R.id.ib_facebook_button -> facebookLogin()
                 R.id.ib_google_button -> googleLogin()
             }
         }

@@ -55,7 +55,7 @@ class UpcomingServiceEventsFragment (): TitleOnlyFragment() {
 
                         adapter = ExtractDataAdapter(serviceHistoryList, object : ExtractDataAdapter.ExtractDataListener {
                             override fun onMoreInfo(index: Int) {
-                                UpcomingServiceEventsFragmentDirections.actionUpcomingServiceEventsFragment2ToSelectedServiceHistoryFragment22(index,getTitle()).also {
+                                UpcomingServiceEventsFragmentDirections.actionUpcomingServiceEventsFragmentToSelectedServiceHistoryFragment(index,getTitle()).also {
                                     findNavController().navigate(it)
                                 }
                             }

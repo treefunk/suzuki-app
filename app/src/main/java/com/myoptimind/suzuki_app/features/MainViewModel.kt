@@ -47,6 +47,12 @@ class MainViewModel @ViewModelInject constructor(
                         appSharedPref.getUserId(),
                         multipart
                 )
+                appSharedPref.storeLoginCredentials(
+                        response.data.id,
+                        response.data.fullname,
+                        response.data.emailAddress,
+                        response.data.profilePicture
+                )
                 _updateProfilePictureResult.postValue(Result.Success(response))
             }catch (exception: Exception){
                 _updateProfilePictureResult.postValue(Result.Error(exception))
@@ -58,5 +64,6 @@ class MainViewModel @ViewModelInject constructor(
 
     fun resetResult(){
         _updateProfilePictureResult.value = null
+
     }
 }

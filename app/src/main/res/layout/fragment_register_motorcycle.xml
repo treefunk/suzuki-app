@@ -130,6 +130,9 @@
         android:layout_marginLeft="24dp"
         android:layout_marginRight="24dp"
         tools:text=""
+        android:lines="1"
+        android:maxLines="1"
+        android:singleLine="true"
         />
 
     <TextView
@@ -213,6 +216,9 @@
         android:layout_marginLeft="24dp"
         android:layout_marginRight="24dp"
         tools:text=""
+        android:lines="1"
+        android:maxLines="1"
+        android:singleLine="true"
         />
 
     <TextView
@@ -245,6 +251,9 @@
         android:layout_marginLeft="24dp"
         android:layout_marginRight="24dp"
         tools:text=""
+        android:lines="1"
+        android:maxLines="1"
+        android:singleLine="true"
         />
 
     <TextView
@@ -314,6 +323,9 @@
         android:layout_marginLeft="24dp"
         android:layout_marginRight="24dp"
         tools:text=""
+        android:lines="1"
+        android:maxLines="1"
+        android:singleLine="true"
         />
 
     <Button

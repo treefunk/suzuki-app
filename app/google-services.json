@@ -15,6 +15,30 @@
       },
       "oauth_client": [
         {
+          "client_id": "179063550762-fi9o250v0u8n2s5j921uqtni8vb019eu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.myoptimind.suzuki_app",
+            "certificate_hash": "7c5272c07cdd9e3c5b01703d75c36e1ccc42d53a"
+          }
+        },
+        {
+          "client_id": "179063550762-gcq6oa01ae7r5nssn89rjim06pis5aqk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.myoptimind.suzuki_app",
+            "certificate_hash": "c53eb263b511abf7ad7342f00e2e717987d04d76"
+          }
+        },
+        {
+          "client_id": "179063550762-kcpqh1kj27bg5tda5fpb79vu0elq16gf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.myoptimind.suzuki_app",
+            "certificate_hash": "e1f0365b59f445c4a4c69ba2b486b7ce49d56bb1"
+          }
+        },
+        {
           "client_id": "179063550762-23kpje43ktd11a5dsmnk41k3vibj08c5.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -32,10 +56,10 @@
               "client_type": 3
             },
             {
-              "client_id": "179063550762-3db7g3cdbf4ts3dkiqdslj0nqv1agt60.apps.googleusercontent.com",
+              "client_id": "179063550762-2aq1td6k6fb0diu8n2tprfjo39hr3qok.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.myoptimind.suzuki"
+                "bundle_id": "com.myoptimind.suzukibeta"
               }
             }
           ]

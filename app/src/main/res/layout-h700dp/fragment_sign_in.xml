@@ -21,7 +21,6 @@
         android:id="@+id/tv_title"
         style="@style/suzukiHeader1"
         android:layout_width="wrap_content"
-
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
         android:layout_marginBottom="6dp"
@@ -37,16 +36,20 @@
 
     <ImageButton
         android:id="@+id/ib_google_button"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
         android:layout_marginLeft="24dp"
         android:layout_marginBottom="6dp"
-        android:background="@drawable/google_button"
+        android:src="@drawable/google_button"
+        android:background="@android:color/transparent"
         android:contentDescription="Google"
+        android:scaleType="fitCenter"
+        android:scaleY="1.03"
 
         app:layout_constraintBottom_toTopOf="@id/label_or"
         app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
 
         app:layout_constraintRight_toLeftOf="@id/ib_facebook_button"
         app:layout_constraintTop_toBottomOf="@id/tv_title" />
@@ -73,13 +76,15 @@
 
         <ImageButton
             android:id="@+id/ib_facebook_button"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
             android:layout_marginRight="24dp"
-            android:background="@drawable/facebook_button"
+            android:src="@drawable/facebook_button"
+            android:background="@null"
             android:contentDescription="Facebook"
             app:layout_constraintBottom_toBottomOf="@id/ib_google_button"
+            android:scaleType="fitCenter"
 
             app:layout_constraintLeft_toRightOf="@id/ib_google_button"
 
@@ -150,13 +155,15 @@
         android:layout_width="0dp"
 
         android:layout_height="wrap_content"
-        android:layout_marginLeft="24dp"
-        android:layout_marginRight="24dp"
+
         android:layout_marginBottom="8dp"
+        android:lines="1"
+        android:maxLines="1"
+        android:singleLine="true"
 
         app:layout_constraintBottom_toTopOf="@id/tv_password"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/ib_google_button"
+        app:layout_constraintRight_toRightOf="@id/ib_facebook_button"
         app:layout_constraintTop_toBottomOf="@id/tv_email_mobile"
         tools:text="Francis Jhondee Anib Diaz" />
 
@@ -179,14 +186,16 @@
         android:layout_width="0dp"
 
         android:layout_height="wrap_content"
-        android:layout_marginLeft="24dp"
-        android:layout_marginRight="24dp"
+
         android:layout_marginBottom="10dp"
+        android:lines="1"
+        android:maxLines="1"
+        android:singleLine="true"
 
         android:inputType="textPassword"
         app:layout_constraintBottom_toTopOf="@id/btn_sign_in"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/ib_google_button"
+        app:layout_constraintRight_toRightOf="@id/ib_facebook_button"
         app:layout_constraintTop_toBottomOf="@id/tv_password"
 
         tools:text="fjanib@myoptimind.com" />

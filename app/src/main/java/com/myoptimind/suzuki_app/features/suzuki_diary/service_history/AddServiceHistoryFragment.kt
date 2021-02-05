@@ -24,6 +24,7 @@ import org.joda.time.DateTime
 import org.joda.time.Days
 import org.joda.time.Months
 import timber.log.Timber
+import kotlin.math.abs
 import kotlin.math.ceil
 import kotlin.math.floor
 
@@ -52,45 +53,21 @@ class AddServiceHistoryFragment : TitleOnlyFragment() {
         return inflater.inflate(R.layout.fragment_add_service_history,container,false)
     }
 
-/*    private fun getNextPMS(nextPmsDate: String?){
-        val dt = DateTime()
-        val dateOfPurchaseDt = et_date_of_purchase.toDateTime()
-        val monthStep: Int
-        var mileage = 0.0
-        val oneMonthMark = dt!! < dateOfPurchaseDt.plusMonths(1)
-        Timber.v("${dt!!} < ${dateOfPurchaseDt.plusMonths(1)}")
-        val monthDiff = Months.monthsBetween(dateOfPurchaseDt,dt).months
-        val sameDay = dt.dayOfMonth() == dateOfPurchaseDt.dayOfMonth()
-        var multiplier: Double = 0.0
-        Timber.v("in one month mark $oneMonthMark"  )
-        Timber.v("monthdiff $monthDiff")
-        Timber.v("sameday $sameDay")
-        if(oneMonthMark){
-            mileage = 1000.0
-            tv_date_pms.setText(dateOfPurchaseDt.plusMonths(1).toReadableDateTime())
-        } else if (!oneMonthMark && sameDay){
-            multiplier = 1.0
-            tv_date_pms.setText(dateOfPurchaseDt.plusMonths(1).toReadableDateTime())
-        }else {
-            multiplier = ceil(monthDiff / 6.0)
-            tv_date_pms.setText(dateOfPurchaseDt.plusMonths(multiplier.toInt()).toReadableDateTime())
-        }
-        if(multiplier != 0.0){
-            mileage = multiplier * 4000
-        }
-        tv_mileage_pms.setText(mileage.toString())
-    }*/
+
 
     private fun getNextPMS(purchasedDate : String?){
-        val dateOfPurchaseDT = purchasedDate?.toDateTime()
+        if(purchasedDate.isNullOrBlank()){
+            return
+        }
+        val dateOfPurchaseDT = purchasedDate.toDateTime()
         val dateTodayDT = DateTime()
 
         val monthsDiff = Months.monthsBetween(dateOfPurchaseDT,dateTodayDT).months
-        val daysDiff = Days.daysBetween(dateOfPurchaseDT,dateTodayDT).days
+//        val daysDiff = Days.daysBetween(dateOfPurchaseDT,dateTodayDT).days
+        val daysDiff = abs(dateOfPurchaseDT.monthOfYear().get() + dateOfPurchaseDT.dayOfMonth().get()) - (dateTodayDT.monthOfYear().get() + dateTodayDT.dayOfMonth().get())
 
         Timber.v("month diff $monthsDiff")
         Timber.v("days diff $daysDiff")
-
 
         var mileage = 0.0
         if(monthsDiff > 1 || (monthsDiff == 1 && daysDiff > 0)){
@@ -100,7 +77,7 @@ class AddServiceHistoryFragment : TitleOnlyFragment() {
             }
             val modifier = ceil(totalMonths.toFloat() / 6.0)
             val months = (6 * modifier).toInt()
-            tv_date_pms.setText(dateOfPurchaseDT?.plusMonths(months)?.toReadableDateTime())
+            tv_date_pms.setText(dateOfPurchaseDT.plusMonths(months)?.toReadableDateTime())
             mileage = 4000 * modifier
         }else{
             mileage = 1000.0
@@ -112,7 +89,8 @@ class AddServiceHistoryFragment : TitleOnlyFragment() {
         if(tv_odometer_reading.text.toString().isBlank()){
             tv_mileage_pms.setText(mileage.toString())
         }else{
-            val remainingMileage = mileage - tv_odometer_reading.text.toString().toFloat()
+            val computedMileage = mileage - tv_odometer_reading.text.toString().toFloat()
+            val remainingMileage = if(computedMileage <= 0.00) 0.00 else computedMileage
             tv_mileage_pms.setText(remainingMileage.toString())
         }
 
@@ -201,9 +179,10 @@ class AddServiceHistoryFragment : TitleOnlyFragment() {
         }
 
         btn_save.setOnClickListener {
+            val nicknameTag = if(ac_beast_nickname.tag == null) "" else ac_beast_nickname.tag.toString()
             viewModel.saveHistoryDetails(
                     ServiceHistoryDetails(
-                            ac_beast_nickname.tag.toString(),
+                            nicknameTag,
                             ac_beast_nickname.text.toString(),
                             tv_odometer_reading.text.toString(),
                             et_date_of_purchase.text.toString(),

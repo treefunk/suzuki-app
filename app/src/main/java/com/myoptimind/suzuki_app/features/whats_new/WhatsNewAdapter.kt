@@ -13,7 +13,7 @@ import com.myoptimind.suzuki_app.features.whats_new.data.Article
 
 class WhatsNewAdapter(
         var articleList: List<Article>,
-        private var listener: WhatsNewListener? = null
+        var listener: WhatsNewListener? = null
 ): RecyclerView.Adapter<WhatsNewAdapter.ViewHolder>() {
 
     inner class ViewHolder(private val v: View,

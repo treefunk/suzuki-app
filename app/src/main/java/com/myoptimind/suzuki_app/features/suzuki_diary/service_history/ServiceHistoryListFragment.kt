@@ -66,7 +66,7 @@ class ServiceHistoryListFragment (): TitleOnlyFragment(){
                 is Result.Success -> {
                     val serviceHistoryList = result.data.data
                     if(serviceHistoryList.isNotEmpty()){
-                        group_no_motorcycles.visibility = View.GONE
+                        group_no_motorcycles.visibility = View.INVISIBLE
                         group_motorcycles.visibility = View.VISIBLE
                         adapter = ServiceHistoryAdapter(serviceHistoryList,object: ServiceHistoryAdapter.ServiceHistoryListener {
                             override fun onEdit(index: Int) {
@@ -83,11 +83,12 @@ class ServiceHistoryListFragment (): TitleOnlyFragment(){
                                 }
                             }
                         })
+
                         rv_service_history.adapter = adapter
                         adapter?.notifyDataSetChanged()
                     }else{
                         group_no_motorcycles.visibility = View.VISIBLE
-                        group_motorcycles.visibility = View.GONE
+                        group_motorcycles.visibility = View.INVISIBLE
                     }
                     hideLoading()
                 }

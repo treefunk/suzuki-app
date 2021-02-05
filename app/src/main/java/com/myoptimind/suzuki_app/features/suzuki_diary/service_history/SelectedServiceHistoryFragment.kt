@@ -85,6 +85,7 @@ open class SelectedServiceHistoryFragment(): TitleOnlyFragment(){
             tv_spark_plugs.text = activeDetails.sparkPlugs.valueFromThreechoices()
             tv_exhaust_muffler.text = activeDetails.exhaust_muffler.valueFromThreechoices()
             tv_suspension.text = activeDetails.suspension.valueFromThreechoices()
+            tv_chassis_bolts_nuts.text = activeDetails.chassisBoltsNuts.valueFromThreechoices()
             tv_notes.text = activeDetails.notes
         }
 

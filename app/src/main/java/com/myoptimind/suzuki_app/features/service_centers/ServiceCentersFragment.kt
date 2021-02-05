@@ -20,6 +20,7 @@ import com.myoptimind.suzuki_app.features.shared.setOnScrollEnd
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_service_centers.*
 import kotlinx.android.synthetic.main.fragment_service_centers.tv_filter_value
+import kotlinx.android.synthetic.main.partial_nav_top.*
 import timber.log.Timber
 
 
@@ -28,7 +29,7 @@ private const val LIST_OF_SERVICES_DIALOG_TAG = "list_of_services_dialog"
 @AndroidEntryPoint
 class ServiceCentersFragment: SearchableFragment() {
 
-    override fun getHint() = "Search Fi Service Centers by Name"
+    override fun getHint() = "Search Service Centers by Name"
 
     private val viewModel: ServiceCentersViewModel by viewModels()
     private var adapter: ServiceCentersAdapter? = null

@@ -74,7 +74,7 @@ class SelectedDealerLocatorFragment: TitleOnlyFragment() {
 
                         btn_call.setOnClickListener {
                             val phone = dealerLocator.contactNumber
-                            val intent = Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", "78954", null))
+                            val intent = Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", "#789854", null))
                             startActivity(intent)
                         }
 

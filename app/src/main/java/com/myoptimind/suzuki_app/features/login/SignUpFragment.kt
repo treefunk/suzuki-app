@@ -43,6 +43,7 @@ class SignUpFragment: BaseLoginFragment(), View.OnClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        facebookLogin()
         initClickListeners()
 
         viewModel.registrationResult.observe(viewLifecycleOwner){ result ->
@@ -229,7 +230,7 @@ class SignUpFragment: BaseLoginFragment(), View.OnClickListener {
             }
 
             override fun onError(error: FacebookException?) {
-                Timber.v("ON ERROR")
+                Toast.makeText(requireContext(),error?.message,Toast.LENGTH_SHORT).show()
             }
         })
     }

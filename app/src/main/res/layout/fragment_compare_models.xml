@@ -211,7 +211,6 @@
             android:layout_width="0dp"
             android:layout_height="108dp"
             android:padding="8dp"
-            android:scaleType="fitXY"
             android:src="@drawable/img_crossover"
 
             app:layout_constraintBottom_toTopOf="@id/iv_motorcycle_logo_1"
@@ -268,7 +267,6 @@
             android:layout_width="0dp"
             android:layout_height="108dp"
             android:padding="8dp"
-            android:scaleType="fitXY"
             android:src="@drawable/img_crossover"
 
             app:layout_constraintBottom_toTopOf="@id/iv_motorcycle_logo_2"

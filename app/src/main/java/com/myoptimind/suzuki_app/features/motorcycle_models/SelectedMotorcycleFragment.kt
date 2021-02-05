@@ -27,6 +27,7 @@ import com.myoptimind.suzuki_app.R
 import com.myoptimind.suzuki_app.features.customer_care.CustomerCareFragment
 import com.myoptimind.suzuki_app.features.motorcycle_models.data.ColorVariant
 import com.myoptimind.suzuki_app.features.motorcycle_models.data.Feature
+import com.myoptimind.suzuki_app.features.shared.InfoDialogFragment
 import com.myoptimind.suzuki_app.features.shared.TitleOnlyFragment
 import com.myoptimind.suzuki_app.features.shared.api.Result
 import dagger.hilt.android.AndroidEntryPoint
@@ -184,21 +185,33 @@ class SelectedMotorcycleFragment: TitleOnlyFragment(){
                     }
 
                     ib_view_360.setOnClickListener {
-                        val dialog360 = DialogWebViewFragment.newInstance(motorcycle.url360)
-                        dialog360.show(parentFragmentManager, "360")
+                        if(motorcycle.url360.isBlank()){
+                            InfoDialogFragment.newInstance("Notice!","No 360 View available for this motorcycle").show(parentFragmentManager,"product_video_dialog")
+                        }else{
+                            val dialog360 = DialogWebViewFragment.newInstance(motorcycle.url360)
+                            dialog360.show(parentFragmentManager, "360")
+                        }
                     }
 
 
                     tv_link_watch.setOnClickListener {
-                        val dialogVideo = DialogWebViewFragment.newInstance(motorcycle.productVideoUrl, youtubeUrl = MainActivity.URL_YOUTUBE)
-                        dialogVideo.show(parentFragmentManager, "video")
+                        if(motorcycle.productVideoUrl.isBlank()){
+                            InfoDialogFragment.newInstance("Notice!","No Product video available for this motorcycle").show(parentFragmentManager,"product_video_dialog")
+                        }else{
+                            val dialogVideo = DialogWebViewFragment.newInstance(motorcycle.productVideoUrl, youtubeUrl = MainActivity.URL_YOUTUBE)
+                            dialogVideo.show(parentFragmentManager, "video")
+                        }
                     }
 
                     tv_link_nearest_dealer.setOnClickListener {
-                        ListOfDealersDialogFragment.newInstance(
-                                motorcycle.listOfDealers,
-                                motorcycle.listOfDealers.map { it.city }.distinct() as List<String>
-                        ).show(childFragmentManager, "List_of_dealers")
+                        if(motorcycle.listOfDealers.isEmpty()){
+                            InfoDialogFragment.newInstance("Notice!","No dealers available for this motorcycle").show(parentFragmentManager,"list_of_dealer_dialog")
+                        }else{
+                            ListOfDealersDialogFragment.newInstance(
+                                    motorcycle.listOfDealers,
+                                    motorcycle.listOfDealers.map { it.city }.distinct() as List<String>
+                            ).show(childFragmentManager, "List_of_dealers")
+                        }
                     }
 
                     if (motorcycle.brochure.isNotBlank()) {

@@ -59,7 +59,7 @@ class ExtractDataFragment() : TitleOnlyFragment() {
 
         initObservers()
         btn_extract_all_data.setOnClickListener {
-            val uri: Uri = Uri.parse("http://suzukiapp.blitzworx.com/extract_pdf/${appSharedPref.getUserId()}")
+            val uri: Uri = Uri.parse("https://suzuki.optimindsolutions.com/extract_pdf/${appSharedPref.getUserId()}")
             Timber.v(uri.toString())
             val request = DownloadManager.Request(uri)
             val filename: String = "data-" + DateTime().toString("MMMM-dd-yyyy") + ".pdf"

@@ -68,11 +68,12 @@
     <ImageView
         android:id="@+id/box_bike_details"
         android:layout_width="0dp"
-        android:layout_height="190dp"
+        android:layout_height="0dp"
 
         app:layout_constraintTop_toBottomOf="@id/white_bg_header_bike_details"
         app:layout_constraintLeft_toLeftOf="@id/blue_bg_bike_details"
         app:layout_constraintRight_toRightOf="@id/white_bg_header_bike_details"
+        app:layout_constraintBottom_toBottomOf="@id/extra_box_below_date_of_purchase"
         android:background="@android:color/white"
         />
 
@@ -168,6 +169,9 @@
         android:layout_marginTop="2dp"
         android:layout_marginBottom="4dp"
         android:layout_marginRight="14dp"
+        android:lines="1"
+        android:maxLines="1"
+        android:singleLine="true"
         />
 
     <TextView
@@ -195,6 +199,7 @@
         app:layout_constraintTop_toBottomOf="@id/label_date_of_purchase"
         app:layout_constraintLeft_toLeftOf="@id/label_date_of_purchase"
         app:layout_constraintRight_toRightOf="@id/box_bike_details"
+        app:layout_constraintBottom_toTopOf="@id/extra_box_below_date_of_purchase"
 
         android:clickable="false"
         android:focusableInTouchMode="false"
@@ -207,6 +212,15 @@
         android:layout_marginTop="2dp"
         android:layout_marginBottom="4dp"
         android:layout_marginRight="14dp"
+        />
+
+    <View
+        android:id="@+id/extra_box_below_date_of_purchase"
+        android:layout_width="0dp"
+        android:layout_height="16dp"
+        app:layout_constraintTop_toBottomOf="@id/et_date_of_purchase"
+        app:layout_constraintLeft_toLeftOf="@id/label_date_of_purchase"
+        app:layout_constraintRight_toRightOf="@id/box_bike_details"
         />
 
     <View
@@ -230,7 +244,7 @@
         app:layout_constraintTop_toBottomOf="@id/box_bike_details"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/rectangle_blue_slanted_1"
         />
 

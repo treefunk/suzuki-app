@@ -72,7 +72,7 @@ class HomeFragment: LogoOnlyFragment() {
                     hideLoading()
                 }
                 is Result.Error -> {
-                    Toast.makeText(requireContext(),"error fetching home",Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(),"Internet Connection is required. Please try again.",Toast.LENGTH_SHORT).show()
                     hideLoading()
                 }
                 Result.Loading -> {

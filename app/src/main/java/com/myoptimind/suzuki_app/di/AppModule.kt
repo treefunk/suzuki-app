@@ -40,9 +40,12 @@ class AppModule {
             writeTimeout(60,TimeUnit.SECONDS)
             readTimeout(60,TimeUnit.SECONDS)
         }
+//    https://suzukiapp.blitzworx.com/api/
+//    http://suzuki.optimindsolutions.com/api/
+//    http://suzuki.optimindsolutions.com/api/
 
         return Retrofit.Builder()
-                .baseUrl("https://suzukiapp.blitzworx.com/api/")
+                .baseUrl("https://suzuki.optimindsolutions.com/api/")
                 .client(okHttpClient.build())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()

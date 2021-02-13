@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/signUpFragment"
-        android:name="com.myoptimind.suzuki_app.features.login.SignUpFragment"
+        android:name="com.myoptimind.suzuki_motors.features.login.SignUpFragment"
         android:label="SignUpFragment"
         tools:layout="@layout/fragment_sign_up"
         >
@@ -17,7 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/signInFragment"
-        android:name="com.myoptimind.suzuki_app.features.login.SignInFragment"
+        android:name="com.myoptimind.suzuki_motors.features.login.SignInFragment"
         tools:layout="@layout/fragment_sign_in"
         android:label="SignInFragment" >
         <action
@@ -29,7 +29,7 @@
     </fragment>
     <fragment
         android:id="@+id/forgotPasswordFragment"
-        android:name="com.myoptimind.suzuki_app.features.login.ForgotPasswordFragment"
+        android:name="com.myoptimind.suzuki_motors.features.login.ForgotPasswordFragment"
         tools:layout="@layout/fragment_forgot_password"
         android:label="ForgotPasswordFragment" >
         <action

@@ -46,6 +46,48 @@
       "api_key": [
         {
           "current_key": "AIzaSyBeOGn9CuYxRa2Leb5I2VHEn_5H20Tkt5E"
+        },
+        {
+          "current_key": "AIzaSyBBK3pqQXXjDE02vdI7g1IAhutX9F9PGsA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "179063550762-23kpje43ktd11a5dsmnk41k3vibj08c5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "179063550762-2aq1td6k6fb0diu8n2tprfjo39hr3qok.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.myoptimind.suzukibeta"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:179063550762:android:ce44f8b3f311122ae16453",
+        "android_client_info": {
+          "package_name": "com.myoptimind.suzuki_motors"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "179063550762-23kpje43ktd11a5dsmnk41k3vibj08c5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBeOGn9CuYxRa2Leb5I2VHEn_5H20Tkt5E"
+        },
+        {
+          "current_key": "AIzaSyBBK3pqQXXjDE02vdI7g1IAhutX9F9PGsA"
         }
       ],
       "services": {

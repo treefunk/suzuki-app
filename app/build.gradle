@@ -26,11 +26,11 @@ android {
 */
 
     defaultConfig {
-        applicationId "com.myoptimind.suzuki_app"
+        applicationId "com.myoptimind.suzuki_motors"
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 10
-        versionName "1.9"
+        versionCode 1
+        versionName "1"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
 

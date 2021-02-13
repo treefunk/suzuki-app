@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.myoptimind.suzuki_app">
+    package="com.myoptimind.suzuki_motors">
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -26,11 +26,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:usesCleartextTraffic="true"
-        android:name=".SuzukiApp"
+        android:name="com.myoptimind.suzuki_motors.SuzukiApp"
         android:hardwareAccelerated="true"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.myoptimind.suzuki_app.features.login.LoginActivity"
+        <activity android:name="com.myoptimind.suzuki_motors.features.login.LoginActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan">
             <intent-filter>
@@ -61,7 +61,7 @@
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity> <!-- END OF FACEBOOK -->
-        <activity android:name=".MainActivity"
+        <activity android:name="com.myoptimind.suzuki_motors.MainActivity"
             android:theme="@style/AppTheme"
             android:launchMode="singleTop"
             android:windowSoftInputMode="adjustPan"
@@ -79,11 +79,11 @@
             android:value="${GOOGLE_API_KEY}" />
 
 
-        <receiver android:name=".features.suzuki_diary.service_history.ServiceHistoryBroadcastReceiver" />
+        <receiver android:name="com.myoptimind.suzuki_motors.features.suzuki_diary.service_history.ServiceHistoryBroadcastReceiver" />
 
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="com.myoptimind.suzuki_app.fileprovider"
+            android:authorities="com.myoptimind.suzuki_motors.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
@@ -92,7 +92,7 @@
         </provider>
 
         <service
-            android:name=".features.shared.MyFirebaseMessagingService"
+            android:name="com.myoptimind.suzuki_motors.features.shared.MyFirebaseMessagingService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.myoptimind.suzuki_app.home.HomeFragment"
+        android:name="com.myoptimind.suzuki_motors.home.HomeFragment"
         android:label="HomeFragment"
         tools:layout="@layout/fragment_home"
         >
@@ -16,7 +16,7 @@
 
     <fragment
         android:id="@+id/motorcycleModelsFragment"
-        android:name="com.myoptimind.suzuki_app.features.motorcycle_models.MotorcycleModelsFragment"
+        android:name="com.myoptimind.suzuki_motors.features.motorcycle_models.MotorcycleModelsFragment"
         android:label="motorcycleModelsFragment"
         tools:layout="@layout/fragment_motorcycle_models"
         >
@@ -27,7 +27,7 @@
 
     <fragment
         android:id="@+id/sparePartsFragment"
-        android:name="com.myoptimind.suzuki_app.features.spare_parts.SparePartsFragment"
+        android:name="com.myoptimind.suzuki_motors.features.spare_parts.SparePartsFragment"
         android:label="SparePartsFragment"
         tools:layout="@layout/fragment_spare_parts"
         >
@@ -45,7 +45,7 @@
         />
     <fragment
         android:id="@+id/fullMenuFragment"
-        android:name="com.myoptimind.suzuki_app.home.FullMenuFragment"
+        android:name="com.myoptimind.suzuki_motors.home.FullMenuFragment"
         android:label="FullMenuFragment"
         tools:layout="@layout/fragment_full_menu"
         >
@@ -80,7 +80,7 @@
         />
     <fragment
         android:id="@+id/serviceCentersFragment"
-        android:name="com.myoptimind.suzuki_app.features.service_centers.ServiceCentersFragment"
+        android:name="com.myoptimind.suzuki_motors.features.service_centers.ServiceCentersFragment"
         android:label="ServiceCentersFragment"
         tools:layout="@layout/fragment_service_centers"
 
@@ -97,7 +97,7 @@
         />
     <fragment
         android:id="@+id/whatsNewFragment"
-        android:name="com.myoptimind.suzuki_app.features.whats_new.WhatsNewFragment"
+        android:name="com.myoptimind.suzuki_motors.features.whats_new.WhatsNewFragment"
         android:label="WhatsNewFragment"
         tools:layout="@layout/fragment_whats_new"
         >
@@ -110,7 +110,7 @@
         app:destination="@id/whatsNewFragment" />
     <fragment
         android:id="@+id/customerCareFragment"
-        android:name="com.myoptimind.suzuki_app.features.customer_care.CustomerCareFragment"
+        android:name="com.myoptimind.suzuki_motors.features.customer_care.CustomerCareFragment"
         android:label="CustomerCareFragment"
         tools:layout="@layout/fragment_customer_care"
         >
@@ -126,7 +126,7 @@
         app:destination="@id/sparePartsFragment" />
     <fragment
         android:id="@+id/safetyTipsFragment"
-        android:name="com.myoptimind.suzuki_app.features.safety_tips.SafetyTipsFragment"
+        android:name="com.myoptimind.suzuki_motors.features.safety_tips.SafetyTipsFragment"
         android:label="SafetyTipsFragment"
         tools:layout="@layout/fragment_safety_tips"
         >
@@ -139,7 +139,7 @@
     </fragment>
     <fragment
         android:id="@+id/dealerLocatorsFragment"
-        android:name="com.myoptimind.suzuki_app.features.dealer_locator.DealerLocatorsFragment"
+        android:name="com.myoptimind.suzuki_motors.features.dealer_locator.DealerLocatorsFragment"
         android:label="DealerLocatorsFragment"
         tools:layout="@layout/fragment_service_centers"
         >
@@ -152,7 +152,7 @@
         app:destination="@id/dealerLocatorsFragment" />
     <fragment
         android:id="@+id/selectedWhatsNewFragment"
-        android:name="com.myoptimind.suzuki_app.features.whats_new.SelectedWhatsNewFragment"
+        android:name="com.myoptimind.suzuki_motors.features.whats_new.SelectedWhatsNewFragment"
         android:label="SelectedWhatsNewFragment"
         tools:layout="@layout/fragment_selected_whats_new"
         >
@@ -164,7 +164,7 @@
     </fragment>
     <fragment
         android:id="@+id/selectedSafetyTipsFragment"
-        android:name="com.myoptimind.suzuki_app.features.safety_tips.SelectedSafetyTipsFragment"
+        android:name="com.myoptimind.suzuki_motors.features.safety_tips.SelectedSafetyTipsFragment"
         android:label="SelectedSafetyTipsFragment"
         tools:layout="@layout/fragment_selected_safety_tip"
         >
@@ -176,7 +176,7 @@
     </fragment>
     <fragment
         android:id="@+id/selectedDealerLocatorFragment"
-        android:name="com.myoptimind.suzuki_app.features.dealer_locator.SelectedDealerLocatorFragment"
+        android:name="com.myoptimind.suzuki_motors.features.dealer_locator.SelectedDealerLocatorFragment"
         android:label="SelectedDealerLocatorFragment"
         tools:layout="@layout/fragment_selected_service_center"
 
@@ -190,7 +190,7 @@
     </fragment>
     <fragment
         android:id="@+id/selectedServiceCenterFragment"
-        android:name="com.myoptimind.suzuki_app.features.service_centers.SelectedServiceCenterFragment"
+        android:name="com.myoptimind.suzuki_motors.features.service_centers.SelectedServiceCenterFragment"
         android:label="SelectedServiceCenterFragment"
         tools:layout="@layout/fragment_selected_service_center"
         >
@@ -202,7 +202,7 @@
     </fragment>
     <fragment
         android:id="@+id/selectedSparePartFragment"
-        android:name="com.myoptimind.suzuki_app.features.spare_parts.SelectedSparePartFragment"
+        android:name="com.myoptimind.suzuki_motors.features.spare_parts.SelectedSparePartFragment"
         android:label="SelectedSparePartFragment"
         tools:layout="@layout/fragment_selected_spare_parts"
         >
@@ -224,7 +224,7 @@
     </fragment>
     <fragment
         android:id="@+id/selectedMotorcycleFragment"
-        android:name="com.myoptimind.suzuki_app.features.motorcycle_models.SelectedMotorcycleFragment"
+        android:name="com.myoptimind.suzuki_motors.features.motorcycle_models.SelectedMotorcycleFragment"
         android:label="SelectedMotorcycleFragment"
         tools:layout="@layout/fragment_selected_motorcycle"
         >
@@ -245,20 +245,20 @@
         app:destination="@id/fragmentSuzukiDiary" />
     <fragment
         android:id="@+id/fragmentSuzukiDiary"
-        android:name="com.myoptimind.suzuki_app.features.suzuki_diary.FragmentSuzukiDiary"
+        android:name="com.myoptimind.suzuki_motors.features.suzuki_diary.FragmentSuzukiDiary"
         android:label="FragmentSuzukiDiary"
         tools:layout="@layout/fragment_suzuki_diary"
         />
     <fragment
         android:id="@+id/compareModelsFragment"
-        android:name="com.myoptimind.suzuki_app.features.compare_motorcycles.CompareModelsFragment"
+        android:name="com.myoptimind.suzuki_motors.features.compare_motorcycles.CompareModelsFragment"
         android:label="CompareModelsFragment"
         tools:layout="@layout/fragment_compare_models"
         />
 
     <fragment
         android:id="@+id/extractDataFragment"
-        android:name="com.myoptimind.suzuki_app.features.extract_data.ExtractDataFragment"
+        android:name="com.myoptimind.suzuki_motors.features.extract_data.ExtractDataFragment"
         android:label="ExtractDataFragment" >
         <action
             android:id="@+id/action_extractDataFragment_to_selectedServiceHistoryFragment2"
@@ -266,18 +266,18 @@
     </fragment>
     <fragment
         android:id="@+id/aboutSuzukiFragment"
-        android:name="com.myoptimind.suzuki_app.features.sidenav.AboutSuzukiFragment"
+        android:name="com.myoptimind.suzuki_motors.features.sidenav.AboutSuzukiFragment"
         android:label="AboutSuzukiFragment"
         />
     <fragment
         android:id="@+id/privacyPolicyFragment"
-        android:name="com.myoptimind.suzuki_app.features.sidenav.PrivacyPolicyFragment"
+        android:name="com.myoptimind.suzuki_motors.features.sidenav.PrivacyPolicyFragment"
         android:label="PrivacyPolicyFragment"
 
         />
     <fragment
         android:id="@+id/termsAndConditionsFragment"
-        android:name="com.myoptimind.suzuki_app.features.sidenav.TermsAndConditionsFragment"
+        android:name="com.myoptimind.suzuki_motors.features.sidenav.TermsAndConditionsFragment"
         android:label="TermsAndConditionsFragment"
 
         />
@@ -308,7 +308,7 @@
         app:destination="@id/customerCareFragment" />
     <fragment
         android:id="@+id/selectedServiceHistoryFragment"
-        android:name="com.myoptimind.suzuki_app.features.suzuki_diary.service_history.SelectedServiceHistoryFragment"
+        android:name="com.myoptimind.suzuki_motors.features.suzuki_diary.service_history.SelectedServiceHistoryFragment"
         android:label="SelectedServiceHistoryFragment"
 
         >
@@ -328,7 +328,7 @@
         app:destination="@id/safetyTipsFragment" />
     <fragment
         android:id="@+id/upcomingServiceEventsFragment"
-        android:name="com.myoptimind.suzuki_app.features.notifications.UpcomingServiceEventsFragment"
+        android:name="com.myoptimind.suzuki_motors.features.notifications.UpcomingServiceEventsFragment"
         android:label="UpcomingServiceEventsFragment" >
         <action
             android:id="@+id/action_upcomingServiceEventsFragment_to_selectedServiceHistoryFragment"
